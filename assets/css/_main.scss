@@ -1,3 +1,6 @@
+@import "./colorPrimary.scss";
+@import "./heading.scss";
+
 * {
   margin: 0;
   padding: 0;
@@ -6,4 +9,27 @@
 
 html {
   font-size: 62.5%;
+  font-family: "Roboto", sans-serif;
 }
+
+.activeBody {
+  background-color: #c2c3c4;
+}
+// app
+.app {
+  position: relative;
+}
+
+.overlay {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgb(194, 195, 196, 0.4);
+}
+
+// heading
+
+// heading-nav

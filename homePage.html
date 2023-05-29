@@ -12,9 +12,138 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="icon" type="image/x-icon" href="./assets/img/favicon.ico" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+      integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,400;1,500;1,700&display=swap" rel="stylesheet" />
+    <link rel="icon" type="image/x-icon" href="./assets/img/iconShopQHai.ico" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="./assets/css/grid.css" />
     <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
-  <body></body>
+  <body>
+    <div class="app">
+      <!--heading  -->
+      <div class="heading grid">
+        <!-- heading-navigation -->
+        <div class="heading-nav grid">
+          <ul class="heading-nav-item">
+            <li class="heading-nav-list">
+              <a href="#" class="heading-nav-link">Trang chủ</a>
+            </li>
+            <li class="heading-nav-list">
+              <a href="#" class="heading-nav-link">Giới thiệu</a>
+            </li>
+            <li class="heading-nav-list">
+              <a href="#" class="heading-nav-link">Tuyển dụng</a>
+            </li>
+            <li class="heading-nav-list">
+              <a href="#" class="heading-nav-link">Trung tâm bảo hành</a>
+            </li>
+            <li class="heading-nav-list">
+              <a href="#" class="heading-nav-link">Đăng kí</a>
+            </li>
+
+            <li class="heading-nav-list">
+              <a href="#" class="heading-nav-link">Đăng nhập</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- heading-content -->
+        <div class="heading-content grid wide">
+          <div class="heading-content-img-wrap">
+            <img src="./assets/img/logo shopquhai.png" alt="logo" class="heading-content-img" />
+          </div>
+
+          <div class="heading-content-search">
+            <input type="text" class="heading-content-search-input" placeholder="Hôm nay bạn cần tìm gì trên shop Quang Hải?" />
+            <span class="heading-content-search-wrap-icon">
+              <i class="fa-solid fa-magnifying-glass heading-content-search-icon"></i>
+            </span>
+          </div>
+
+          <div class="heading-content-order-tools">
+            <div class="heading-check-order">
+              <span class="material-symbols-outlined heading-check-order-icon"> local_shipping </span>
+              <span class="heading-check-order-text"> Kiểm tra đơn hàng</span>
+            </div>
+
+            <div class="header-cart">
+              <span class="material-symbols-outlined header-cart-icon"> shopping_cart </span>
+              <span class="header-cart-total"> 0</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- heading product -->
+        <div class="heading-pruduct grid wide">
+          <ul class="wrap-product">
+            <li class="product-item">
+              <span class="material-symbols-outlined product-icon"> phone_iphone </span>
+              <span class="product-icon-text">ĐIỆN THOẠI</span>
+            </li>
+            <li class="product-item">
+              <span class="material-symbols-outlined product-icon"> watch_screentime </span>
+              <span class="product-icon-text">ĐỒNG HỒ</span>
+            </li>
+            <li class="product-item">
+              <span class="material-symbols-outlined product-icon"> laptop_windows </span>
+              <span class="product-icon-text">LAPTOP</span>
+            </li>
+            <li class="product-item">
+              <span class="material-symbols-outlined product-icon"> monitor </span>
+              <span class="product-icon-text">MÀN HÌNH</span>
+            </li>
+            <li class="product-item">
+              <i class="fa-solid fa-tv product-icon"></i>
+              <span class="product-icon-text">SMART TV</span>
+            </li>
+
+            <li class="product-item">
+              <span class="material-symbols-outlined product-icon"> headphones </span>
+              <span class="product-icon-text">ÂM THANH</span>
+            </li>
+            <li class="product-item">
+              <span class="material-symbols-outlined product-icon"> house </span>
+              <span class="product-icon-text">Smart Home</span>
+            </li>
+            <li class="product-item">
+              <span class="material-symbols-outlined product-icon"> sim_card </span>
+              <span class="product-icon-text">sim thẻ</span>
+            </li>
+
+            <li class="product-item">
+              <span class="material-symbols-outlined product-icon"> construction </span>
+              <span class="product-icon-text">sửa chữa</span>
+            </li>
+
+            <li class="product-item">
+              <span class="material-symbols-outlined product-icon"> stadia_controller </span>
+              <span class="product-icon-text">đồ chơi</span>
+            </li>
+            <li class="product-item">
+              <span class="material-symbols-outlined product-icon"> feed </span>
+              <span class="product-icon-text">tin hót</span>
+            </li>
+            <li class="product-item">
+              <i class="fa-solid fa-bolt product-icon"></i>
+              <span class="product-icon-text">ưu đãi</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- overlay -->
+      <div class="overlay"></div>
+    </div>
+
+    <script src="./js/main.js"></script>
+  </body>
 </html>
