@@ -1,5 +1,6 @@
 @import "./colorPrimary.scss";
 @import "./heading.scss";
+@import "./slider.scss";
 
 * {
   margin: 0;
@@ -11,12 +12,15 @@ html {
   font-size: 62.5%;
   font-family: "Roboto", sans-serif;
 }
-
-.activeBody {
-  background-color: #c2c3c4;
+body {
+  background-color: #f4f4f4;
 }
+// .activeBody {
+//   background-color: #c2c3c4;
+// }
 // app
 .app {
+  min-height: 50vh;
   position: relative;
 }
 
@@ -27,9 +31,8 @@ html {
   right: 0;
   bottom: 0;
   left: 0;
-  background-color: rgb(194, 195, 196, 0.4);
+  background-color: rgba(194, 195, 196, 0.4);
 }
-
 // heading
-
+//
 // heading-nav

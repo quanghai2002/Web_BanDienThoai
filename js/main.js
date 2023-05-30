@@ -1,9 +1,7 @@
-// input
-// let inputHeader = document.querySelector('.heading-content-search-input');
-// let body = document.querySelector('body');
-// let overlay = document.querySelector('.overlay');
+import inputSearch from './inputSearch.js';
+import slider from './slider.js';
 
-// inputHeader.addEventListener('click', function (e) {
-//     overlay.style.display = 'block';
-//     inputHeader.focus();
-// })
+
+// inpu inputSearch
+inputSearch();
+slider();

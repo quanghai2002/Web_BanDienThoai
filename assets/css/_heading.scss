@@ -49,6 +49,8 @@
       border: 1px solid #eee;
       width: 100%;
       box-shadow: 0 4px 6px #ccc;
+      position: relative;
+      z-index: 10;
     }
     &-icon {
       font-size: 1.9rem;
@@ -70,6 +72,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      z-index: 10;
     }
   }
 
@@ -158,6 +161,7 @@
       font-weight: 300;
       padding: 8px 0;
       cursor: pointer;
+      position: relative;
 
       &:hover .product-icon-text::after {
         display: block;
@@ -197,4 +201,262 @@
   to {
     transform: translateX(100%);
   }
+}
+
+//sub-product
+.sub-product {
+  display: none;
+  position: absolute;
+  left: -51px;
+  top: 111%;
+  background-color: $whiteColor;
+  width: 1200px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px #ccc;
+  animation: out 0.3s linear;
+  transform-origin: top left;
+
+  .sub-list {
+    .sub-item {
+      list-style-type: none;
+      .sub-wrap-item {
+        padding: 20px 30px;
+        .sub-heading {
+          color: #333;
+          text-transform: uppercase;
+          font-size: 1.3rem;
+          font-weight: 700;
+          padding-bottom: 19px;
+        }
+        .sub-item {
+          .sub-list {
+            color: #333;
+            text-transform: capitalize;
+            font-size: 1.3rem;
+            font-weight: 400;
+            padding-bottom: 9px;
+          }
+        }
+      }
+    }
+  }
+}
+.sub-product::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 140px;
+  height: 20px;
+  background-color: transparent;
+  left: 0;
+  top: -15px;
+}
+
+.sub-item-text {
+  transition: all 0.1s ease-in-out;
+  position: relative;
+}
+
+.sub-item-text::before {
+  display: none;
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 0%;
+  height: 3px;
+  background-color: $primarryColor;
+  border-radius: 4px;
+}
+.sub-item-text:hover {
+  color: #009981;
+}
+.sub-item-text:hover::before {
+  display: block;
+  width: 50%;
+  transform: translateX(100%);
+  animation: slide 0.5s ease-in-out;
+}
+
+.sub-item-img {
+  padding: 20px 30px;
+  img {
+    width: 100%;
+  }
+}
+
+// product-item:hover
+.product-item {
+  transition: all 3s linear;
+}
+.product-item:hover .sub-product {
+  display: block;
+}
+
+// đồng hồ hover
+
+.sub-product.đong-ho {
+  // display: block;
+  left: -156px;
+}
+.sub-product.đong-ho::before {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 125px;
+  height: 29px;
+  left: 116px;
+  background-color: transparent;
+}
+.sub-item-dong-ho {
+  display: flex;
+  flex-wrap: wrap;
+  li {
+    margin: 10px 30px 0 0;
+  }
+}
+
+// laptop hover
+.sub-product.lap-top {
+  left: -249px;
+}
+
+.sub-product.lap-top::before {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 125px;
+  height: 29px;
+  left: 203px;
+  background-color: transparent;
+}
+
+// màn hình hover
+.sub-product.man-hinh {
+  // display: block;
+  left: -337px;
+}
+.sub-product.man-hinh::before {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 125px;
+  height: 29px;
+  left: 303px;
+  // background-color: red;
+  background-color: transparent;
+}
+
+//sub-product smart-tv
+.sub-product.smart-tv {
+  left: -436px;
+}
+.sub-product.smart-tv::before {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 125px;
+  height: 29px;
+  left: 394px;
+  // background-color: red;
+  background-color: transparent;
+}
+
+//am thanh
+.sub-product.am-thanh {
+  left: -436px;
+}
+.sub-product.am-thanh::before {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 125px;
+  height: 29px;
+  left: 400px;
+  // background-color: red;
+  background-color: transparent;
+}
+
+//smart home
+.sub-product.smart-home {
+  left: -635px;
+  // display: block;
+}
+.sub-product.smart-home::before {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 125px;
+  height: 29px;
+  left: 604px;
+  // background-color: red;
+  background-color: transparent;
+}
+
+//sim thẻ
+.sub-product.sim-the {
+  left: -750px;
+  // display: block;
+}
+.sub-product.sim-the ::before {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 125px;
+  height: 29px;
+  left: 708px;
+  top: -16px;
+  // background-color: red;
+  background-color: transparent;
+}
+
+//sửa chữa
+.sub-product.sua-chua {
+  left: -839px;
+  // display: block;
+}
+.sub-product.sua-chua::before {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 125px;
+  height: 29px;
+  left: 801px;
+  top: -16px;
+  // background-color: red;
+  background-color: transparent;
+}
+
+//đồ chơi
+.sub-product.do-choi {
+  left: -939px;
+  // display: block;
+}
+.sub-product.do-choi::before {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 125px;
+  height: 29px;
+  left: 897px;
+  top: -16px;
+  // background-color: red;
+  background-color: transparent;
+}
+
+//ưu đãi
+.sub-product.uu-dai {
+  left: -1116px;
+  // display: block;
+}
+.sub-product.uu-dai::before {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 125px;
+  height: 29px;
+  left: 1074px;
+  top: -16px;
+  // background-color: red;
+  background-color: transparent;
 }

@@ -1,0 +1,67 @@
+@import "./colorPrimary.scss";
+
+// slider
+.slider {
+  position: relative;
+}
+.slider-wrap {
+  width: 100%;
+  height: 376px;
+  display: flex;
+}
+
+.slide-img {
+  width: 100%;
+  height: 100%;
+}
+
+// slider btn next-prev
+.slide-btn {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+}
+
+.btn {
+  position: absolute;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  padding: 13px 16.8px;
+  border-radius: 50%;
+  background-color: #c2c2c273;
+  cursor: pointer;
+  color: $whiteColor;
+  transition: all 0.2s linear;
+  &:hover {
+    background-color: #e6e4e473;
+  }
+  &-next {
+    position: absolute;
+    left: 30px;
+  }
+
+  &-prev {
+    position: absolute;
+    right: 30px;
+  }
+}
+// slide dots
+.slide-dots {
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+}
+.slide-dots-icon {
+  font-size: 14px;
+  margin-right: 6px;
+  cursor: pointer;
+  color: #c2c2c273;
+}
+
+.slide-dots-active {
+  color: $primarryColor;
+}
