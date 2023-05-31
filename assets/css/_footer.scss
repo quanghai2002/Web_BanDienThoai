@@ -1,0 +1,87 @@
+@import "./colorPrimary.scss";
+//footer
+.footer {
+  background-color: $primarryColor;
+  margin-top: 10px;
+  border-radius: 11px;
+  box-shadow: 0 0 4px #ccc;
+}
+
+.footer-wrap-item {
+  padding: 26px 0 0 16px;
+}
+
+.footer-heading {
+  color: #ddd;
+  font-size: 1.5rem;
+  &:hover {
+    cursor: pointer;
+    color: #fff;
+  }
+}
+
+.footer-item {
+  list-style-type: none;
+  margin-top: 13px;
+}
+
+.footer-list {
+  margin-bottom: 8px;
+}
+.footer-link {
+  color: #ddd;
+  font-size: 1.3rem;
+  font-weight: 300;
+  cursor: pointer;
+
+  &:hover {
+    color: #fff;
+  }
+}
+.footer-heading.footer-pay {
+  color: #fff;
+}
+.footer-icon {
+  margin-right: 3px;
+}
+
+.footer-congthuong {
+  margin-top: 9px;
+}
+
+// footer-info
+
+.footer-info {
+  padding-bottom: 12px;
+}
+.footer-info-text {
+  text-align: center;
+  user-select: none;
+  font-size: 1.4rem;
+  color: #ddd;
+}
+
+// up-top
+.up-top {
+  display: none;
+  position: fixed;
+  top: 81%;
+  right: 39px;
+  &:hover {
+    cursor: pointer;
+    opacity: 0.7;
+  }
+}
+
+.up-top-icon {
+  font-size: 5rem;
+  padding: 4.2px 13.4px;
+  background-color: #00483d;
+  color: #fff;
+  opacity: 0.6;
+  border-radius: 50%;
+}
+
+.up-top-active {
+  display: block;
+}

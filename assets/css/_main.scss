@@ -1,11 +1,13 @@
 @import "./colorPrimary.scss";
 @import "./heading.scss";
 @import "./slider.scss";
-
+@import "./container.scss";
+@import "./footer.scss";
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 html {

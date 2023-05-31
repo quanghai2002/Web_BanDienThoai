@@ -2,7 +2,12 @@
 
 // slider
 .slider {
+  // display: none;
   position: relative;
+  margin-top: 20px !important;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 0 4px #ccc;
 }
 .slider-wrap {
   width: 100%;
@@ -13,6 +18,9 @@
 .slide-img {
   width: 100%;
   height: 100%;
+  transition: all 0.3s linear;
+  // animation: sliderLeft 0.3s linear forwards
+  // animation: sliderRight 0.3s linear forwards;
 }
 
 // slider btn next-prev
@@ -64,4 +72,34 @@
 
 .slide-dots-active {
   color: $primarryColor;
+}
+
+// slide-img-active
+.slide-img-hiden {
+  display: none;
+}
+.slide-img-active {
+  display: block;
+}
+
+// trượt slider left
+@keyframes sliderLeft {
+  from {
+    transform: translateX(100%);
+  }
+
+  to {
+    transform: translateX(0%);
+  }
+}
+
+// trượt slider right
+
+@keyframes sliderRight {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translate(0);
+  }
 }

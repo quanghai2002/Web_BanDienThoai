@@ -207,6 +207,7 @@
 .sub-product {
   display: none;
   position: absolute;
+  z-index: 99;
   left: -51px;
   top: 111%;
   background-color: $whiteColor;
@@ -364,7 +365,8 @@
 
 //am thanh
 .sub-product.am-thanh {
-  left: -436px;
+  left: -534px;
+  // display: block;
 }
 .sub-product.am-thanh::before {
   position: absolute;
@@ -372,7 +374,7 @@
   display: block;
   width: 125px;
   height: 29px;
-  left: 400px;
+  left: 498px;
   // background-color: red;
   background-color: transparent;
 }
