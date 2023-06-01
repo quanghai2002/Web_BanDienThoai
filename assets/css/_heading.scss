@@ -24,10 +24,17 @@
   }
 }
 
+// .heading-nav {
+//   position: fixed;
+//   top: 0;
+//   left: 0;
+//   z-index: 20;
+// }
 .heading-content {
   display: flex;
   padding: 20px 0;
   align-items: center;
+  padding-top: 19px;
   &-img-wrap {
     width: 256px;
   }

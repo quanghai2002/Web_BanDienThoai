@@ -72,6 +72,7 @@
   padding: 21.6px 0 10px;
   img {
     width: 150px;
+    height: 150px;
     object-fit: contain;
   }
 }
@@ -85,6 +86,7 @@
     text-align: center;
     line-height: 16px;
     cursor: pointer;
+    min-height: 32px;
   }
 
   .container-product-info-price {
@@ -118,6 +120,7 @@
     border-radius: 3px;
     color: $whiteColor;
     box-shadow: 0 4px 6px #00000029;
+    text-transform: uppercase;
   }
 
   .container-product-info-note-text {
@@ -125,11 +128,14 @@
     font-weight: 400;
     color: #333;
     line-height: 21px;
+    position: relative;
+    text-transform: capitalize;
   }
 
   .container-product-info-note-detail {
     font-size: 1.3rem;
     font-weight: bold;
     color: #f7941e;
+    text-transform: uppercase;
   }
 }

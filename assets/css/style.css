@@ -25,6 +25,7 @@
   display: flex;
   padding: 20px 0;
   align-items: center;
+  padding-top: 19px;
 }
 .heading-content-img-wrap {
   width: 256px;
@@ -586,6 +587,7 @@
 }
 .container-product-img img {
   width: 150px;
+  height: 150px;
   object-fit: contain;
 }
 
@@ -597,6 +599,7 @@
   text-align: center;
   line-height: 16px;
   cursor: pointer;
+  min-height: 32px;
 }
 .container-product-info .container-product-info-price {
   cursor: pointer;
@@ -627,17 +630,21 @@
   border-radius: 3px;
   color: #fff;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1607843137);
+  text-transform: uppercase;
 }
 .container-product-info-note .container-product-info-note-text {
   font-size: 1.3rem;
   font-weight: 400;
   color: #333;
   line-height: 21px;
+  position: relative;
+  text-transform: capitalize;
 }
 .container-product-info-note .container-product-info-note-detail {
   font-size: 1.3rem;
   font-weight: bold;
   color: #f7941e;
+  text-transform: uppercase;
 }
 
 .footer {
@@ -750,11 +757,79 @@ body {
 .overlay {
   display: none;
   position: absolute;
+  z-index: 100;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
   background-color: rgba(194, 195, 196, 0.4);
+}
+
+.sosial {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 5.5%;
+  display: inline-block;
+  background: #f5f5f5 0% 0% no-repeat;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1607843137);
+  border-radius: 30px;
+}
+
+.sosial-item {
+  list-style-type: none;
+}
+
+.sosial-list {
+  margin: 6px 0;
+  transition: all 0.1s linear;
+}
+.sosial-list:hover {
+  opacity: 0.6;
+}
+
+.sosial-list:first-child {
+  margin-top: 0;
+}
+
+.sosial-list:last-child {
+  margin-bottom: 0;
+}
+
+.sosial-list:first-child .sosial-link {
+  padding: 8px 12.5px;
+  color: #3c5a99;
+  border: 2px solid currentColor;
+  border-radius: 50%;
+}
+
+.sosial-list:nth-child(2) .sosial-link {
+  padding: 8px 6.5px;
+  color: #f00;
+  border: 2px solid currentColor;
+  border-radius: 50%;
+}
+
+.sosial-list:nth-child(3) .sosial-link {
+  padding: 8px 9.5px;
+  color: #e24e92;
+  border: 2px solid currentColor;
+  border-radius: 50%;
+}
+
+.sosial-list:last-child .sosial-link {
+  padding: 8px 9.5px;
+  color: #000;
+  border: 2px solid currentColor;
+  border-radius: 50%;
+}
+
+.sosial-link {
+  display: inline-block;
+}
+
+.sosial-link-icon {
+  font-size: 2.4rem;
 }
 
 /*# sourceMappingURL=style.css.map */

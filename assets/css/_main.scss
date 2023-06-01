@@ -29,12 +29,68 @@ body {
 .overlay {
   display: none;
   position: absolute;
+  z-index: 100;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
   background-color: rgba(194, 195, 196, 0.4);
 }
-// heading
-//
-// heading-nav
+
+// social
+.sosial {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 5.5%;
+  display: inline-block;
+  background: #f5f5f5 0% 0% no-repeat;
+  box-shadow: 0 4px 6px #00000029;
+  border-radius: 30px;
+}
+.sosial-item {
+  list-style-type: none;
+}
+.sosial-list {
+  margin: 6px 0;
+  transition: all 0.1s linear;
+  &:hover {
+    opacity: 0.6;
+  }
+}
+.sosial-list:first-child {
+  margin-top: 0;
+}
+.sosial-list:last-child {
+  margin-bottom: 0;
+}
+.sosial-list:first-child .sosial-link {
+  padding: 8px 12.5px;
+  color: #3c5a99;
+  border: 2px solid currentColor;
+  border-radius: 50%;
+}
+.sosial-list:nth-child(2) .sosial-link {
+  padding: 8px 6.5px;
+  color: #f00;
+  border: 2px solid currentColor;
+  border-radius: 50%;
+}
+.sosial-list:nth-child(3) .sosial-link {
+  padding: 8px 9.5px;
+  color: #e24e92;
+  border: 2px solid currentColor;
+  border-radius: 50%;
+}
+.sosial-list:last-child .sosial-link {
+  padding: 8px 9.5px;
+  color: #000;
+  border: 2px solid currentColor;
+  border-radius: 50%;
+}
+.sosial-link {
+  display: inline-block;
+}
+.sosial-link-icon {
+  font-size: 2.4rem;
+}

@@ -1,7 +1,7 @@
 function inputSearch() {
     let inputHeader = document.querySelector('.heading-content-search-input');
     let body = document.querySelector('body');
-    let app = document.querySelector('.app');
+
 
 
     inputHeader.onfocus = (e) => {
