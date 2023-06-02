@@ -1,0 +1,127 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  color: #333;
+  font-size: 62.5%;
+  font-family: "Open Sans", sans-serif;
+}
+.main {
+  /* background: linear-gradient(90deg, rgba(0, 145, 122, 1), rgba(0, 72, 61, 1)); */
+  background: transparent
+    linear-gradient(
+      50deg,
+      rgba(251, 225, 138, 0.9) 0%,
+      rgba(252, 187, 69, 0.6) 21%,
+      rgba(247, 82, 116, 0.7) 38%,
+      rgba(213, 54, 146, 0.8) 52%,
+      rgb(143, 57, 206, 0.6) 74%,
+      rgb(173, 99, 160, 0.9) 100%
+    )
+    0% 0% no-repeat;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+.form {
+  width: 360px;
+  min-height: 100px;
+  padding: 32px 24px;
+  text-align: center;
+  background: #fff;
+  border-radius: 2px;
+  margin: 24px;
+  align-self: center;
+  box-shadow: 0 0 4px #ccc;
+}
+.form .heading {
+  font-size: 2rem;
+}
+.form .desc {
+  text-align: center;
+  color: #636d77;
+  font-size: 1.6rem;
+  font-weight: lighter;
+  line-height: 2.4rem;
+  margin-top: 16px;
+  font-weight: 300;
+}
+
+.form-group {
+  display: flex;
+  margin-bottom: 16px;
+  flex-direction: column;
+}
+
+.form-label,
+.form-message {
+  text-align: left;
+}
+
+.form-label {
+  font-weight: 700;
+  padding-bottom: 6px;
+  line-height: 1.8rem;
+  font-size: 1.4rem;
+}
+
+.form-control {
+  height: 40px;
+  padding: 8px 12px;
+  border: 1px solid #b3b3b3;
+  border-radius: 3px;
+  outline: none;
+  font-size: 1.4rem;
+}
+
+.form-control:hover {
+  border-color: #1dbfaf;
+}
+
+.form-group.invalid .form-control {
+  border-color: #f33a58;
+}
+
+.form-group.invalid .form-message {
+  color: #f33a58;
+}
+
+.form-message {
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+  padding: 4px 0 0;
+}
+
+.form-submit {
+  outline: none;
+  background-color: #00917a;
+  margin-top: 12px;
+  padding: 12px 16px;
+  font-weight: 600;
+  color: #fff;
+  border: none;
+  width: 100%;
+  font-size: 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s linear;
+}
+.form-submit.form-login {
+  display: block;
+  background-color: #ec506a;
+  text-decoration: none;
+  transition: all 0.2s linear;
+}
+
+.form-submit.form-login:hover {
+  background-color: #eb3251;
+}
+.form-submit:hover {
+  background-color: #00483d;
+}
+
+.spacer {
+  margin-top: 36px;
+}

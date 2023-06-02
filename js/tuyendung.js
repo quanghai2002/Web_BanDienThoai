@@ -1,16 +1,9 @@
 import inputSearch from './inputSearch.js';
-import slider from './slider.js';
-import { renderPhone } from './renderPhone.js';
 import navigation from './navigation.js';
-
 let body = document.querySelector('body');
 body.onload = () => {
-    renderPhone();
     inputSearch();
-    slider();
-    // navigation();
-
-
+    navigation();
     let upTop = document.querySelector('.up-top');
 
     // click up top page
@@ -53,38 +46,4 @@ body.onload = () => {
         }
     });
 
-
-    // handle change khi clik vào sản phẩm mua hàng
-    setTimeout(() => {
-        let btnPhone = document.querySelectorAll('.container-product');
-        btnPhone.forEach((phone) => {
-            phone.onclick = () => {
-                let checkLogin = JSON.parse(localStorage.getItem('userLogin')).checkLogin;
-                console.log(checkLogin);
-                if (!checkLogin) {
-                    if (confirm('Bạn cần đăng nhập để mua hàng của shop QUANG HẢI! Bạn muốn đăng nhập luôn chứ !')) {
-                        window.location.href = './login.html';
-                    }
-                }
-                else {
-                    alert('Bạn đã đăng nhập giờ là chuyển vào trang mua sản phẩm này');
-                }
-            }
-        })
-    }, 1000)
-
-
-    // khi click vào slider => đăng nhập
-    let btnSilder = document.querySelectorAll('.slide-img');
-    btnSilder.forEach((slider) => {
-
-        slider.onclick = (e) => {
-            window.location.href = './login.html';
-        }
-    })
-
-
 }
-
-
-

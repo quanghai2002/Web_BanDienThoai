@@ -434,6 +434,26 @@
   background-color: transparent;
 }
 
+.heading-nav-link-login {
+  display: flex;
+  align-items: center;
+  position: relative;
+  top: 2px;
+  text-transform: unset;
+}
+
+.heading-nav-user-login {
+  font-size: 1.4rem;
+  margin-right: 3px;
+  border: 2px solid #ddd;
+  border-radius: 50%;
+}
+
+.heading-nav-user-text {
+  font-weight: 900;
+  font-size: 1.3rem;
+}
+
 .slider {
   position: relative;
   margin-top: 20px !important;
@@ -645,6 +665,21 @@
   font-weight: bold;
   color: #f7941e;
   text-transform: uppercase;
+}
+
+.introduce {
+  text-align: center;
+}
+.introduce p {
+  top: -22px;
+  position: relative;
+  font-size: 2.6rem;
+  color: #000;
+}
+
+.introduce-text {
+  font-size: 3.6rem;
+  padding: 40px;
 }
 
 .footer {

@@ -469,3 +469,22 @@
   // background-color: red;
   background-color: transparent;
 }
+
+// heading nav của trang chủ khi đã được đăng nhập
+.heading-nav-link-login {
+  display: flex;
+  align-items: center;
+  position: relative;
+  top: 2px;
+  text-transform: unset;
+}
+.heading-nav-user-login {
+  font-size: 1.4rem;
+  margin-right: 3px;
+  border: 2px solid #ddd;
+  border-radius: 50%;
+}
+.heading-nav-user-text {
+  font-weight: 900;
+  font-size: 1.3rem;
+}
