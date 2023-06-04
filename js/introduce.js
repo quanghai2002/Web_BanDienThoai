@@ -47,18 +47,4 @@ body.onload = () => {
     });
 
 
-
-    // click vào logo về trang chủ
-    let btnLogo = document.querySelector('.heading-content-img');
-    btnLogo.addEventListener('click', () => {
-        window.location.href = './index.html';
-        let data = JSON.parse(localStorage.getItem('userLogin'));
-        let dataNew = { ...data, checkLogin: false };
-        console.log(dataNew);
-        localStorage.setItem('userLogin', JSON.stringify(dataNew));
-
-    })
-
-
-
 }

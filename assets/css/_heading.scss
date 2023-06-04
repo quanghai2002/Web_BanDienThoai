@@ -42,10 +42,12 @@
     width: 100%;
     cursor: pointer;
   }
+
   &-search {
     flex: 1;
     position: relative;
     margin-left: 20px;
+    z-index: 300;
 
     input {
       outline: none;
@@ -59,6 +61,7 @@
       position: relative;
       z-index: 10;
     }
+
     &-icon {
       font-size: 1.9rem;
       padding: 11.5px;

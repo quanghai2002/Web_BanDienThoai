@@ -3,6 +3,7 @@
 @import "./slider.scss";
 @import "./container.scss";
 @import "./footer.scss";
+@import "./buyProductPhone.scss";
 * {
   margin: 0;
   padding: 0;
@@ -93,4 +94,9 @@ body {
 }
 .sosial-link-icon {
   font-size: 2.4rem;
+}
+
+// navigation active
+.nav-active {
+  color: #7fd6cb;
 }

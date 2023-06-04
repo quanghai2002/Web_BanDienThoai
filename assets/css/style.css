@@ -38,6 +38,7 @@
   flex: 1;
   position: relative;
   margin-left: 20px;
+  z-index: 300;
 }
 .heading-content-search input {
   outline: none;
@@ -768,6 +769,147 @@
   display: block;
 }
 
+.buy-phone-name {
+  margin-top: 27px;
+  font-size: 2.2rem;
+  color: #333;
+  font-weight: bold;
+}
+
+.buy-phone-product {
+  display: flex;
+  margin-top: 18px;
+}
+
+.buy-phone-product-img {
+  width: 360px;
+  height: 360px;
+  margin-left: -14px;
+}
+.buy-phone-product-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.buy-phone-product-info {
+  margin-left: 50px;
+  flex: 1;
+}
+
+.buy-phone-product-info-price-new {
+  font-size: 25px;
+  color: #fd475a;
+  font-weight: bold;
+}
+
+.buy-phone-product-info-price-vat {
+  font-size: 15px;
+  margin-left: 5px;
+  color: #333;
+  font-weight: 400;
+}
+
+.buy-phone-product-info-freeShip {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #00483d;
+  padding: 0.2px 0;
+  margin-top: 10px;
+  border-radius: 4px;
+  box-shadow: 0 0 3px #ccc;
+  cursor: pointer;
+}
+
+.buy-phone-product-info-freeShip-icon {
+  font-size: 32px;
+  color: #fff;
+}
+
+.buy-phone-product-info-freeShip-text {
+  text-transform: uppercase;
+  font-size: 1.3rem;
+  color: #fff;
+  font-weight: 400;
+  margin-left: 8px;
+  position: relative;
+  top: 1px;
+}
+
+.buy-phone-product-option-text {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #333;
+  padding: 8px 0;
+}
+
+.buy-phone-product-option-phone {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+.buy-phone-product-option-phone-list {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.3rem;
+  color: #333;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.1s linear;
+}
+.buy-phone-product-option-phone-list:hover {
+  border: 1px solid #ff6801;
+}
+
+.buy-phone-product-option-phone-list-active {
+  border: 2px solid #00483d;
+}
+.buy-phone-product-option-phone-list-active:hover {
+  border: 2px solid #00483d;
+}
+.buy-phone-product-option-phone-list-active .buy-phone-product-option-phone-GB::before {
+  background-color: #00483d;
+  border-color: #00483d;
+}
+
+.buy-phone-product-option-phone-GB {
+  position: relative;
+  padding: 8px 0 6px 25px;
+}
+.buy-phone-product-option-phone-GB::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 4px;
+  top: 42%;
+  transform: translateY(-50%);
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+}
+
+.buy-phone-product-option-phone-icon-check {
+  display: block;
+  position: absolute;
+  left: 7px;
+  top: 44%;
+  font-size: 10.7px;
+  font-weight: bold;
+  transform: translateY(-50%);
+  color: #fff;
+}
+
+.buy-phone-product-option-phone-price {
+  color: #fd475a;
+  font-weight: bold;
+  padding: 0 20.1px 4px 6px;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -865,6 +1007,10 @@ body {
 
 .sosial-link-icon {
   font-size: 2.4rem;
+}
+
+.nav-active {
+  color: #7fd6cb;
 }
 
 /*# sourceMappingURL=style.css.map */
