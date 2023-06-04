@@ -220,8 +220,7 @@ Validator.isConfirmmed = function (selector, getConfirmValue, message) {
     }
 
 };
-// check xem đăng nhập có đúng hay không
-let dataRegister = JSON.parse(localStorage.getItem('register'));
+
 
 // Form đăng nhập
 
@@ -237,38 +236,50 @@ Validator({
 
     ],
     onSubmit: function (data) {
-        // call API
-        let isLogin = false;
-        let valueLoginEmail = dataRegister.find((item, index) => {
-            return item.email === data.email;
-        })
 
-        let valueLoginPassword = dataRegister.find((item, index) => {
-            return item.password === data.password;
-        })
+        // check xem đã đăng kí tài khoản chưa => nếu chưa đăng kí yêu cầu đăng kí đã
+        let checkRegister = localStorage.key('register');
+        if (checkRegister) {
+            // check xem đăng nhập có đúng hay không
+            let dataRegister = JSON.parse(localStorage.getItem('register'));
+            // call API
 
-        if (valueLoginEmail) {
-            if (valueLoginPassword) {
-                alert('Bạn đã đăng nhập thành công');
-                isLogin = true;
-                let emailUser = data.email;
-                let checkLogin = isLogin;
-                localStorage.setItem('userLogin', JSON.stringify({
-                    email: emailUser,
-                    checkLogin
-                }))
+            let isLogin = false;
+            let valueLoginEmail = dataRegister.find((item, index) => {
+                return item.email === data.email;
+            })
 
-                window.location.href = './loginHomePage.html';
+            let valueLoginPassword = dataRegister.find((item, index) => {
+                return item.password === data.password;
+            })
+
+            if (valueLoginEmail) {
+                if (valueLoginPassword) {
+                    alert('Bạn đã đăng nhập thành công');
+                    isLogin = true;
+                    let emailUser = data.email;
+                    let checkLogin = isLogin;
+                    localStorage.setItem('userLogin', JSON.stringify({
+                        email: emailUser,
+                        checkLogin
+                    }))
+
+                    window.location.href = './loginHomePage.html';
+                }
+                else {
+                    alert('Vui lòng nhập đúng mật khẩu');
+                    document.querySelector('#password1').focus();
+                }
             }
             else {
-                alert('Vui lòng nhập đúng mật khẩu');
-                document.querySelector('#password1').focus();
+                alert('Vui lòng nhập đúng email đăng kí');
+                document.querySelector('#email1').focus();
+            }
+
+        } else {
+            if (confirm('Bạn chưa đăng kí tài khoản! Vui lòng đăng kí trước khi đăng nhập')) {
+                window.location.href = './register.html';
             }
         }
-        else {
-            alert('Vui lòng nhập đúng email đăng kí');
-            document.querySelector('#email1').focus();
-        }
-
     }
 });
