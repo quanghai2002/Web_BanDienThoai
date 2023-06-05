@@ -46,5 +46,22 @@ body.onload = () => {
         }
     });
 
+    // click vào các li thành phần con của ul => vào trang đăng nhập
+    let liNavLink = document.querySelectorAll('.sub-item-text');
+    liNavLink.forEach((linav) => {
+        linav.addEventListener('click', (e) => {
+            window.location.href = './login.html';
+        })
+    })
+
+    // click vào logo về trang chủ => set lại checklogin:false
+    let btnLogo = document.querySelector('.heading-content-img');
+    if (btnLogo) {
+
+        btnLogo.addEventListener('click', () => {
+            window.location.href = './index.html';
+
+        })
+    }
 
 }

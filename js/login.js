@@ -238,8 +238,10 @@ Validator({
     onSubmit: function (data) {
 
         // check xem đã đăng kí tài khoản chưa => nếu chưa đăng kí yêu cầu đăng kí đã
-        let checkRegister = localStorage.key('register');
-        if (checkRegister) {
+        let checkRegister = localStorage.getItem('checkRegister');
+        console.log(checkRegister);
+
+        if (checkRegister === 'true') {
             // check xem đăng nhập có đúng hay không
             let dataRegister = JSON.parse(localStorage.getItem('register'));
             // call API

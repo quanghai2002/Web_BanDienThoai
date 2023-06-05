@@ -778,7 +778,7 @@
 
 .buy-phone-product {
   display: flex;
-  margin-top: 18px;
+  margin: 18px 0 41px;
 }
 
 .buy-phone-product-img {
@@ -795,6 +795,10 @@
 .buy-phone-product-info {
   margin-left: 50px;
   flex: 1;
+  background-color: #fff;
+  padding: 14px 15px 4px;
+  border-radius: 6px;
+  box-shadow: 0 0 4px #ccc;
 }
 
 .buy-phone-product-info-price-new {
@@ -847,7 +851,8 @@
 .buy-phone-product-option-phone {
   list-style-type: none;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
 }
 
 .buy-phone-product-option-phone-list {
@@ -866,10 +871,10 @@
 }
 
 .buy-phone-product-option-phone-list-active {
-  border: 2px solid #00483d;
+  border: 1px solid #00483d;
 }
 .buy-phone-product-option-phone-list-active:hover {
-  border: 2px solid #00483d;
+  border: 1px solid #00483d;
 }
 .buy-phone-product-option-phone-list-active .buy-phone-product-option-phone-GB::before {
   background-color: #00483d;
@@ -896,7 +901,7 @@
 .buy-phone-product-option-phone-icon-check {
   display: block;
   position: absolute;
-  left: 7px;
+  left: 6.6px;
   top: 44%;
   font-size: 10.7px;
   font-weight: bold;
@@ -908,6 +913,136 @@
   color: #fd475a;
   font-weight: bold;
   padding: 0 20.1px 4px 6px;
+}
+
+.buy-phone-product-promotion-text {
+  font-size: 1.4rem;
+  color: #009a82;
+  font-weight: bold;
+  padding: 14px 0 6px 0px;
+}
+
+.buy-phone-product-promotion-content {
+  list-style-type: none;
+  font-size: 1.3rem;
+}
+
+.buy-phone-product-promotion-list {
+  margin-bottom: 11px;
+}
+
+.buy-phone-product-promotion-list-icon {
+  display: inline-block;
+  padding: 2px 5px;
+  background-color: #f7941e;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1607843137);
+  color: #fff;
+  border-radius: 3px;
+  font-size: 1.1rem;
+}
+
+.buy-phone-product-promotion-list-content {
+  display: block;
+  color: #00483d;
+  line-height: 28px;
+  transition: all 0.1s linear;
+}
+.buy-phone-product-promotion-list-content:hover {
+  color: #ff6801;
+  cursor: pointer;
+}
+
+.buy-phone-product-action {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 16px;
+}
+
+.buy-phone-product-action-buy {
+  text-align: center;
+  color: #fff;
+  background: transparent linear-gradient(180deg, #fd475a 0%, #bf1e2d 100%) 0% 0% no-repeat padding-box;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1607843137);
+  border-radius: 3px;
+  padding: 0px 35.1px;
+  cursor: pointer;
+  transition: all 0.3s linear;
+}
+.buy-phone-product-action-buy p {
+  font-size: 1.4rem;
+  font-weight: bold;
+  padding: 6px 0 4px;
+  text-transform: uppercase;
+}
+.buy-phone-product-action-buy span,
+.buy-phone-product-action-buy strong {
+  display: block;
+  font-size: 1.1rem;
+  font-weight: 300;
+}
+.buy-phone-product-action-buy strong {
+  font-weight: 300;
+  padding: 5px 0;
+}
+.buy-phone-product-action-buy:hover {
+  background: transparent linear-gradient(0deg, #fd475a 0%, #bf1e2d 100%) 0% 0% no-repeat padding-box;
+}
+
+.buy-phone-product-action-add-cart {
+  background: transparent linear-gradient(180deg, #ff990e 0%, #ff6801 100%) 0% 0% no-repeat padding-box;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1607843137);
+  color: #fff;
+  text-align: center;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: all 0.3s linear;
+  padding: 0 50px;
+}
+.buy-phone-product-action-add-cart p {
+  font-size: 1.1rem;
+}
+.buy-phone-product-action-add-cart:hover {
+  background: transparent linear-gradient(0deg, #ff990e 0%, #ff6801 100%) 0% 0% no-repeat padding-box;
+}
+
+.buy-phone-product-action-add-cart-icon {
+  font-size: 3.1rem;
+  padding: 4px 0 3px 0;
+}
+
+.buy-phone-warranty {
+  padding: 0 23px;
+}
+
+.buy-phone-warranty-heading {
+  color: #333;
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  padding-bottom: 9px;
+  text-align: center;
+}
+
+.buy-phone-warranty-info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 13px;
+  cursor: pointer;
+}
+.buy-phone-warranty-info:hover .buy-phone-warranty-text {
+  color: #009a82;
+}
+
+.buy-phone-warranty-icon {
+  color: #009a82;
+  font-size: 2rem;
+}
+
+.buy-phone-warranty-text {
+  max-width: 223px;
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #333;
+  transition: all 0.2s linear;
 }
 
 * {

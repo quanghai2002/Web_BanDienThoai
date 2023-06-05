@@ -4,7 +4,7 @@ import { renderPhone } from './renderPhone.js';
 import navigation from './navigation.js';
 import tranggioithieulogin from './tranggioithieulogin.js';
 import buyPhone from './buyPhone.js';
-
+import renderPhoneKhiBuy from './renderPhoneKhiBuy.js';
 
 let body = document.querySelector('body');
 body.onload = () => {
@@ -15,7 +15,8 @@ body.onload = () => {
     setTimeout(() => {
         navigation();
         tranggioithieulogin();
-        buyPhone()
+        buyPhone();
+        renderPhoneKhiBuy();
     }, 100)
 
 
@@ -70,7 +71,28 @@ body.onload = () => {
         })
     })
 
+    // khi click vào slider => đăng nhập
+    let btnSilder = document.querySelectorAll('.slide-img');
 
+    if (btnSilder) {
+
+        btnSilder.forEach((slider) => {
+
+            slider.onclick = (e) => {
+                window.location.href = './login.html';
+            }
+        })
+    }
+
+    // kiểm tra xem đã đăng kí chưa
+    let checkRegister = localStorage.getItem('register');
+
+    if (Boolean(checkRegister)) {
+        localStorage.setItem('checkRegister', true);
+    }
+    else {
+        localStorage.setItem('checkRegister', false);
+    }
 
 }
 

@@ -54,71 +54,89 @@ function navigation() {
     }
 
     // xử lý khi đăng nhập => hiển thị đúng tên userName ra giao diện;
-    let data = JSON.parse(localStorage.getItem('register'));
-    let emailUser = JSON.parse(localStorage.getItem('userLogin')).email;
-    let valueUser = data.find((data) => {
-        return data.email === emailUser;
-    })
-
-    // thêm đúng tên user hoặc email đã đăng nhập vào trang chủ;
-    let userText = document.querySelector('.heading-nav-user-text');
-    if (userText) {
-        userText.innerText = valueUser.email;
-    }
 
 
-    // khi click đăng xuất => về trang chủ => checkLogin = false;
-    let btnLogout = document.querySelector('.heading-nav-logout');
-
-    if (btnLogout) {
-
-        btnLogout.addEventListener('click', () => {
-            let data = JSON.parse(localStorage.getItem('userLogin'));
-            let dataNew = { ...data, checkLogin: false };
-            localStorage.setItem('userLogin', JSON.stringify(dataNew));
-            window.location.href = './index.html';
-
-        })
-    }
-
-    // khi click vào nút trang chủ => ý  là đăng xuất set lại checklogin:false
-    let btnHomepageLogout = document.querySelector('.heading-nav-trangchu');
-
-    if (btnHomepageLogout) {
-        let data = JSON.parse(localStorage.getItem('userLogin'));
-        btnHomepageLogout.addEventListener('click', () => {
-            let newData = { ...data, checkLogin: false };
-            localStorage.setItem('userLogin', JSON.stringify(newData));
-        })
-    }
+    let checkRegister = localStorage.getItem('checkRegister');
+    let checkUserLogin = localStorage.getItem('userLogin');
 
 
-    // click vào logo về trang chủ => set lại checklogin:false
-    let btnLogo = document.querySelector('.heading-content-img');
-    if (btnLogo) {
 
-        btnLogo.addEventListener('click', () => {
-            window.location.href = './index.html';
-            let data = JSON.parse(localStorage.getItem('userLogin'));
-            let dataNew = { ...data, checkLogin: false };
+    if (checkRegister && checkUserLogin) {
+        let data = JSON.parse(localStorage.getItem('register'));
+        let emailUser = JSON.parse(localStorage.getItem('userLogin')).email;
+        if (emailUser) {
 
-            localStorage.setItem('userLogin', JSON.stringify(dataNew));
+            let valueUser = data.find((data) => {
+                return data.email === emailUser;
+            })
 
-        })
-    }
 
-    // khi click vào slider => đăng nhập
-    let btnSilder = document.querySelectorAll('.slide-img');
-    btnSilder.forEach((slider) => {
 
-        slider.onclick = (e) => {
-            window.location.href = './login.html';
+            // thêm đúng tên user hoặc email đã đăng nhập vào trang chủ;
+            let userText = document.querySelector('.heading-nav-user-text');
+            if (userText) {
+                userText.innerText = valueUser.email;
+            }
+            // }
         }
-    })
+
+        // khi click đăng xuất => về trang chủ => checkLogin = false;
+        let btnLogout = document.querySelector('.heading-nav-logout');
+
+        if (btnLogout) {
+
+            btnLogout.addEventListener('click', () => {
+                let data = JSON.parse(localStorage.getItem('userLogin'));
+                let dataNew = { ...data, checkLogin: false };
+                localStorage.setItem('userLogin', JSON.stringify(dataNew));
+                window.location.href = './index.html';
+
+            })
+        }
+
+        // khi click vào nút trang chủ => ý  là đăng xuất set lại checklogin:false
+        let btnHomepageLogout = document.querySelector('.heading-nav-trangchu');
+
+        if (btnHomepageLogout) {
+            let data = JSON.parse(localStorage.getItem('userLogin'));
+            btnHomepageLogout.addEventListener('click', () => {
+                let newData = { ...data, checkLogin: false };
+                localStorage.setItem('userLogin', JSON.stringify(newData));
+            })
+        }
+
+
+        // click vào logo về trang chủ => set lại checklogin:false
+        let btnLogo = document.querySelector('.heading-content-img');
+        if (btnLogo) {
+
+            btnLogo.addEventListener('click', () => {
+                window.location.href = './index.html';
+                let data = JSON.parse(localStorage.getItem('userLogin'));
+                let dataNew = { ...data, checkLogin: false };
+
+                localStorage.setItem('userLogin', JSON.stringify(dataNew));
+
+            })
+        }
+
+        // khi click vào slider => đăng nhập
+        let btnSilder = document.querySelectorAll('.slide-img');
+
+        if (btnSilder) {
+
+            btnSilder.forEach((slider) => {
+
+                slider.onclick = (e) => {
+                    window.location.href = './login.html';
+                }
+            })
+        }
 
 
 
-};
+    };
+}
 
 export default navigation;
 

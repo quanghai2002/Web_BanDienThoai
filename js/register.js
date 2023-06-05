@@ -258,9 +258,14 @@ Validator({
         // Validator.isRequired('#avatar'), // input type =file
     ],
 
+
     onSubmit: function (data) {
+
+        let checkRegister = localStorage.getItem('register');
+
         // call API
-        if (localStorage.key('register')) {
+        if (checkRegister) {
+
             let curentValue = JSON.parse(localStorage.getItem('register'));
             let check = curentValue.find((item) => {
                 return item.email === data.email;
@@ -273,6 +278,7 @@ Validator({
                 saveData(data);
                 if (confirm('Bạn đã đăng kí thành công! Bạn có muốn chuyển sang đăng nhập không !')) {
 
+                    localStorage.setItem('checkRegister', true);
                     window.location.href = './login.html';
                 }
                 else {
@@ -282,15 +288,14 @@ Validator({
             }
 
         }
+
         else {
             localStorage.setItem('register', JSON.stringify([data]));
+            localStorage.setItem('checkRegister', true);
 
             if (confirm('Bạn đã đăng kí thành công! Bạn có muốn chuyển sang đăng nhập không !')) {
 
                 window.location.href = './login.html';
-            }
-            else {
-
             }
 
         }
@@ -302,15 +307,17 @@ Validator({
 });
 
 function saveData(data) {
+    let checkRegister = localStorage.getItem('checkRegister');
 
-
-    if (localStorage.key('register')) {
+    if (checkRegister) {
         let valueData = JSON.parse(localStorage.getItem('register'));
         let ar = [...valueData, data];
         localStorage.setItem('register', JSON.stringify(ar));
+        localStorage.setItem('checkRegister', true);
     }
     else {
         localStorage.setItem('register', JSON.stringify([data]));
+        localStorage.setItem('checkRegister', true);
     }
 
 }
