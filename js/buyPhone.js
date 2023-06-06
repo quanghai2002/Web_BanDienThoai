@@ -1,6 +1,5 @@
 export default function buyPhone() {
 
-
     // handle change khi click vào sản phẩm khi chưa đăng nhập => yêu cầu đăng nhập => mới cho mua
     let phone = document.querySelectorAll('.container-product');
     let chekĐNhap = localStorage.getItem('userLogin');

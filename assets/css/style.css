@@ -1045,6 +1045,320 @@
   transition: all 0.2s linear;
 }
 
+.buy-phone-click-overlay {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+  z-index: 400;
+  justify-content: center;
+  align-items: center;
+}
+
+.buy-phone-click-curent {
+  background-color: #fff;
+  max-width: 1200px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px #000;
+  display: flex;
+  margin: 19px 0;
+  min-height: 979px;
+  position: relative;
+}
+
+.buy-phone-click-wrap-img {
+  flex: 1;
+  padding-top: 29px;
+}
+
+.buy-phone-click-img {
+  width: 290px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+}
+
+.buy-phone-click-img-info-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.buy-phone-click-img-info-option {
+  color: #aaa;
+  font-weight: bold;
+  font-size: 1.5rem;
+  text-align: center;
+  padding-top: 5px;
+}
+.buy-phone-click-img-info-option .buy-phone-click-img-info-option-text1 {
+  text-transform: capitalize;
+}
+
+.buy-phone-click-img-info-price {
+  color: #fd475a;
+  font-size: 2.2rem;
+  font-weight: bold;
+  text-align: center;
+  padding-top: 9px;
+}
+
+.buy-phone-product-promotion-click-buy {
+  margin: 7px 0 0 48px;
+}
+
+.buy-phone-product-promotion-list-content-click-buy {
+  padding: 8px 20px 8px 55px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-top: 5px;
+  position: relative;
+}
+
+.buy-phone-product-promotion-list-content-click-buy-icon {
+  position: absolute;
+  font-size: 1.6rem;
+  content: "";
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+  color: #009981;
+}
+
+.buy-phone-product-promotion-list-content-click-buy::before {
+  position: absolute;
+  content: "";
+  display: block;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 15px;
+  width: 23.3px;
+  height: 23.3px;
+  border-radius: 50%;
+  border: 2px solid #009981;
+  box-shadow: 0 0 2px #ccc;
+}
+
+.buy-phone-product-promotion-list-clik-buy {
+  margin-bottom: 21px;
+}
+
+.buy-phone-click-wrap-info-price {
+  flex: 1;
+  margin: 48px 68px 0 0;
+}
+
+.buy-phone-click-wrap-info-price-title {
+  font-size: 22px;
+  font-weight: bold;
+  padding-bottom: 1.7rem;
+}
+
+.buy-phone-click-wrap-info-price-number-text {
+  font-size: 1.4rem;
+  padding-bottom: 9px;
+}
+
+.buy-phone-click-wrap-info-price-number-option {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 1.5rem;
+}
+
+.buy-phone-click-wrap-info-price-number-option-btn {
+  border: 1px solid #c4c4c4;
+  cursor: pointer;
+  padding: 4px 6px;
+  transition: all 0.2s linear;
+}
+.buy-phone-click-wrap-info-price-number-option-btn:hover {
+  background-color: #009981;
+  color: #fff;
+}
+
+.buy-phone-click-wrap-info-price-number-option-input {
+  width: 29px;
+  text-align: center;
+  padding: 2.1px 0;
+  pointer-events: none;
+}
+
+.buy-phone-click-wrap-info-price-form-user {
+  margin-top: 13px;
+}
+
+.info-name-label {
+  font-size: 1.2rem;
+  color: #333;
+  font-weight: bold;
+  display: block;
+}
+
+.info-name-input {
+  padding: 6px;
+  font-size: 1.3rem;
+  border-radius: 13px;
+  outline: none;
+  background: #e5e5e5 0% 0% no-repeat padding-box;
+  border: 1px solid #e5e5e5;
+  width: 100%;
+}
+
+.info-number {
+  display: flex;
+  align-items: center;
+  margin-top: 13px;
+}
+
+.info-number-phone {
+  flex: 1;
+  margin-right: 10px;
+}
+
+.info-number-phone-label {
+  font-size: 1.2rem;
+  color: #333;
+  font-weight: bold;
+  display: block;
+}
+
+.info-number-phone-input {
+  padding: 6px;
+  font-size: 1.3rem;
+  border-radius: 13px;
+  outline: none;
+  background: #e5e5e5 0% 0% no-repeat padding-box;
+  border: 1px solid #e5e5e5;
+  width: 100%;
+}
+
+.info-number-mail {
+  flex: 1;
+}
+
+.info-number-phone-mail {
+  font-size: 1.2rem;
+  color: #333;
+  font-weight: bold;
+  display: block;
+  margin-left: 3px;
+}
+
+.info-number-phone-mail-input {
+  padding: 6px;
+  font-size: 1.3rem;
+  border-radius: 13px;
+  outline: none;
+  background: #e5e5e5 0% 0% no-repeat padding-box;
+  border: 1px solid #e5e5e5;
+  width: 100%;
+}
+
+.info-address {
+  margin-top: 20px;
+}
+
+.info-address-text {
+  font-size: 1.2rem;
+  color: #333;
+  font-weight: bold;
+}
+
+.info-address-wrap-select {
+  display: flex;
+}
+
+.info-address-select {
+  flex: 1;
+  padding: 6px;
+  font-size: 1.3rem;
+  border-radius: 13px;
+  outline: none;
+  background: #e5e5e5 0% 0% no-repeat padding-box;
+  border: 1px solid #e5e5e5;
+  width: 100%;
+  color: #444;
+  margin-right: 10px;
+}
+
+.info-address-shop {
+  flex: 1;
+  flex: 1;
+  padding: 6px;
+  font-size: 1.3rem;
+  border-radius: 13px;
+  outline: none;
+  background: #e5e5e5 0% 0% no-repeat padding-box;
+  border: 1px solid #e5e5e5;
+  width: 100%;
+  color: #444;
+}
+
+.wrap-textarea {
+  margin-top: 13px;
+}
+.wrap-textarea textarea {
+  min-height: 60px;
+  max-height: 102px;
+  padding: 8px;
+  outline: none;
+  width: 100%;
+  font-size: 1.3rem;
+  background: #e5e5e5 0% 0% no-repeat padding-box;
+  border-radius: 13px;
+  border: 1px solid #e5e5e5;
+}
+
+.wrap-btn-buy-phone {
+  text-align: center;
+}
+.wrap-btn-buy-phone p {
+  color: #333;
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin: 28px 0 -10px 0;
+}
+
+.buy-phone-btn {
+  margin-top: 30px;
+  padding: 10px 50px;
+  border-radius: 5px;
+  outline: none;
+  background: transparent linear-gradient(180deg, #009981 0%, #00483d 100%) 0% 0% no-repeat padding-box;
+  font-weight: bold;
+  border: none;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  color: #fff;
+  transition: all 0.3s ease-in;
+}
+.buy-phone-btn:hover {
+  cursor: pointer;
+  background: transparent linear-gradient(0deg, #009981 0%, #00483d 100%) 0% 0% no-repeat padding-box;
+}
+
+.btn-out-page-buy-phone {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  padding: 4px 5.6px;
+  font-size: 2.5rem;
+  font-weight: bold;
+  background: #fd5465;
+  color: #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 1px #ccc;
+  transition: all 0.2s linear;
+}
+.btn-out-page-buy-phone:hover {
+  cursor: pointer;
+  background: #e62d40;
+}
+
 * {
   margin: 0;
   padding: 0;

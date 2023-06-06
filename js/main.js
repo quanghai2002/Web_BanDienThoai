@@ -5,6 +5,7 @@ import navigation from './navigation.js';
 import tranggioithieulogin from './tranggioithieulogin.js';
 import buyPhone from './buyPhone.js';
 import renderPhoneKhiBuy from './renderPhoneKhiBuy.js';
+import buyPhoneClickChange from './buyPhoneClickChange.js'
 
 let body = document.querySelector('body');
 body.onload = () => {
@@ -17,6 +18,7 @@ body.onload = () => {
         tranggioithieulogin();
         buyPhone();
         renderPhoneKhiBuy();
+        buyPhoneClickChange();
     }, 100)
 
 
