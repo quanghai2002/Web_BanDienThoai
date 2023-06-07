@@ -404,6 +404,16 @@
   margin-top: 13px;
 }
 .info-name {
+  position: relative;
+  margin-bottom: 20px;
+}
+.input-checkVaildate {
+  display: none;
+  position: absolute;
+  bottom: -16px;
+  left: 6px;
+  color: red;
+  font-size: 1.2rem;
 }
 .info-name-label {
   font-size: 1.2rem;
@@ -424,11 +434,13 @@
   display: flex;
   align-items: center;
   margin-top: 13px;
+  margin-bottom: 21px;
 }
 
 .info-number-phone {
   flex: 1;
   margin-right: 10px;
+  position: relative;
 }
 .info-number-phone-label {
   font-size: 1.2rem;
@@ -448,6 +460,7 @@
 }
 .info-number-mail {
   flex: 1;
+  position: relative;
 }
 .info-number-phone-mail {
   font-size: 1.2rem;
@@ -473,9 +486,19 @@
   color: #333;
   font-weight: bold;
 }
+
 .info-address-wrap-select {
   display: flex;
+  margin-bottom: 21px;
 }
+.wrap-select {
+  flex: 1;
+  position: relative;
+}
+.wrap-select-1 {
+  margin-right: 10px;
+}
+
 .info-address-select {
   flex: 1;
   padding: 6px;
@@ -503,6 +526,7 @@
 
 .wrap-textarea {
   margin-top: 13px;
+  position: relative;
 
   textarea {
     min-height: 60px;

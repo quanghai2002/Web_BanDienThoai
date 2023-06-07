@@ -792,89 +792,101 @@
             <div class="buy-phone-click-wrap-info-price-form-user">
               <div class="info-name">
                 <label for="name-input" class="info-name-label">Họ Tên</label>
-                <input type="text" id="name-input" class="info-name-input" placeholder="Họ và tên" required />
+                <input type="text" id="name-input" class="info-name-input input-change" placeholder="Họ và tên" required />
+                <span class="input-checkVaildate">Vui lòng nhập vào họ và tên !</span>
               </div>
 
               <div class="info-number">
                 <div class="info-number-phone">
                   <label for="" class="info-number-phone-label">Điện Thoại</label>
-                  <input type="text" class="info-number-phone-input" placeholder="Số điện thoại" required />
+                  <input type="text" class="info-number-phone-input input-change" placeholder="Số điện thoại" required />
+                  <span class="input-checkVaildate">Vui lòng nhập đúng số điện thoại</span>
                 </div>
                 <div class="info-number-mail">
                   <label for="" class="info-number-phone-mail">Email</label>
-                  <input type="text" class="info-number-phone-mail-input" placeholder="Email" required />
+                  <input type="text" class="info-number-phone-mail-input input-change" placeholder="Email" required />
+                  <span class="input-checkVaildate">Vui lòng nhập vào đúng email</span>
                 </div>
               </div>
 
               <div class="info-address">
                 <p class="info-address-text">Nơi Nhận Hàng</p>
                 <div class="info-address-wrap-select">
-                  <select name="" id="" class="info-address-select">
-                    <option value="">Tỉnh/Thành Phố</option>
-                    <option value="1">Hà Nội</option>
-                    <option value="2">TP HCM</option>
-                    <option value="3">Thái Nguyên</option>
-                    <option value="4">An Giang</option>
-                    <option value="5">Bà Rịa - Vũng Tàu</option>
-                    <option value="6">Bắc Giang</option>
-                    <option value="7">Bạc Liêu</option>
-                    <option value="8">Bắc Ninh</option>
-                    <option value="9">Bình Định</option>
-                    <option value="10">Bình Dương</option>
-                    <option value="11">Bình Phước</option>
-                    <option value="12">Bình Thuận</option>
-                    <option value="13">Cà Mau</option>
-                    <option value="14">Cần Thơ</option>
-                    <option value="15">Đà Nẵng</option>
-                    <option value="16">Đắk Lắk</option>
-                    <option value="17">Đắk Nông</option>
-                    <option value="18">Điện Biên</option>
-                    <option value="19">Đồng Nai</option>
-                    <option value="20">Đồng Tháp</option>
-                    <option value="21">Gia Lai</option>
-                    <option value="22">Hà Nam</option>
-                    <option value="23">Hà Tĩnh</option>
-                    <option value="24">Hải Dương</option>
-                    <option value="25">Hải Phòng</option>
-                    <option value="26">Hoà Bình</option>
-                    <option value="27">Hưng Yên</option>
-                    <option value="28">Khánh Hòa</option>
-                    <option value="29">Kiên Giang</option>
-                    <option value="30">Lâm Đồng</option>
-                    <option value="31">Lào Cai</option>
-                    <option value="32">Long An</option>
-                    <option value="33">Nam Định</option>
-                    <option value="34">Nghệ An</option>
-                    <option value="35">Ninh Bình</option>
-                    <option value="36">Ninh Thuận</option>
-                    <option value="37">Phú Thọ</option>
-                    <option value="38">Phú Yên</option>
-                    <option value="39">Quảng Bình</option>
-                    <option value="40">Quảng Nam</option>
-                    <option value="41">Quảng Ngãi</option>
-                    <option value="42">Quảng Ninh</option>
-                    <option value="43">Quảng Trị</option>
-                    <option value="44">Sóc Trăng</option>
-                    <option value="45">Sơn La</option>
-                    <option value="46">Tây Ninh</option>
-                    <option value="47">Thái Bình</option>
-                    <option value="48">Thanh Hóa</option>
-                    <option value="49">Thừa Thiên Huế</option>
-                    <option value="50">Tiền Giang</option>
-                    <option value="51">Tuyên Quang</option>
-                    <option value="52">Vĩnh Long</option>
-                    <option value="53">Vĩnh Phúc</option>
-                    <option value="54">Yên Bái</option>
-                  </select>
+                  <div class="wrap-select wrap-select-1">
+                    <select name="" id="" class="info-address-select">
+                      <option value="">Tỉnh/Thành Phố</option>
+                      <option value="Hà Nội">Hà Nội</option>
+                      <option value="TP HCM">TP HCM</option>
+                      <option value="Thái Nguyên">Thái Nguyên</option>
+                      <option value="An Giang">An Giang</option>
+                      <option value="Bà Rịa - Vũng Tàu">Bà Rịa - Vũng Tàu</option>
+                      <option value="Bắc Giang">Bắc Giang</option>
+                      <option value="Bạc Liêu">Bạc Liêu</option>
+                      <option value="Bắc Ninh">Bắc Ninh</option>
+                      <option value="Bình Định">Bình Định</option>
+                      <option value="Bình Dương">Bình Dương</option>
+                      <option value="Bình Phước">Bình Phước</option>
+                      <option value="Bình Thuận">Bình Thuận</option>
+                      <option value="Cà Mau">Cà Mau</option>
+                      <option value="Cần Thơ">Cần Thơ</option>
+                      <option value="Đà Nẵng">Đà Nẵng</option>
+                      <option value="Đắk Lắk">Đắk Lắk</option>
+                      <option value="Đắk Nông">Đắk Nông</option>
+                      <option value="Điện Biên">Điện Biên</option>
+                      <option value="Đồng Nai">Đồng Nai</option>
+                      <option value="Đồng Tháp">Đồng Tháp</option>
+                      <option value="Gia Lai">Gia Lai</option>
+                      <option value="Hà Nam">Hà Nam</option>
+                      <option value="Hà Tĩnh">Hà Tĩnh</option>
+                      <option value="Hải Dương">Hải Dương</option>
+                      <option value="Hải Phòng">Hải Phòng</option>
+                      <option value="Hoà Bình">Hoà Bình</option>
+                      <option value="Hưng Yên">Hưng Yên</option>
+                      <option value="Khánh Hòa">Khánh Hòa</option>
+                      <option value="Kiên Giang">Kiên Giang</option>
+                      <option value="Lâm Đồng">Lâm Đồng</option>
+                      <option value="Lào Cai">Lào Cai</option>
+                      <option value="Long An">Long An</option>
+                      <option value="Nam Định">Nam Định</option>
+                      <option value="Nghệ An">Nghệ An</option>
+                      <option value="Ninh Bình">Ninh Bình</option>
+                      <option value="Ninh Thuận">Ninh Thuận</option>
+                      <option value="Phú Thọ">Phú Thọ</option>
+                      <option value="Phú Yên">Phú Yên</option>
+                      <option value="Quảng Bình">Quảng Bình</option>
+                      <option value="Quảng Nam">Quảng Nam</option>
+                      <option value="Quảng Ngãi">Quảng Ngãi</option>
+                      <option value="Quảng Ninh">Quảng Ninh</option>
+                      <option value="Quảng Trị">Quảng Trị</option>
+                      <option value="Sóc Trăng">Sóc Trăng</option>
+                      <option value="Sơn La">Sơn La</option>
+                      <option value="Tây Ninh">Tây Ninh</option>
+                      <option value="Thái Bình">Thái Bình</option>
+                      <option value="Thanh Hóa">Thanh Hóa</option>
+                      <option value="Thừa Thiên Huế">Thừa Thiên Huế</option>
+                      <option value="Tiền Giang">Tiền Giang</option>
+                      <option value="Tuyên Quang">Tuyên Quang</option>
+                      <option value="Vĩnh Long">Vĩnh Long</option>
+                      <option value="Vĩnh Phúc">Vĩnh Phúc</option>
+                      <option value="Yên Bái">Yên Bái</option>
+                    </select>
+                    <span class="input-checkVaildate">Vui lòng chọn Tỉnh/Thành Phố </span>
+                  </div>
 
-                  <select name="" id="" class="info-address-shop">
-                    <option value="">Cửa Hàng</option>
-                    <option value="">Shop Nguyễn Quang Hải</option>
-                  </select>
+                  <div class="wrap-select">
+                    <select name="" id="" class="info-address-shop">
+                      <option value="">Cửa Hàng</option>
+                      <option value="Shop Nguyễn Quang Hải">Shop Nguyễn Quang Hải</option>
+                      <option value="Shop Nguyễn Quang Hải Cơ Sở 2">Shop Nguyễn Quang Hải Cơ Sở 2</option>
+                      <option value="Shop Nguyễn Quang Hải Cơ Sở 3">Shop Nguyễn Quang Hải Cơ Sở 3</option>
+                    </select>
+                    <span class="input-checkVaildate">Vui lòng chọn cửa hàng </span>
+                  </div>
                 </div>
               </div>
               <div class="wrap-textarea">
-                <textarea name="" id="" cols="30" rows="10" placeholder="Ghi chú cho Shop Quang Hải"></textarea>
+                <textarea name="" id="textarea" cols="30" rows="10" placeholder="Ghi chú cho Shop Quang Hải"></textarea>
+                <span class="input-checkVaildate">Vui lòng nhập vào ghi chú cho Shop Quang Hải </span>
               </div>
               <div class="wrap-btn-buy-phone">
                 <p>Bằng cách đặt hàng bạn đã đồng ý với điều khoản sử dụng và chính sách đổi trả</p>

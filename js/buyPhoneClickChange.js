@@ -46,6 +46,238 @@ export default function buyPhoneClickChange() {
                 }
 
             }
+
+
+            // khi click btn TIẾN HÀNH ĐẶT HÀNG => check tất cả các input bắt buộc phải nhập vào
+            let btnDatHang = document.querySelector('.buy-phone-btn');
+
+            if (btnDatHang) {
+                btnDatHang.addEventListener('click', () => {
+                    // thông tin userName nhập
+                    let userNameInput = document.querySelector('.info-name-input');
+                    let valueUserNameInput = userNameInput.value;
+
+                    // thông tin số điện thoại user nhập vào => check nhập đúng số điện thoại VN
+                    let telePhoneUser = document.querySelector('.info-number-phone-input');
+                    let telePhoneValue = telePhoneUser.value;
+                    let checkPhoneVN = (/^(0|\+84)\d{9,9}$/).test(telePhoneValue); //regex check kiểm tra đúng là số điện thoại VN hay không
+
+                    // thông tin => và check nhập đúng email
+                    let emailInput = document.querySelector('.info-number-phone-mail-input');
+                    let checkEmail = (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/).test(emailInput.value);
+
+                    // thông tin address user chọn => check phải chọn địa chỉ
+                    let addressUser = document.querySelector('.info-address-select').value;
+
+                    // thông tin tên shop
+                    let nameShop = document.querySelector('.info-address-shop').value;
+
+                    // thông tin ghi chú
+                    let noteUser = document.querySelector('#textarea').value;
+
+
+
+                    // thồn báo check validate hiện ra nếu 1 trong các trường chưa nhập dữ liệu 
+                    let checkUserName = document.querySelectorAll('.input-checkVaildate');
+
+
+                    // check từng trường hợp 1 nếu nhập đúng thì cho qua => không hiển thị cảnh báo
+                    // user name
+                    if (valueUserNameInput === '') {
+                        checkUserName[0].style.display = 'block';
+
+                    }
+                    else {
+                        checkUserName[0].style.display = 'none';
+                    }
+
+                    // số điện thoại
+                    if (checkPhoneVN === false) {
+                        checkUserName[1].style.display = 'block';
+
+                    }
+                    else {
+                        checkUserName[1].style.display = 'none';
+                    }
+
+                    // email
+                    if (checkEmail === false) {
+                        checkUserName[2].style.display = 'block';
+
+                    }
+                    else {
+                        checkUserName[2].style.display = 'none';
+                    }
+
+                    // tỉnh/thành phố
+                    if (addressUser === '') {
+                        checkUserName[3].style.display = 'block';
+
+                    }
+                    else {
+                        checkUserName[3].style.display = 'none';
+                    }
+                    // cửa hàng
+                    if (nameShop === '') {
+                        checkUserName[4].style.display = 'block';
+
+                    }
+                    else {
+                        checkUserName[4].style.display = 'none';
+                    }
+
+                    // ghi chú
+                    if (noteUser === '') {
+                        checkUserName[5].style.display = 'block';
+
+                    }
+                    else {
+                        checkUserName[5].style.display = 'none';
+                    }
+
+
+                    // nếu tất cả các trường input đều đã nhập dữ liệu => gửi dữ liệu đi
+                    if (!(valueUserNameInput === '') && checkPhoneVN === true && checkEmail === true && !(addressUser === '') && !(nameShop === '') && !(noteUser === '')) {
+                        console.log('dữ liệu nhập đủ');
+                        let pricePhoneCurrent = document.querySelector('.buy-phone-click-img-info-price').innerText;
+                        let numberBuyPhone = document.querySelector('.buy-phone-click-wrap-info-price-number-option-input').value;
+                        let dataOptionPhone = document.querySelector('.buy-phone-click-img-info-option-text2').innerText;
+                        let dataOld = JSON.parse(localStorage.getItem('completedBuyPhone'));
+
+                        let newData = {
+                            ...dataOld,
+                            dataPhonePrice: pricePhoneCurrent,
+                            dataPhoneNumber: numberBuyPhone,
+                            dataOptionPhone,
+                            nameUser: valueUserNameInput,
+                            telephoneUser: telePhoneValue,
+                            emailUser: emailInput.value,
+                            addressUser: addressUser,
+                            shop: nameShop,
+                            noteUser: noteUser
+
+                        }
+                        saveData(newData)
+
+                    }
+                    else {
+                        console.log('dữ liệu nhập thiếu')
+
+                    }
+                })
+
+                // khi oninput // focus input => ẩn thông báo cảnh báo đi
+                let checkUserName = document.querySelectorAll('.input-checkVaildate');
+                let inputChange = document.querySelectorAll('.input-change');
+                Array.from(inputChange).forEach((input, index) => {
+                    input.addEventListener('input', () => {
+                        checkUserName[index].style.display = 'none';
+                    })
+                    input.addEventListener('focus', () => {
+                        checkUserName[index].style.display = 'none';
+                    })
+                })
+
+
+                // check inputName khi blur => ra ngoài => check xem đúng chưa
+
+                // user name
+                // thông tin userName nhập
+                let userNameInput = document.querySelector('.info-name-input');
+                userNameInput.addEventListener('blur', () => {
+
+                    let valueUserNameInput = userNameInput.value;
+                    if (valueUserNameInput === '') {
+                        checkUserName[0].style.display = 'block';
+
+                    }
+                    else {
+                        checkUserName[0].style.display = 'none';
+                    }
+                })
+
+
+                // thông tin số điện thoại user nhập vào => check nhập đúng số điện thoại VN
+                let telePhoneUser = document.querySelector('.info-number-phone-input');
+                telePhoneUser.addEventListener('blur', () => {
+                    let telePhoneValue = telePhoneUser.value;
+                    let checkPhoneVN = (/^(0|\+84)\d{9,9}$/).test(telePhoneValue); //regex check kiểm tra đúng là số điện thoại VN hay không
+                    if (checkPhoneVN) {
+                        checkUserName[1].style.display = 'none';
+
+                    }
+                    else {
+                        checkUserName[1].style.display = 'block';
+                    }
+                })
+
+                // thông tin số điện thoại user nhập vào => check nhập đúng số điện thoại VN
+                let emailInput = document.querySelector('.info-number-phone-mail-input');
+                emailInput.addEventListener('blur', () => {
+                    // thông tin => và check nhập đúng email
+                    let emailInputValue = emailInput.value;
+                    let checkEmail = (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/).test(emailInputValue);
+                    if (checkEmail) {
+                        checkUserName[2].style.display = 'none';
+
+                    }
+                    else {
+                        checkUserName[2].style.display = 'block';
+                    }
+                })
+
+                // thông tin address user chọn => check phải chọn địa chỉ
+                let addressUser = document.querySelector('.info-address-select');
+                addressUser.addEventListener('focus', () => {
+                    checkUserName[3].style.display = 'none';
+                })
+                addressUser.addEventListener('blur', () => {
+                    let value = addressUser.value;
+                    if (value === '') {
+
+                        checkUserName[3].style.display = 'block';
+                    }
+                    else {
+                        checkUserName[3].style.display = 'none';
+                    }
+                })
+
+                // thông tin shop
+                // thông tin tên shop
+
+
+                // thông tin shop
+                let nameShop = document.querySelector('.info-address-shop');
+                nameShop.addEventListener('focus', () => {
+                    checkUserName[4].style.display = 'none';
+                })
+                nameShop.addEventListener('blur', () => {
+                    let value = nameShop.value;
+                    if (value === '') {
+
+                        checkUserName[4].style.display = 'block';
+                    }
+                    else {
+                        checkUserName[4].style.display = 'none';
+                    }
+                })
+
+                // thông tin ghi chú
+                let noteUser = document.querySelector('#textarea');
+                noteUser.addEventListener('focus', () => {
+                    checkUserName[5].style.display = 'none';
+                })
+                noteUser.addEventListener('blur', () => {
+                    let value = noteUser.value;
+                    if (value === '') {
+
+                        checkUserName[5].style.display = 'block';
+                    }
+                    else {
+                        checkUserName[5].style.display = 'none';
+                    }
+                })
+            }
         })
 
         // handleChange khi click vào tăng số lượng or giảm thì giá sẽ thay đổi 

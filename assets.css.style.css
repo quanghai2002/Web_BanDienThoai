@@ -1196,7 +1196,7 @@
   margin-bottom: 20px;
 }
 
-.input-checkVaildate {
+.info-name-input-checkVaildate {
   display: none;
   position: absolute;
   bottom: -16px;
@@ -1226,7 +1226,6 @@
   display: flex;
   align-items: center;
   margin-top: 13px;
-  margin-bottom: 21px;
 }
 
 .info-number-phone {
@@ -1254,7 +1253,6 @@
 
 .info-number-mail {
   flex: 1;
-  position: relative;
 }
 
 .info-number-phone-mail {
@@ -1287,16 +1285,6 @@
 
 .info-address-wrap-select {
   display: flex;
-  margin-bottom: 21px;
-}
-
-.wrap-select {
-  flex: 1;
-  position: relative;
-}
-
-.wrap-select-1 {
-  margin-right: 10px;
 }
 
 .info-address-select {
@@ -1327,7 +1315,6 @@
 
 .wrap-textarea {
   margin-top: 13px;
-  position: relative;
 }
 .wrap-textarea textarea {
   min-height: 60px;
@@ -1490,4 +1477,4 @@ body {
   color: #7fd6cb;
 }
 
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=assets.css.style.css.map */
