@@ -157,11 +157,14 @@ export default function buyPhoneClickChange() {
                             noteUser: noteUser
 
                         }
-                        saveData(newData)
+                        saveData(newData);
+                        // sau khi lưu dữ liệu và thông tin nhập đã đủ hết => chuyển sang trang completed buy phone
+                        window.location.href = "./completedBuyPhone.html";
 
                     }
                     else {
                         console.log('dữ liệu nhập thiếu')
+                        // dữ liệu nhập thiếu ko có hành động gì
 
                     }
                 })

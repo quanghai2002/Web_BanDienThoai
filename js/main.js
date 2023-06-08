@@ -6,6 +6,8 @@ import tranggioithieulogin from './tranggioithieulogin.js';
 import buyPhone from './buyPhone.js';
 import renderPhoneKhiBuy from './renderPhoneKhiBuy.js';
 import buyPhoneClickChange from './buyPhoneClickChange.js'
+import { completedBuyPhone } from './completedBuyPhone.js';
+import thanhtoan from "./thanhtoan.js";
 
 let body = document.querySelector('body');
 body.onload = () => {
@@ -19,6 +21,8 @@ body.onload = () => {
         buyPhone();
         renderPhoneKhiBuy();
         buyPhoneClickChange();
+        completedBuyPhone();
+        thanhtoan();
     }, 100)
 
 

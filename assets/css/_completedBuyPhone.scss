@@ -1,0 +1,282 @@
+@import "./colorPrimary.scss";
+
+.completed-buy-phone-wrap-img {
+  background-color: #fff;
+  border-radius: 10px;
+  margin-top: 22px;
+  text-align: center;
+}
+.completed-buy-phone-img {
+  img {
+    width: 200px;
+    padding-top: 8px 0 22px;
+  }
+}
+.completed-buy-phone-text {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+.completed-buy-phone-descrption {
+  font-size: 1.3rem;
+  font-weight: 400;
+  color: #333;
+  padding-bottom: 33px;
+}
+.completed-buy-phone-wrap-info {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+.completed-buy-phone-order-info {
+  flex: 1;
+}
+.completed-buy-phone-order-info {
+  background-color: #fafafa;
+  border-radius: 6px;
+  margin-right: 20px;
+  border: 1px solid #eee;
+}
+.completed-buy-phone-order-info-heading {
+  display: flex;
+  align-items: center;
+  border: none;
+  font-size: 1.3rem;
+  padding: 6.9px 0px 6.9px 16px;
+  background-color: #009981;
+  width: 100%;
+  color: #fff;
+  border: 1px solid #009981;
+  border-radius: 6px 6px 0 0;
+
+  .heading-check-order-icon {
+    font-size: 2rem;
+    margin-right: 6px;
+  }
+}
+.completed-buy-phone-order-info-item {
+  padding: 7px 10px;
+  font-size: 1.3rem;
+  font-weight: 400;
+  color: #333;
+}
+.completed-buy-phone-order-info-id {
+  margin-top: 6px;
+}
+.completed-buy-phone-order-item {
+  display: flex;
+  align-items: center;
+  background-color: #eee;
+  margin: 6px 16px 16px;
+  box-shadow: 0 0 2px #eee;
+  border: 1px solid #eee;
+}
+.completed-buy-phone-order-item-img {
+  img {
+    width: 85px;
+    height: 85px;
+    object-fit: contain;
+    padding: 9px 0;
+  }
+}
+
+.completed-buy-phone-order-item-namePhone {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #333;
+  padding-bottom: 6px;
+}
+.completed-buy-phone-order-item-option {
+  font-size: 1.3rem;
+  font-weight: 400;
+  color: #333;
+  padding: 3px 0;
+}
+
+.completed-buy-phone-order-pay {
+  background-color: #fafafa;
+  border-radius: 6px;
+  flex: 1;
+}
+.completed-buy-phone-order-pay-heading {
+  display: flex;
+  align-items: center;
+  background-color: #00483d;
+  color: #fff;
+  font-size: 1.3rem;
+  padding: 6.9px 0px 6.9px 16px;
+  border-radius: 6px 6px 0 0;
+  border: 1px solid #009981;
+  .icon {
+    font-size: 2rem;
+    margin-right: 6px;
+  }
+}
+.completed-buy-phone-order-pay-type {
+  display: flex;
+}
+.completed-buy-phone-order-pay-type-item {
+  background-color: #00483d;
+  border: 1px solid #00483d;
+  color: #fff;
+  text-align: center;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  flex: 1;
+  margin: 40px 12px 30px 12px;
+  border-radius: 4px;
+  transition: all 0.2s linear;
+
+  &:hover {
+    cursor: pointer;
+    background-color: #009a82;
+  }
+  .icon {
+    padding: 6px 0 10px;
+    font-size: 2.6rem;
+  }
+
+  h3 {
+    padding: 1px 0 12px;
+  }
+}
+.completed-buy-phone-back {
+  text-align: center;
+  button {
+    border: 1px solid #00483d;
+    background-color: #009981;
+    font-size: 1.4rem;
+    color: #fff;
+    outline: none;
+    cursor: pointer;
+    padding: 8px 48.1px;
+    border-radius: 6px;
+    margin: 22px 0;
+    transition: all 0.2s linear;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}
+
+// THANH TOÁN KHI NHẬN HÀNG
+
+.header {
+  text-align: center;
+  margin-top: 90px;
+}
+.header-icon {
+  font-size: 60px;
+  color: #009981;
+  margin-bottom: 18px;
+}
+.header-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  strong {
+    color: #f7941e;
+    font-size: 1.8rem;
+  }
+}
+.header-info {
+  margin-right: 4px;
+}
+
+.infomation-text {
+  font-size: 1.6rem;
+  padding: 7px 0 16px;
+}
+
+.infomation-client {
+  background: #fff 0% 0% no-repeat padding-box;
+  box-shadow: 0 4px 6px #00000029;
+  border-radius: 8px;
+  margin: 24px 0 20px;
+  padding: 15px 15px 9px;
+}
+.infomation-item {
+  .name {
+    display: flex;
+    font-size: 1.3rem;
+    color: #333;
+    margin-bottom: 8px;
+    p {
+      margin-right: 4px;
+    }
+    strong {
+      flex: 1;
+    }
+  }
+}
+.infomation-phone {
+  background: #fff 0% 0% no-repeat padding-box;
+  box-shadow: 0 4px 6px #00000029;
+  border-radius: 8px;
+  padding: 15px;
+}
+
+.infomation-phone-item {
+  display: flex;
+}
+.infomation-phone-item-text {
+  text-align: center;
+  border: 1px solid #dedede;
+
+  h3 {
+    font-size: 1.3rem;
+    background-color: #009a82;
+    color: #fff;
+    padding: 6.2px 0;
+    margin: 0 0.2px;
+  }
+  strong {
+    font-size: 1.5rem;
+    display: block;
+    padding: 21px 24px;
+  }
+}
+
+.infomation-phone-item-text-1 {
+  flex: 1;
+}
+.infomation-phone-item-text-2 {
+  flex: 0.5;
+}
+.infomation-phone-item-text-3 {
+  flex: 0.5;
+}
+.infomation-phone-item-text-4 {
+  flex: 0.5;
+}
+
+.infomation-price-completed {
+  text-align: right;
+}
+.infomation-price-completed-item {
+  margin-top: 18px;
+}
+.infomation-price-completed-item-text {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 1.3rem;
+  color: #333;
+  font-weight: 400;
+  margin: 6px 6px 5px 0;
+
+  span {
+    margin-right: 21px;
+  }
+  .active {
+    color: #fd475a;
+    font-weight: bold;
+  }
+  p {
+    flex: 0.2;
+    text-align: center;
+  }
+}
