@@ -54,6 +54,8 @@ export default function buyPhoneClickChange() {
             if (btnDatHang) {
                 btnDatHang.addEventListener('click', () => {
                     // thông tin userName nhập
+
+
                     let userNameInput = document.querySelector('.info-name-input');
                     let valueUserNameInput = userNameInput.value;
 
@@ -142,14 +144,17 @@ export default function buyPhoneClickChange() {
                         let pricePhoneCurrent = document.querySelector('.buy-phone-click-img-info-price').innerText;
                         let numberBuyPhone = document.querySelector('.buy-phone-click-wrap-info-price-number-option-input').value;
                         let dataOptionPhone = document.querySelector('.buy-phone-click-img-info-option-text2').innerText;
+                        let imgPhone = document.querySelector('.buy-phone-click-img').src;
+
                         let dataOld = JSON.parse(localStorage.getItem('completedBuyPhone'));
-                        console.log(dataOld);
+
 
                         let newData = {
                             ...dataOld,
                             dataPhonePrice: pricePhoneCurrent,
                             dataPhoneNumber: numberBuyPhone,
                             dataOptionPhone,
+                            dataImgPhone: imgPhone,
                             nameUser: valueUserNameInput,
                             telephoneUser: telePhoneValue,
                             emailUser: emailInput.value,
@@ -159,6 +164,7 @@ export default function buyPhoneClickChange() {
 
                         }
                         saveData(newData);
+                        console.log(newData);
                         // sau khi lưu dữ liệu và thông tin nhập đã đủ hết => chuyển sang trang completed buy phone
                         window.location.href = "./completedBuyPhone.html";
 
