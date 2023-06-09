@@ -99,10 +99,8 @@ export default function renderPhoneKhiBuy() {
 
             }
 
-            if (window.location.href === './buyPhone.html') {
-                console.log(1);
-            }
-            // khi clik đổi active và load lại giá bán
+
+            // khi click đổi active và load lại giá bán
             Array.from(liOption).forEach((phoneOption, index) => {
                 phoneOption.addEventListener('click', (e) => {
 
