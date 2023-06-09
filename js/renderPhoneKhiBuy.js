@@ -146,7 +146,7 @@ export default function renderPhoneKhiBuy() {
 
     // nếu không ở trang hiện tại => xóa key pricePhoneBuy trên locasorage đi
 
-    if (window.location.href === 'http://127.0.0.1:5500/buyPhone.html' || window.location.href === 'https://quanghai2002.github.io/Web_BanDienThoai/?utm_source=zalo&utm_medium=zalo&utm_campaign=zalo') {
+    if (window.location.href === 'http://127.0.0.1:5500/buyPhone.html' || window.location.href === 'https://quanghai2002.github.io/Web_BanDienThoai/?utm_source=zalo&utm_medium=zalo&utm_campaign=zalo' || 'https://quanghai2002.github.io/Web_BanDienThoai/buyPhone.html') {
 
     }
 
