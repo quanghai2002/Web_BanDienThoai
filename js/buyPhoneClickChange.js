@@ -145,6 +145,7 @@ export default function buyPhoneClickChange() {
                         let numberBuyPhone = document.querySelector('.buy-phone-click-wrap-info-price-number-option-input').value;
                         let dataOptionPhone = document.querySelector('.buy-phone-click-img-info-option-text2').innerText;
                         let imgPhone = document.querySelector('.buy-phone-click-img').src;
+                        let dataNamePhone = document.querySelectorAll('.buy-phone-click-img-info-title').innerText;
 
                         let dataOld = JSON.parse(localStorage.getItem('completedBuyPhone'));
 
@@ -155,6 +156,7 @@ export default function buyPhoneClickChange() {
                             dataPhoneNumber: numberBuyPhone,
                             dataOptionPhone,
                             dataImgPhone: imgPhone,
+                            dataNamePhone,
                             nameUser: valueUserNameInput,
                             telephoneUser: telePhoneValue,
                             emailUser: emailInput.value,
