@@ -88,7 +88,7 @@ function completedBuyPhone() {
 
                 }
 
-                console.log(newData);
+
 
                 // update lại dữ liệu khi click thanh toán khi nhận hàng
                 localStorage.setItem('completedBuyPhone', JSON.stringify(newData));

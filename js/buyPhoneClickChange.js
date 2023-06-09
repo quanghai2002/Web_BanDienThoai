@@ -145,8 +145,8 @@ export default function buyPhoneClickChange() {
                         let numberBuyPhone = document.querySelector('.buy-phone-click-wrap-info-price-number-option-input').value;
                         let dataOptionPhone = document.querySelector('.buy-phone-click-img-info-option-text2').innerText;
                         let imgPhone = document.querySelector('.buy-phone-click-img').src;
-                        let dataNamePhone = document.querySelectorAll('.buy-phone-click-img-info-title').innerText;
-
+                        let dataNamePhone = document.querySelector('.buy-phone-click-img-info-title-buy').innerText;
+                        console.log(dataNamePhone);
                         let dataOld = JSON.parse(localStorage.getItem('completedBuyPhone'));
 
 
@@ -376,7 +376,7 @@ export default function buyPhoneClickChange() {
                     let dataPhonePrice = document.querySelector('.buy-phone-click-img-info-price').innerText.trim();
                     let dataPhoneNumber = document.querySelector('.buy-phone-click-wrap-info-price-number-option-input').value.trim();
                     let dataImgPhone = document.querySelector('.buy-phone-click-img').src;
-                    let dataNamePhone = document.querySelector('.buy-phone-click-img-info-title').innerText.trim();
+                    let dataNamePhone = document.querySelector('.buy-phone-click-img-info-title-buy').innerText.trim();
                     let dataOptionPhone = document.querySelector('.buy-phone-click-img-info-option-text2').innerText.trim();
 
                     if (dataPhonePrice && dataPhoneNumber && dataImgPhone && dataNamePhone && dataOptionPhone) {
@@ -501,7 +501,7 @@ export default function buyPhoneClickChange() {
                     let dataPhonePrice = document.querySelector('.buy-phone-click-img-info-price').innerText.trim();
                     let dataPhoneNumber = document.querySelector('.buy-phone-click-wrap-info-price-number-option-input').value.trim();
                     let dataImgPhone = document.querySelector('.buy-phone-click-img').src;
-                    let dataNamePhone = document.querySelector('.buy-phone-click-img-info-title').innerText.trim();
+                    let dataNamePhone = document.querySelector('.buy-phone-click-img-info-title-buy').innerText.trim();
                     let dataOptionPhone = document.querySelector('.buy-phone-click-img-info-option-text2').innerText.trim();
 
                     if (dataPhonePrice && dataPhoneNumber && dataImgPhone && dataNamePhone && dataOptionPhone) {

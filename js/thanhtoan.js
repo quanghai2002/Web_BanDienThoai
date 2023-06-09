@@ -48,9 +48,15 @@ export default function thanhtoan() {
         // thanh toán qua ví momo
         // render giá khi thanh toán qua momo => ra màn hình
         let priceMomo = document.querySelector('.table .render-data');
+        let orderCode = document.querySelector('.completed-buy-phone-order-info-id-momo strong');
+
 
         if (priceMomo) {
             priceMomo.innerText = data.dataPhonePrice;
+        }
+
+        if (orderCode) {
+            orderCode.innerText = data.codeOrder;
         }
 
         // làm time đếm ngược 15p ra màn hình

@@ -124,6 +124,7 @@ export default function renderPhoneKhiBuy() {
                     //  khi click vào các option active => sau đó lưu thông tin giá khi đã chọn option lên localstorage 
 
                     let pricePhoneClick = pricePhoneNew.innerText;
+
                     localStorage.setItem('pricePhoneBuy', JSON.stringify({
                         price: pricePhoneClick,
                         locationActive: index,
