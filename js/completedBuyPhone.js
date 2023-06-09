@@ -80,11 +80,15 @@ function completedBuyPhone() {
                 let methodPay = document.querySelector('.completed-buy-phone-order-pay-type-item-1 h3').innerText;
                 let newData = {
                     ...dataPhoneOld,
+                    dataImgPhone: document.querySelector('.completed-buy-phone-order-item-img img').src,
+                    dataNamePhone: document.querySelector('.completed-buy-phone-order-item-namePhone').innerText,
                     codeOrder: valueCodeOrder,
                     dataBuyPhone: valueDate,
                     methodPay
 
                 }
+
+                console.log(newData);
 
                 // update lại dữ liệu khi click thanh toán khi nhận hàng
                 localStorage.setItem('completedBuyPhone', JSON.stringify(newData));
@@ -113,15 +117,27 @@ function completedBuyPhone() {
 
                 // update lại dữ liệu khi click thanh toán MOMO
                 localStorage.setItem('completedBuyPhone', JSON.stringify(newData));
+
+                // chuyển đến trang thanh toán MoMo
+                window.location.href = "./thanhtoanmomo.html";
             })
         }
 
     }
 
-    // khi click vào btn về trang chủ => về trang chủ
+    // khi click vào btn về trang chủ => về trang chủ => chuyển lại trạng thái check login bằng false
     let btnBack = document.querySelector('.completed-buy-phone-back button');
     if (btnBack) {
         btnBack.addEventListener('click', () => {
+            // chuyển checklogin = flase
+            let dataOld = JSON.parse(localStorage.getItem('userLogin'));
+
+            let newData = {
+                ...dataOld,
+                checkLogin: false
+            }
+
+            localStorage.setItem('userLogin', JSON.stringify(newData));
             window.location.href = "./index.html";
         })
     }

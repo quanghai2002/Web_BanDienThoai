@@ -1682,6 +1682,55 @@
   text-align: center;
 }
 
+.completed-buy-phone-order-pay-momo .pay {
+  font-size: 1.3rem;
+  font-weight: 400;
+  color: #333;
+  padding: 8px 10px;
+  border: 1px dashed #ccc;
+  margin: 28px 10px 20px;
+  text-align: center;
+}
+.completed-buy-phone-order-pay-momo .pay strong {
+  color: red;
+}
+.completed-buy-phone-order-pay-momo .pay-info {
+  color: #333;
+  font-size: 1.3rem;
+  font-weight: 400;
+  line-height: 1.9rem;
+  padding: 0 18px;
+}
+.completed-buy-phone-order-pay-momo .order-info .wrap-img {
+  text-align: center;
+  margin-top: 26px;
+}
+.completed-buy-phone-order-pay-momo .order-info img {
+  width: 250px;
+  object-fit: cover;
+}
+.completed-buy-phone-order-pay-momo .order-info .wrap-table {
+  background: #ddd;
+  border: 1px solid #222;
+  font-size: 1.3rem;
+  color: #333;
+  font-weight: 400;
+  margin: 26px 10px 10px;
+  padding: 5px;
+}
+.completed-buy-phone-order-pay-momo .order-info .table {
+  width: 100%;
+}
+.completed-buy-phone-order-pay-momo .order-info .table .active {
+  color: red;
+  font-weight: bold;
+}
+.completed-buy-phone-order-pay-momo .order-info .td {
+  display: inline-block;
+  margin-right: -7px;
+  margin-bottom: 6px;
+}
+
 * {
   margin: 0;
   padding: 0;

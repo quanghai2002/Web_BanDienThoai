@@ -5,7 +5,7 @@ export default function thanhtoan() {
 
     // lấy dữ liệu về
     let data = JSON.parse(localStorage.getItem('completedBuyPhone'));
-    console.log(data);
+
 
     if (data) {
         let codeOrder = document.querySelector('.header-text strong');
@@ -19,7 +19,7 @@ export default function thanhtoan() {
         if (check) {
             let name = document.querySelectorAll('.name strong');
             name[0].innerText = data.nameUser;
-            name[1].innerText = data.methodPay;
+
             name[2].innerText = `${data.shop} - ${data.addressUser}`;
             name[3].innerText = data.telephoneUser;
             name[4].innerText = data.emailUser;
@@ -43,6 +43,37 @@ export default function thanhtoan() {
             price[2].innerText = data.dataPhonePrice;
 
         }
+
+
+        // thanh toán qua ví momo
+        // render giá khi thanh toán qua momo => ra màn hình
+        let priceMomo = document.querySelector('.table .render-data');
+
+        if (priceMomo) {
+            priceMomo.innerText = data.dataPhonePrice;
+        }
+
+        // làm time đếm ngược 15p ra màn hình
+        let d = new Date('2002-04-16');
+        let seconds = 900;
+        let idInterver = setInterval(() => {
+            seconds--;
+            d.setSeconds(seconds);
+            d.setMinutes(Math.floor(seconds / 60));
+
+
+            if (seconds === 0) {
+                seconds = 900;
+            }
+            let date = `${d.getMinutes()}:${d.getSeconds()}`;
+
+            // render ra màn hình
+            let dateOld = document.querySelector('.completed-buy-phone-order-pay-momo .pay strong');
+            if (dateOld) {
+                dateOld.innerText = date;
+            }
+        }, 1000)
+
 
     }
 
