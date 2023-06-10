@@ -18,6 +18,8 @@ export default function buyPhoneClickChange() {
             if (dataPhoneClick) {
                 let imgPhone = dataPhoneClick.imgPhone;
                 let namePhone = dataPhoneClick.namePhone;
+
+
                 let pricePhone = dataPhoneClick.price;
                 let optionPhone = dataPhoneClick.optionGB;
 
@@ -28,7 +30,7 @@ export default function buyPhoneClickChange() {
                     imgPhoneOld.src = imgPhone;
                 }
 
-                let namePhoneOld = document.querySelector('.buy-phone-click-img-info-title');
+                let namePhoneOld = document.querySelector('.buy-phone-click-img-info-title-buy');
                 if (namePhoneOld) {
                     namePhoneOld.innerText = namePhone;
                 }
@@ -146,7 +148,7 @@ export default function buyPhoneClickChange() {
                         let dataOptionPhone = document.querySelector('.buy-phone-click-img-info-option-text2').innerText;
                         let imgPhone = document.querySelector('.buy-phone-click-img').src;
                         let dataNamePhone = document.querySelector('.buy-phone-click-img-info-title-buy').innerText;
-                        console.log(dataNamePhone);
+
                         let dataOld = JSON.parse(localStorage.getItem('completedBuyPhone'));
 
 

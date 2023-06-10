@@ -61,7 +61,7 @@ function navigation() {
 
 
 
-    if (checkRegister && checkUserLogin) {
+    if (checkRegister === true && checkUserLogin) {
         let data = JSON.parse(localStorage.getItem('register'));
         let emailUser = JSON.parse(localStorage.getItem('userLogin')).email;
         if (emailUser) {

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shop Quang Hải</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+      integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,400;1,500;1,700&display=swap" rel="stylesheet" />
+    <link rel="icon" type="image/x-icon" href="./assets/img/iconShopQHai.ico" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="./assets/css/grid.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
+    <div class="app">
+      <!--heading  -->
+      <div class="heading grid">
+        <!-- heading-navigation -->
+        <div class="heading-nav grid">
+          <ul class="heading-nav-item">
+            <li class="heading-nav-list">
+              <a href="./index.html" class="heading-nav-link heading-nav-trangchu">Trang chủ</a>
+            </li>
+            <li class="heading-nav-list">
+              <a href="#" class="heading-nav-link heading-nav-gioithieu-login">Giới thiệu</a>
+            </li>
+            <li class="heading-nav-list">
+              <a href="#" class="heading-nav-link heading-nav-tuyendung-login">Tuyển dụng</a>
+            </li>
+            <li class="heading-nav-list">
+              <a href="#" class="heading-nav-link heading-nav-baohanh-login">Trung tâm bảo hành</a>
+            </li>
+            <li class="heading-nav-list">
+              <a href="#" class="heading-nav-link heading-nav-link-login nav-active">
+                <span class="material-symbols-outlined heading-nav-user-login"> person </span>
+                <span class="heading-nav-user-text"></span>
+              </a>
+            </li>
+            <li class="heading-nav-list">
+              <a href="./index.html" class="heading-nav-link heading-nav-logout">Đăng Xuất</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- cart khi rỗng, khi chưa có gì -->
+      <div class="thanhtoan-nhanhang grid wide">
+        <div class="header header-cart-null">
+          <i class="fa-regular fa-circle-check header-icon header-cart-null-icon"></i>
+          <h3 class="header-cart-null-text">Giỏ hàng</h3>
+
+          <div class="header-cart-null-wrap-content">
+            <img src="./assets/img/cart-rỗng.png" alt="cart null" class="header-cart-null-img" />
+
+            <p class="header-cart-null-footer-text">Hiện chưa có sản phẩm nào trong giỏ hàng</p>
+          </div>
+        </div>
+
+        <div class="completed-buy-phone-back">
+          <button>Về Trang chủ</button>
+        </div>
+      </div>
+      <!--up top-->
+      <div class="up-top">
+        <i class="fa-solid fa-caret-up up-top-icon"></i>
+      </div>
+
+      <!--social -->
+      <div class="sosial">
+        <ul class="sosial-item">
+          <li class="sosial-list">
+            <a href="https://www.facebook.com/hai.nguyenquang.5477272/" class="sosial-link">
+              <i class="fa-brands fa-facebook-f sosial-link-icon"></i>
+            </a>
+          </li>
+          <li class="sosial-list">
+            <a href="https://www.youtube.com/channel/UCDnfGvT9xON5D2VTpJ-Cevw" class="sosial-link">
+              <i class="fa-brands fa-youtube sosial-link-icon"></i>
+            </a>
+          </li>
+          <li class="sosial-list">
+            <a href="https://www.instagram.com/" class="sosial-link">
+              <i class="fa-brands fa-instagram sosial-link-icon"></i>
+            </a>
+          </li>
+          <li class="sosial-list">
+            <a href="https://www.tiktok.com/" class="sosial-link"> <i class="fa-brands fa-tiktok sosial-link-icon"></i> </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- <script src="./js/tranggioithieulogin.js" type="module"></script> -->
+    <script src="./js/main.js" type="module"></script>
+  </body>
+</html>

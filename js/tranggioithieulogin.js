@@ -13,9 +13,9 @@ export default function tranggioithieulogin() {
         }
 
         // hiển thị trong trang giới thiệu, tuyển dụng, trung tâm bảo hành =>  có tên user khi đã đăng nhập => vẫn lưu thông tin user khi đăng nhập
-        let isLogin = localStorage.key('userLogin');
+        let isLogin = localStorage.getItem('userLogin');
 
-        if (isLogin === 'userLogin') {
+        if (isLogin) {
 
             let checkUserName = JSON.parse(localStorage.getItem('userLogin'));
             let isCheckLogin = checkUserName.checkLogin;

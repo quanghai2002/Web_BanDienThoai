@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shop Quang Hải</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+      integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,400;1,500;1,700&display=swap" rel="stylesheet" />
+    <link rel="icon" type="image/x-icon" href="./assets/img/iconShopQHai.ico" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="./assets/css/grid.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
+    <div class="app">
+      <!--heading  -->
+      <div class="heading grid">
+        <!-- heading-navigation -->
+        <div class="heading-nav grid">
+          <ul class="heading-nav-item">
+            <li class="heading-nav-list">
+              <a href="./index.html" class="heading-nav-link heading-nav-trangchu">Trang chủ</a>
+            </li>
+            <li class="heading-nav-list">
+              <a href="#" class="heading-nav-link heading-nav-gioithieu-login">Giới thiệu</a>
+            </li>
+            <li class="heading-nav-list">
+              <a href="#" class="heading-nav-link heading-nav-tuyendung-login">Tuyển dụng</a>
+            </li>
+            <li class="heading-nav-list">
+              <a href="#" class="heading-nav-link heading-nav-baohanh-login">Trung tâm bảo hành</a>
+            </li>
+            <li class="heading-nav-list">
+              <a href="#" class="heading-nav-link heading-nav-link-login nav-active">
+                <span class="material-symbols-outlined heading-nav-user-login"> person </span>
+                <span class="heading-nav-user-text"></span>
+              </a>
+            </li>
+            <li class="heading-nav-list">
+              <a href="./index.html" class="heading-nav-link heading-nav-logout">Đăng Xuất</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- khi cart có giá trị-->
+      <div class="thanhtoan-nhanhang grid wide">
+        <div class="wrap-heading-cart-value">
+          <i class="fa-regular fa-circle-check header-icon header-cart-null-icon"></i>
+          <h3 class="header-cart-null-text">Giỏ hàng</h3>
+        </div>
+        <div class="wrap-cart-value">
+          <div class="header-cart-null header-cart-value-1 header-cart-value-11">
+            <div class="header-cart-value">
+              <div class="header-cart-value-img">
+                <img src="https://cdn.hoanghamobile.com/i/productlist/ts/Uploads/2023/05/11/note12pro.png" alt="cart" />
+              </div>
+
+              <p class="header-cart-value-name">Redmi Note 12 Pro (8GB/256GB) - Chính hãng</p>
+
+              <p class="header-cart-value-option">
+                <span>Phiên bản:</span>
+                <strong>64G</strong>
+              </p>
+              <p class="header-cart-value-price">
+                <span>Giá sản phẩm:</span>
+                <strong>7,490,000 ₫</strong>
+              </p>
+            </div>
+          </div>
+
+          <div class="buy-phone-click-wrap-info-price-form-user header-cart-value-1">
+            <div class="info-name">
+              <label for="name-input" class="info-name-label">Họ Tên</label>
+              <input type="text" id="name-input" class="info-name-input input-change" placeholder="Họ và tên" required />
+              <span class="input-checkVaildate">Vui lòng nhập vào họ và tên !</span>
+            </div>
+
+            <div class="info-number">
+              <div class="info-number-phone">
+                <label for="" class="info-number-phone-label">Điện Thoại</label>
+                <input type="text" class="info-number-phone-input input-change" placeholder="Số điện thoại" required />
+                <span class="input-checkVaildate">Vui lòng nhập đúng số điện thoại</span>
+              </div>
+              <div class="info-number-mail">
+                <label for="" class="info-number-phone-mail">Email</label>
+                <input type="text" class="info-number-phone-mail-input input-change" placeholder="Email" required />
+                <span class="input-checkVaildate">Vui lòng nhập vào đúng email</span>
+              </div>
+            </div>
+
+            <div class="info-address">
+              <p class="info-address-text">Nơi Nhận Hàng</p>
+              <div class="info-address-wrap-select">
+                <div class="wrap-select wrap-select-1">
+                  <select name="" id="" class="info-address-select">
+                    <option value="">Tỉnh/Thành Phố</option>
+                    <option value="Hà Nội">Hà Nội</option>
+                    <option value="TP HCM">TP HCM</option>
+                    <option value="Thái Nguyên">Thái Nguyên</option>
+                    <option value="An Giang">An Giang</option>
+                    <option value="Bà Rịa - Vũng Tàu">Bà Rịa - Vũng Tàu</option>
+                    <option value="Bắc Giang">Bắc Giang</option>
+                    <option value="Bạc Liêu">Bạc Liêu</option>
+                    <option value="Bắc Ninh">Bắc Ninh</option>
+                    <option value="Bình Định">Bình Định</option>
+                    <option value="Bình Dương">Bình Dương</option>
+                    <option value="Bình Phước">Bình Phước</option>
+                    <option value="Bình Thuận">Bình Thuận</option>
+                    <option value="Cà Mau">Cà Mau</option>
+                    <option value="Cần Thơ">Cần Thơ</option>
+                    <option value="Đà Nẵng">Đà Nẵng</option>
+                    <option value="Đắk Lắk">Đắk Lắk</option>
+                    <option value="Đắk Nông">Đắk Nông</option>
+                    <option value="Điện Biên">Điện Biên</option>
+                    <option value="Đồng Nai">Đồng Nai</option>
+                    <option value="Đồng Tháp">Đồng Tháp</option>
+                    <option value="Gia Lai">Gia Lai</option>
+                    <option value="Hà Nam">Hà Nam</option>
+                    <option value="Hà Tĩnh">Hà Tĩnh</option>
+                    <option value="Hải Dương">Hải Dương</option>
+                    <option value="Hải Phòng">Hải Phòng</option>
+                    <option value="Hoà Bình">Hoà Bình</option>
+                    <option value="Hưng Yên">Hưng Yên</option>
+                    <option value="Khánh Hòa">Khánh Hòa</option>
+                    <option value="Kiên Giang">Kiên Giang</option>
+                    <option value="Lâm Đồng">Lâm Đồng</option>
+                    <option value="Lào Cai">Lào Cai</option>
+                    <option value="Long An">Long An</option>
+                    <option value="Nam Định">Nam Định</option>
+                    <option value="Nghệ An">Nghệ An</option>
+                    <option value="Ninh Bình">Ninh Bình</option>
+                    <option value="Ninh Thuận">Ninh Thuận</option>
+                    <option value="Phú Thọ">Phú Thọ</option>
+                    <option value="Phú Yên">Phú Yên</option>
+                    <option value="Quảng Bình">Quảng Bình</option>
+                    <option value="Quảng Nam">Quảng Nam</option>
+                    <option value="Quảng Ngãi">Quảng Ngãi</option>
+                    <option value="Quảng Ninh">Quảng Ninh</option>
+                    <option value="Quảng Trị">Quảng Trị</option>
+                    <option value="Sóc Trăng">Sóc Trăng</option>
+                    <option value="Sơn La">Sơn La</option>
+                    <option value="Tây Ninh">Tây Ninh</option>
+                    <option value="Thái Bình">Thái Bình</option>
+                    <option value="Thanh Hóa">Thanh Hóa</option>
+                    <option value="Thừa Thiên Huế">Thừa Thiên Huế</option>
+                    <option value="Tiền Giang">Tiền Giang</option>
+                    <option value="Tuyên Quang">Tuyên Quang</option>
+                    <option value="Vĩnh Long">Vĩnh Long</option>
+                    <option value="Vĩnh Phúc">Vĩnh Phúc</option>
+                    <option value="Yên Bái">Yên Bái</option>
+                  </select>
+                  <span class="input-checkVaildate">Vui lòng chọn Tỉnh/Thành Phố </span>
+                </div>
+
+                <div class="wrap-select">
+                  <select name="" id="" class="info-address-shop">
+                    <option value="">Cửa Hàng</option>
+                    <option value="Shop Nguyễn Quang Hải">Shop Nguyễn Quang Hải</option>
+                    <option value="Shop Nguyễn Quang Hải Cơ Sở 2">Shop Nguyễn Quang Hải Cơ Sở 2</option>
+                    <option value="Shop Nguyễn Quang Hải Cơ Sở 3">Shop Nguyễn Quang Hải Cơ Sở 3</option>
+                  </select>
+                  <span class="input-checkVaildate">Vui lòng chọn cửa hàng </span>
+                </div>
+              </div>
+            </div>
+            <div class="wrap-textarea">
+              <textarea name="" id="textarea" cols="30" rows="10" placeholder="Ghi chú cho Shop Quang Hải"></textarea>
+              <span class="input-checkVaildate">Vui lòng nhập vào ghi chú cho Shop Quang Hải </span>
+            </div>
+            <div class="wrap-btn-buy-phone">
+              <p>Bằng cách đặt hàng bạn đã đồng ý với điều khoản sử dụng và chính sách đổi trả</p>
+              <button class="buy-phone-btn">Tiến Hành Đặt Hàng</button>
+            </div>
+          </div>
+        </div>
+        <div class="completed-buy-phone-back">
+          <button>Về Trang chủ</button>
+        </div>
+      </div>
+      <!--up top-->
+      <div class="up-top">
+        <i class="fa-solid fa-caret-up up-top-icon"></i>
+      </div>
+
+      <!--social -->
+      <div class="sosial">
+        <ul class="sosial-item">
+          <li class="sosial-list">
+            <a href="https://www.facebook.com/hai.nguyenquang.5477272/" class="sosial-link">
+              <i class="fa-brands fa-facebook-f sosial-link-icon"></i>
+            </a>
+          </li>
+          <li class="sosial-list">
+            <a href="https://www.youtube.com/channel/UCDnfGvT9xON5D2VTpJ-Cevw" class="sosial-link">
+              <i class="fa-brands fa-youtube sosial-link-icon"></i>
+            </a>
+          </li>
+          <li class="sosial-list">
+            <a href="https://www.instagram.com/" class="sosial-link">
+              <i class="fa-brands fa-instagram sosial-link-icon"></i>
+            </a>
+          </li>
+          <li class="sosial-list">
+            <a href="https://www.tiktok.com/" class="sosial-link"> <i class="fa-brands fa-tiktok sosial-link-icon"></i> </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- <script src="./js/tranggioithieulogin.js" type="module"></script> -->
+    <script src="./js/main.js" type="module"></script>
+  </body>
+</html>

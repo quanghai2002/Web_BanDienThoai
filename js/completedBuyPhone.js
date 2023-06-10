@@ -138,8 +138,21 @@ function completedBuyPhone() {
             }
 
             localStorage.setItem('userLogin', JSON.stringify(newData));
+
+            // về trang chủ => xóa removeItem completedBuyPhone trên localStorage
+            localStorage.removeItem('completedBuyPhone');
             window.location.href = "./index.html";
         })
+    }
+
+
+
+    // nếu không ở trang buyPhone.html || completedBuyPhone.html  || thanhtoankhinhanhang.html || thanhtoanmomo.html
+    // thì xóa completed buyPhone
+
+
+    if ((window.location.href.includes('buyPhone.html') === false) && (window.location.href.includes('completedBuyPhone.html') === false) && (window.location.href.includes('thanhtoankhinhanhang.html') === false) && (window.location.href.includes('thanhtoanmomo.html') === false)) {
+        localStorage.removeItem('completedBuyPhone');
     }
 }
 

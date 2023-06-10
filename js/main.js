@@ -8,6 +8,8 @@ import renderPhoneKhiBuy from './renderPhoneKhiBuy.js';
 import buyPhoneClickChange from './buyPhoneClickChange.js'
 import { completedBuyPhone } from './completedBuyPhone.js';
 import thanhtoan from "./thanhtoan.js";
+import { cart } from './cart.js';
+
 
 let body = document.querySelector('body');
 body.onload = () => {
@@ -23,6 +25,7 @@ body.onload = () => {
         buyPhoneClickChange();
         completedBuyPhone();
         thanhtoan();
+        cart();
     }, 100)
 
 
@@ -99,6 +102,7 @@ body.onload = () => {
     else {
         localStorage.setItem('checkRegister', false);
     }
+
 
 }
 
