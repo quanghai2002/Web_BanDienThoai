@@ -57,11 +57,11 @@ function navigation() {
 
 
     let checkRegister = JSON.parse(localStorage.getItem('checkRegister'));
-    let checkUserLogin = JSON.parse(localStorage.getItem('userLogin')).checkLogin;
+    let checkUserLogin = JSON.parse(localStorage.getItem('userLogin'));
+    console.log(Boolean(checkUserLogin))
 
 
-
-    if (checkRegister === true && checkUserLogin === true) {
+    if (checkRegister === true && checkUserLogin) {
         let data = JSON.parse(localStorage.getItem('register'));
         let emailUser = JSON.parse(localStorage.getItem('userLogin')).email;
         if (emailUser) {

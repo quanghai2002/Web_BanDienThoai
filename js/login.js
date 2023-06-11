@@ -261,10 +261,14 @@ Validator({
                     isLogin = true;
                     let emailUser = data.email;
                     let checkLogin = isLogin;
-                    localStorage.setItem('userLogin', JSON.stringify({
+
+                    let newLogIn = {
                         email: emailUser,
                         checkLogin
-                    }))
+                    }
+
+                    console.log(newLogIn);
+                    localStorage.setItem('userLogin', JSON.stringify(newLogIn));
 
                     window.location.href = './loginHomePage.html';
                 }

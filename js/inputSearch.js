@@ -1,14 +1,14 @@
 function inputSearch() {
-    let inputHeader = document.querySelector('.heading-content-search-input');
-    let popupSeach = document.querySelector('.input-search-phone');
 
-    let ulSearch = document.querySelector('.input-search-phone-item');
-
-    let btnSearch = document.querySelector('.heading-content-search-wrap-icon');
-    let dataPhone = JSON.parse(localStorage.getItem('phone'));
 
     setTimeout(() => {
+        let inputHeader = document.querySelector('.heading-content-search-input');
+        let popupSeach = document.querySelector('.input-search-phone');
 
+        let ulSearch = document.querySelector('.input-search-phone-item');
+
+        let btnSearch = document.querySelector('.heading-content-search-wrap-icon');
+        let dataPhone = JSON.parse(localStorage.getItem('phone'));
         if (inputHeader) {
 
             let body = document.querySelector('body');
@@ -39,7 +39,7 @@ function inputSearch() {
                                   </div>
                                   <div class="input-search-phone-info">
                                     <p class="name">${phone.namePhone}</p>
-                                    <strong class="price">${phone.priceNew} </strong>
+                                    <strong class="price">${phone.priceOld} </strong>
                                     </div>
                                 </li>
                              `
@@ -298,7 +298,7 @@ function inputSearch() {
 
 
         }
-    }, 1000)
+    }, 600)
 }
 
 export default inputSearch;
