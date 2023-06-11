@@ -56,12 +56,12 @@ function navigation() {
     // xử lý khi đăng nhập => hiển thị đúng tên userName ra giao diện;
 
 
-    let checkRegister = localStorage.getItem('checkRegister');
-    let checkUserLogin = localStorage.getItem('userLogin');
+    let checkRegister = JSON.parse(localStorage.getItem('checkRegister'));
+    let checkUserLogin = JSON.parse(localStorage.getItem('userLogin')).checkLogin;
 
 
 
-    if (checkRegister === true && checkUserLogin) {
+    if (checkRegister === true && checkUserLogin === true) {
         let data = JSON.parse(localStorage.getItem('register'));
         let emailUser = JSON.parse(localStorage.getItem('userLogin')).email;
         if (emailUser) {
@@ -81,18 +81,24 @@ function navigation() {
         }
 
         // khi click đăng xuất => về trang chủ => checkLogin = false;
-        let btnLogout = document.querySelector('.heading-nav-logout');
+        setTimeout(() => {
 
-        if (btnLogout) {
+            let btnLogout = document.querySelector('.heading-nav-link.heading-nav-logout');
 
-            btnLogout.addEventListener('click', () => {
-                let data = JSON.parse(localStorage.getItem('userLogin'));
-                let dataNew = { ...data, checkLogin: false };
-                localStorage.setItem('userLogin', JSON.stringify(dataNew));
-                window.location.href = './index.html';
 
-            })
-        }
+            if (btnLogout) {
+
+                btnLogout.addEventListener('click', () => {
+                    let data = JSON.parse(localStorage.getItem('userLogin'));
+                    let dataNew = { ...data, checkLogin: false };
+
+                    console.log(dataNew);
+                    localStorage.setItem('userLogin', JSON.stringify(dataNew));
+                    // window.location.href = './index.html';
+
+                })
+            }
+        }, 100)
 
         // khi click vào nút trang chủ => ý  là đăng xuất set lại checklogin:false
         let btnHomepageLogout = document.querySelector('.heading-nav-trangchu');

@@ -116,7 +116,8 @@ function slider() {
 
         //sau 2s chuyển slider
         setInterval(function () {
-            btnNext.click();
+            nextSlider();
+
         }, 3000)
     }
 }

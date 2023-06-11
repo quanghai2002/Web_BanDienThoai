@@ -1830,6 +1830,8 @@
   padding: 16px;
   width: 622px;
   margin: 0 auto;
+  position: relative;
+  margin-bottom: 21px;
 }
 
 .header-cart-value-img img {
@@ -1886,7 +1888,6 @@
 .wrap-cart-value {
   display: flex;
   justify-content: space-between;
-  align-items: center;
 }
 
 .header-cart-value-1 {
@@ -1895,8 +1896,133 @@
 
 .header-cart-value-11 {
   text-align: center;
-  margin-top: -26px;
+  margin-top: 25px;
   margin-right: 26px;
+  position: relative;
+}
+
+.cart-value-number {
+  display: flex;
+  justify-content: center;
+}
+
+.cart-value-number-text {
+  font-weight: 400;
+  margin-right: 10px;
+}
+
+.cart-value-clear-icon {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  font-size: 1.3rem;
+  padding: 4px 4.8px;
+  background-color: #fd5465;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 50%;
+  transition: all 0.1s linear;
+}
+.cart-value-clear-icon:hover {
+  cursor: pointer;
+  background: #f7941e;
+}
+
+.cart-value-info-phone {
+  background: #fff 0% 0% no-repeat padding-box;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1607843137);
+  border-radius: 8px;
+  padding: 16px;
+  width: 622px;
+  margin: 0 auto;
+  margin-top: 16px;
+  text-align: left;
+}
+.cart-value-info-phone p {
+  font-size: 1.3rem;
+  color: #333;
+  font-weight: bold;
+  line-height: 21px;
+}
+.cart-value-info-phone .sumPrice-buy {
+  color: red;
+}
+
+.input-search-phone {
+  display: none;
+  position: fixed;
+  z-index: 900;
+  background-color: #fff;
+  width: 668px;
+  left: 50%;
+  transform: translateX(-48%);
+  top: 116px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px #ccc;
+  max-height: 404px;
+  overflow-y: scroll;
+  user-select: none;
+}
+.input-search-phone::-webkit-scrollbar {
+  background-color: #ccc;
+  width: 6px;
+}
+.input-search-phone::-webkit-scrollbar-thumb {
+  background: #00483d;
+  border-radius: 10px;
+}
+
+.input-search-phone-item {
+  list-style-type: none;
+}
+.input-search-phone-item .not-data {
+  text-align: center;
+  padding: 40px 0;
+  font-size: 1.3rem;
+  color: red;
+  font-weight: bold;
+}
+
+.input-search-phone-list {
+  display: flex;
+  padding: 10px 18px;
+  transition: all 0.1s linear;
+  position: relative;
+}
+.input-search-phone-list:hover {
+  cursor: pointer;
+  background-color: #e5e5e5;
+}
+.input-search-phone-list::before {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  width: 95%;
+  height: 1px;
+  background-color: #e5e5e5;
+}
+
+.input-search-phone-img {
+  margin-right: 12px;
+}
+.input-search-phone-img img {
+  width: 65px;
+  height: 65px;
+  object-fit: contain;
+}
+
+.input-search-phone-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+}
+.input-search-phone-info .price {
+  color: red;
+  padding-top: 10px;
 }
 
 * {

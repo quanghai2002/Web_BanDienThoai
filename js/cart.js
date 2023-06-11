@@ -1,39 +1,13 @@
 function cart() {
 
-    // mặc định gán giỏ hàng bằng 0 => điều kiện check bằng 0
-    // localStorage.setItem('checkCart', JSON.stringify({
-    //     check: false,
-    //     value: 0
-    // })
-    // )
-
-    // nếu click vào giỏ hàng => check xem điều kiện check Cart === false => thì link đến giỏ hàng trống 
-    let checkCart = JSON.parse(localStorage.getItem('checkCart'));
-
-    // nút click vào giỏ hàng
-    let btnCart = document.querySelector('.header-cart');
-
-
-
-    if (btnCart) {
-        // nếu check cart = flase => chuyển đến => trang giỏ hàng trống
-        btnCart.addEventListener('click', () => {
-
-            if (checkCart.check === false) {
-                window.location.href = './cartNull.html';
-            }
-        })
-
-    }
-
 
 
     // khi click vào giỏ hàng hiện modal mini => xem giỏ hàng thành công
     let btnAddCart = document.querySelector('.buy-phone-product-action-add-cart');
 
     let popUpCart = document.querySelector('.modal-popop-add-cart');
-    let cart = JSON.parse(localStorage.getItem('checkCart'));
 
+    // localStorage.removeItem('checkCart');s
     let value = 0;
     if (btnAddCart) {
         btnAddCart.addEventListener('click', () => {
@@ -50,28 +24,56 @@ function cart() {
             // lấy thông tin về sản phẩm render ra màn hình thêm giỏ hàng
             let dataNamePhone = document.querySelector('.buy-phone-name').innerText;
             let dataImgPhone = document.querySelector('.buy-phone-product-img img').src;
-            let dataOptionPhone = document.querySelector('.buy-phone-product-option-phone-GB').innerText;
+            let dataOptionPhone = document.querySelector('.buy-phone-product-option-phone-list-active .buy-phone-product-option-phone-GB').innerText;
+
             let dataPhonePrice = document.querySelector('.buy-phone-product-info-price-new').innerText;
 
+            let oldCart = JSON.parse(localStorage.getItem('checkCart'));
+            if (oldCart) {
 
-            let newDataCart = {
-                ...cart,
-                check: true,
-                value: ++value,
-                dataNamePhone,
-                dataImgPhone,
-                dataOptionPhone,
-                dataPhonePrice
+
+                // xử lý nếu tên sau phải khác tên trước thì mới thêm vào
+                oldCart.forEach((cart) => {
+                    if (cart.nameCheckPhone !== dataNamePhone) {
+
+                        let newDataCart = [
+                            ...oldCart,
+                            {
+                                check: true,
+                                value: ++value,
+                                dataNamePhone,
+                                dataImgPhone,
+                                dataOptionPhone,
+                                dataPhonePrice,
+                                nameCheckPhone: [dataNamePhone]
+                            }
+                        ]
+                        localStorage.setItem('checkCart', JSON.stringify(newDataCart));
+                    };
+                })
 
             }
-            localStorage.setItem('checkCart', JSON.stringify(newDataCart));
+            else {
 
+                let newDataCart = [
+                    {
+                        check: true,
+                        value: ++value,
+                        dataNamePhone,
+                        dataImgPhone,
+                        dataOptionPhone,
+                        dataPhonePrice,
+                        nameCheckPhone: [dataNamePhone]
+                    }
+                ]
+                localStorage.setItem('checkCart', JSON.stringify(newDataCart));
+            }
 
-            // khi click vào xem giỏ hàng và thanh toán ngay => chuyển đến trang giỏ hàng có sản phẩm => render ra trang đó
+            // khi click vào xem giỏ hàng và thanh toán ngay => chuyển đến trang giỏ hàng có sản phẩm => render dữ liệu check cart ra trang đó ra trang đó
             let xemgiohang = document.querySelector('.modal-popop-add-cart button');
             if (xemgiohang) {
                 xemgiohang.addEventListener('click', () => {
-                    window.location.href = "./cartValue.html";
+                    alert('Đang phát triển')
                 })
             }
 
@@ -80,38 +82,49 @@ function cart() {
         })
     }
     // render ra trang giỏ hàng có sản phẩm => khi click vào thanh xem giỏ hàng và thanh toán ngay
-    let cartUpdate = JSON.parse(localStorage.getItem('checkCart'));
+    // let cartUpdate = JSON.parse(localStorage.getItem('checkCart'));
 
 
-    let imgPhone = document.querySelector('.header-cart-value-img img');
-    if (imgPhone) {
-        imgPhone.src = cartUpdate.dataImgPhone;
-    }
+    // let imgPhone = document.querySelector('.header-cart-value-img img');
+    // if (imgPhone) {
+    //     imgPhone.src = cartUpdate.dataImgPhone;
+    // }
 
-    let namePhone = document.querySelector('.header-cart-value-name');
-    if (namePhone) {
-        namePhone.innerText = cartUpdate.dataNamePhone;
-    }
+    // let namePhone = document.querySelector('.header-cart-value-name');
+    // if (namePhone) {
+    //     namePhone.innerText = cartUpdate.dataNamePhone;
+    // }
 
-    let optionPhone = document.querySelector('.header-cart-value-option strong');
-    if (optionPhone) {
-        optionPhone.innerText = cartUpdate.dataOptionPhone;
-    }
-    let pricePhone = document.querySelector('.header-cart-value-price strong');
-    if (pricePhone) {
-        pricePhone.innerText = cartUpdate.dataPhonePrice;
-    }
+    // let optionPhone = document.querySelector('.header-cart-value-option strong');
+    // if (optionPhone) {
+    //     optionPhone.innerText = cartUpdate.dataOptionPhone;
+    // }
+    // let pricePhone = document.querySelector('.header-cart-value-price strong');
+    // if (pricePhone) {
+    //     pricePhone.innerText = cartUpdate.dataPhonePrice;
+    // }
 
-
-    // sau đó update lại trên local storage pricePhoneBuy => để chuyển đến trang mua sản phẩm
-
-
-
-    // khi click mua ngay trong giỏ hàng => chuyển đến trang 
-    let dathangngay = document.querySelector('.header-cart-value-buy');
-    console.log(dathangngay);
+    // let numberPhone = document.querySelector('.cart-value-number-option-input');
+    // if (numberPhone) {
+    //     numberPhone.value = cartUpdate.value;
+    // }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    // check điều kiện đặt hàng
 
 
     let btnDatHang = document.querySelector('.buy-phone-btn');
