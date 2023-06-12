@@ -58,7 +58,7 @@ function navigation() {
 
     let checkRegister = JSON.parse(localStorage.getItem('checkRegister'));
     let checkUserLogin = JSON.parse(localStorage.getItem('userLogin'));
-    console.log(Boolean(checkUserLogin))
+
 
 
     if (checkRegister === true && checkUserLogin) {

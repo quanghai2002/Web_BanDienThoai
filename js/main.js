@@ -9,6 +9,7 @@ import buyPhoneClickChange from './buyPhoneClickChange.js'
 import { completedBuyPhone } from './completedBuyPhone.js';
 import thanhtoan from "./thanhtoan.js";
 import { cart } from './cart.js';
+import addProduct from './addProduct.js';
 
 
 let body = document.querySelector('body');
@@ -26,6 +27,7 @@ body.onload = () => {
         completedBuyPhone();
         thanhtoan();
         cart();
+        addProduct();
     }, 100)
 
 

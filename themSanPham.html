@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shop Quang Hải</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+      integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,400;1,500;1,700&display=swap" rel="stylesheet" />
+    <link rel="icon" type="image/x-icon" href="./assets/img/iconShopQHai.ico" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="./assets/css/grid.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
+    <div class="app">
+      <!--heading  -->
+      <div class="heading grid">
+        <!-- heading-navigation -->
+        <div class="heading-nav grid">
+          <ul class="heading-nav-item">
+            <li class="heading-nav-list">
+              <a href="./index.html" class="heading-nav-link heading-nav-trangchu">Trang chủ</a>
+            </li>
+            <li class="heading-nav-list">
+              <a href="#" class="heading-nav-link heading-nav-gioithieu-login">Giới thiệu</a>
+            </li>
+            <li class="heading-nav-list">
+              <a href="#" class="heading-nav-link heading-nav-tuyendung-login">Tuyển dụng</a>
+            </li>
+            <li class="heading-nav-list">
+              <a href="#" class="heading-nav-link heading-nav-baohanh-login">Trung tâm bảo hành</a>
+            </li>
+            <li class="heading-nav-list">
+              <a href="#" class="heading-nav-link heading-nav-link-login nav-active">
+                <span class="material-symbols-outlined heading-nav-user-login"> person </span>
+                <span class="heading-nav-user-text"></span>
+              </a>
+            </li>
+            <li class="heading-nav-list">
+              <a href="./index.html" class="heading-nav-link heading-nav-logout">Đăng Xuất</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Thêm Sản Phẩm-->
+      <div class="add-product grid wide">
+        <form class="wrap-add-product">
+          <h1 class="add-product-heading">THÊM SẢN PHẨM</h1>
+          <div class="parent-add-product-img">
+            <label for="avatar" class="add-product-img-text"> Nhập url ảnh sản phẩm:</label>
+            <input id="avatar" type="text" class="add-product-img" placeholder="link ảnh sản phẩm" />
+            <span class="message-error error">Vui lòng đúng url sản phẩm !</span>
+          </div>
+
+          <div class="wrap-input-1">
+            <label class="label-input" for="name">Nhập tên sản phẩm:</label>
+            <input id="name" type="text" class="add-product-name add-product-input" placeholder="Tên sản phẩm: vd:Xiaomi-Mi9" />
+            <span class="message-error error">Vui lòng nhập tên sản phẩm!</span>
+          </div>
+
+          <div class="wrap-input-1">
+            <label class="label-input" for="price1">Nhập giá cũ sản phẩm:</label>
+            <input type="text" id="price1" class="add-product-price-old add-product-input" placeholder="Giá cũ : 26,030,000 ₫" />
+            <span class="message-error error">Vui lòng nhập giá cũ sản phẩm !</span>
+          </div>
+
+          <div class="wrap-input-1">
+            <label class="label-input" for="price2">Nhập giá mới sản phẩm:</label>
+            <input type="text" id="price2" class="add-product-price-new add-product-input" placeholder="Giá mới : 24,030,000 ₫" />
+            <span class="message-error error">Vui lòng nhập giá mới sản phẩm!</span>
+          </div>
+          <div class="wrap-input-1">
+            <label class="label-input" for="sale">Nhập khuyễn mãi SP:</label>
+
+            <input type="text" id="sale" class="add-product-sale-of add-product-input" placeholder="Khuyễn mãi" />
+            <span class="message-error error">Vui lòng nhập khuyễn mãi sp !</span>
+          </div>
+          <div class="wrap-input-1">
+            <label class="label-input" for="des">Nhập mô tả SP:</label>
+            <input type="text" id="des" class="add-product-des-phone add-product-input" placeholder="Mô tả sản phẩm" />
+            <span class="message-error error">Vui lòng nhập mô tả sản phẩm !</span>
+          </div>
+
+          <div class="wrap-input-1">
+            <label class="label-input" for="des1">Nhập mô tả 2 SP:</label>
+            <input type="text" id="des1" class="add-product-detail-sale add-product-input" placeholder="Và 8 sản phẩm khác" />
+            <span class="message-error error">Vui lòng nhập trường này!</span>
+          </div>
+
+          <div class="wrap-option-phone wrap-option-phone-1">
+            <div class="wrap-input-2">
+              <label class="label-input-2">Nhập option 1 SP:</label>
+              <input type="text" class="add-product-option-phone-1 add-product-option" placeholder="option-phone-1" value="64G" />
+              <span class="message-error-2 error">Vui lòng nhập option sp!</span>
+            </div>
+
+            <div class="wrap-input-2">
+              <label class="label-input-2" for="price-option1">Nhập giá option 1 SP:</label>
+              <input type="text" id="price-option1" class="add-product-option-phone-1-price add-product-option" placeholder="giá: 1,000,000đ" />
+              <span class="message-error-2 error">Vui lòng nhập giá option!</span>
+            </div>
+          </div>
+
+          <div class="wrap-option-phone wrap-option-phone-2">
+            <div class="wrap-input-2">
+              <label class="label-input-2" for="option2">Nhập option 2 SP:</label>
+              <input type="text" id="option2" class="add-product-option-phone-2 add-product-option" placeholder="option-phone-2:128G" />
+              <span class="message-error-2 error">Vui lòng nhập option sản phẩm!</span>
+            </div>
+            <div class="wrap-input-2">
+              <label class="label-input-2" for="price-option2">Nhập giá option 2 SP:</label>
+              <input type="text" id="price-option2" class="add-product-option-phone-2-price add-product-option" placeholder="giá:2,000,000đ" />
+              <span class="message-error-2 error">Vui lòng nhập giá option!</span>
+            </div>
+          </div>
+
+          <div class="wrap-option-phone wrap-option-phone-3">
+            <div class="wrap-input-2">
+              <label class="label-input-2" for="option3">Nhập option 3 SP:</label>
+              <input type="text" id="option3" class="add-product-option-phone-3 add-product-option" placeholder="option-phone-3:256G" />
+              <span class="message-error-2 error">Vui lòng nhập option sản phẩm !</span>
+            </div>
+            <div class="wrap-input-2">
+              <label class="label-input-2" for="price-option3">Nhập price option 3 SP:</label>
+
+              <input type="text" id="price-option3" class="add-product-option-phone-3-price add-product-option" placeholder="giá:3,000,000đ" />
+              <span class="message-error-2 error">Vui lòng nhập giá option!</span>
+            </div>
+          </div>
+
+          <div class="wrap-btn-input">
+            <input type="submit" value="Thêm Sản Phẩm" class="product-btn product-btn-add" />
+            <input type="submit" value="Sửa Sản Phẩm" class="product-btn product-btn-push" />
+            <input type="submit" value="Xóa Sản Phẩm" class="product-btn product-btn-delete" />
+          </div>
+        </form>
+
+        <div class="completed-buy-phone-back">
+          <button>Về Trang chủ</button>
+        </div>
+      </div>
+      <!--up top-->
+      <div class="up-top">
+        <i class="fa-solid fa-caret-up up-top-icon"></i>
+      </div>
+
+      <!--social -->
+      <div class="sosial">
+        <ul class="sosial-item">
+          <li class="sosial-list">
+            <a href="https://www.facebook.com/hai.nguyenquang.5477272/" class="sosial-link">
+              <i class="fa-brands fa-facebook-f sosial-link-icon"></i>
+            </a>
+          </li>
+          <li class="sosial-list">
+            <a href="https://www.youtube.com/channel/UCDnfGvT9xON5D2VTpJ-Cevw" class="sosial-link">
+              <i class="fa-brands fa-youtube sosial-link-icon"></i>
+            </a>
+          </li>
+          <li class="sosial-list">
+            <a href="https://www.instagram.com/" class="sosial-link">
+              <i class="fa-brands fa-instagram sosial-link-icon"></i>
+            </a>
+          </li>
+          <li class="sosial-list">
+            <a href="https://www.tiktok.com/" class="sosial-link"> <i class="fa-brands fa-tiktok sosial-link-icon"></i> </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- <script src="./js/tranggioithieulogin.js" type="module"></script> -->
+    <script src="./js/main.js" type="module"></script>
+  </body>
+</html>

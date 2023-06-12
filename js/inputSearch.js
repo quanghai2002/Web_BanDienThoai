@@ -66,32 +66,60 @@ function inputSearch() {
                         Array.from(phonesClickes).forEach((phoneClick) => {
 
                             phoneClick.addEventListener('click', function (e) {
-                                let imgPhone = this.querySelector('.input-search-phone-img img').src;
-                                let namePhone = this.querySelector('.input-search-phone-info .name').innerText;
-                                let price = this.querySelector('.input-search-phone-info .price').innerText;
 
-                                if (imgPhone && namePhone && price) {
 
-                                    // dữ liệu price buyphone
-                                    let data = {
-                                        imgPhone,
-                                        locationActive: 0,
-                                        namePhone,
-                                        optionGB: "64G",
-                                        price
+                                // check xem đã đăng nhập chưa => nếu đăng nhập mới cho mua hàng
+
+                                let checkLogin = JSON.parse(localStorage.getItem('userLogin'));
+
+                                if (checkLogin) { // nếu như có userLogin => check trạng thái xem đang đăng nhập || đăng xuất
+
+                                    if (checkLogin.checkLogin === true) { // đã đăng nhập thành công => mới cho chọn sản phẩm => để mua hàng
+                                        let imgPhone = this.querySelector('.input-search-phone-img img').src;
+                                        let namePhone = this.querySelector('.input-search-phone-info .name').innerText;
+                                        let price = this.querySelector('.input-search-phone-info .price').innerText;
+
+                                        if (imgPhone && namePhone && price) {
+
+                                            // dữ liệu price buyphone
+                                            let data = {
+                                                imgPhone,
+                                                locationActive: 0,
+                                                namePhone,
+                                                optionGB: "64G",
+                                                price
+
+                                            }
+                                            // dữ liệu info buyPhone
+                                            let data2 = {
+                                                imgPhone,
+                                                namePhone,
+                                                pricePhone: price
+                                            }
+
+                                            localStorage.setItem('infoBuyPhone', JSON.stringify(data2));
+                                            localStorage.setItem('pricePhoneBuy', JSON.stringify(data));
+                                            window.location.href = "./buyPhone.html";
+                                        }
 
                                     }
-                                    // dữ liệu info buyPhone
-                                    let data2 = {
-                                        imgPhone,
-                                        namePhone,
-                                        pricePhone: price
+                                    // trạng thái đăng xuất => bắt đăng nhập nhập lại
+                                    else {
+                                        if (confirm('Bạn vui lòng đăng nhập để mua sản phẩm nhé!')) {
+                                            window.location.href = "./login.html";
+                                        }
                                     }
 
-                                    localStorage.setItem('infoBuyPhone', JSON.stringify(data2));
-                                    localStorage.setItem('pricePhoneBuy', JSON.stringify(data));
-                                    window.location.href = "./buyPhone.html";
                                 }
+
+                                // nếu localstorage không có userLogin => ko cho mua => bắt vào trang đăng nhập
+                                else {
+                                    if (confirm('Bạn vui lòng đăng nhập để mua sản phẩm nhé!')) {
+                                        window.location.href = "./login.html";
+                                    }
+                                }
+
+
                             })
 
 
@@ -114,25 +142,7 @@ function inputSearch() {
                 }
 
             }
-            // khi unput onfocus
 
-            // inputHeader.onfocus = (e) => {
-            //     console.log('focus');
-            //     body.style.overflowY = 'hidden';
-            //     document.querySelector('.overlay').style.display = 'block';
-            // }
-
-            // // khi input blur ra ngoài
-            // inputHeader.onblur = (e) => {
-            //     // bỏ overlay và cho scroll
-            //     console.log('blur')
-            //     body.style.overflowY = 'scroll';
-            //     document.querySelector('.overlay').style.display = 'none';
-
-            // }
-
-
-            // khi click ra ngoài thì đóng popup search, clik vào trong popup thì không đóng pupup
             if (popupSeach) {
 
                 popupSeach.addEventListener('click', (e) => {
@@ -162,38 +172,70 @@ function inputSearch() {
                     // click nút tìm kiếm => chọn sản phẩm => chuyển đến trang thanh toán
                     setTimeout(() => {
 
+
+
+
+
+
                         let phonesClickes = document.querySelectorAll('.input-search-phone-item .input-search-phone-list');
-                        console.log(phonesClickes);
+
                         // muốn chuyển đến trang thanh toán => cần cập nhật lại dữ liệu => infoBuyphone + PricePhoneBuy
                         Array.from(phonesClickes).forEach((phoneClick) => {
 
                             phoneClick.addEventListener('click', function (e) {
-                                let imgPhone = this.querySelector('.input-search-phone-img img').src;
-                                let namePhone = this.querySelector('.input-search-phone-info .name').innerText;
-                                let price = this.querySelector('.input-search-phone-info .price').innerText;
-                                console.log(1)
-                                if (imgPhone && namePhone && price) {
 
-                                    // dữ liệu price buyphone
-                                    let data = {
-                                        imgPhone,
-                                        locationActive: 0,
-                                        namePhone,
-                                        optionGB: "64G",
-                                        price
+
+                                // check xem đã đăng nhập chưa => nếu đăng nhập mới cho mua hàng
+
+                                let checkLogin = JSON.parse(localStorage.getItem('userLogin'));
+
+                                if (checkLogin) {// nếu như có userLogin => check trạng thái xem đang đăng nhập || đăng xuất
+
+                                    if (checkLogin.checkLogin === true) {// đã đăng nhập thành công => mới cho chọn sản phẩm => để mua hàng
+
+                                        let imgPhone = this.querySelector('.input-search-phone-img img').src;
+                                        let namePhone = this.querySelector('.input-search-phone-info .name').innerText;
+                                        let price = this.querySelector('.input-search-phone-info .price').innerText;
+                                        console.log(1)
+                                        if (imgPhone && namePhone && price) {
+
+                                            // dữ liệu price buyphone
+                                            let data = {
+                                                imgPhone,
+                                                locationActive: 0,
+                                                namePhone,
+                                                optionGB: "64G",
+                                                price
+
+                                            }
+                                            // dữ liệu info buyPhone
+                                            let data2 = {
+                                                imgPhone,
+                                                namePhone,
+                                                pricePhone: price
+                                            }
+
+                                            localStorage.setItem('infoBuyPhone', JSON.stringify(data2));
+                                            localStorage.setItem('pricePhoneBuy', JSON.stringify(data));
+                                            window.location.href = "./buyPhone.html";
+                                        }
 
                                     }
-                                    // dữ liệu info buyPhone
-                                    let data2 = {
-                                        imgPhone,
-                                        namePhone,
-                                        pricePhone: price
+                                    else { // checkLogin === false => đã đăng xuất => bắt phải đăng nhập mới cho mua hàng
+                                        if (confirm('Bạn vui lòng đăng nhập để mua sản phẩm nhé!')) {
+                                            window.location.href = "./login.html";
+                                        }
                                     }
 
-                                    localStorage.setItem('infoBuyPhone', JSON.stringify(data2));
-                                    localStorage.setItem('pricePhoneBuy', JSON.stringify(data));
-                                    window.location.href = "./buyPhone.html";
                                 }
+
+                                // nếu localstorage không có userLogin => ko cho mua => bắt vào trang đăng nhập
+                                else {
+                                    if (confirm('Bạn vui lòng đăng nhập để mua sản phẩm nhé!')) {
+                                        window.location.href = "./login.html";
+                                    }
+                                }
+
                             })
 
 
