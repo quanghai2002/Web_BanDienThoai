@@ -8,6 +8,7 @@
   font-size: 2.2rem;
   color: #333;
   font-weight: bold;
+  text-transform: capitalize;
 }
 .buy-phone-product {
   display: flex;
@@ -38,6 +39,7 @@
   font-size: 25px;
   color: #fd475a;
   font-weight: bold;
+  text-transform: lowercase;
 }
 .buy-phone-product-info-price-vat {
   font-size: 15px;
@@ -142,6 +144,7 @@
   color: #fd475a;
   font-weight: bold;
   padding: 0 20.1px 4px 6px;
+  text-transform: lowercase;
 }
 
 .buy-phone-product-promotion-text {
@@ -311,6 +314,7 @@
   font-size: 1.8rem;
   font-weight: bold;
   text-align: center;
+  text-transform: capitalize;
 }
 .buy-phone-click-img-info-option {
   color: #aaa;

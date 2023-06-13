@@ -12,6 +12,7 @@
   box-shadow: 0 0 4px #e5e5e5;
   margin-top: 40px;
   font-size: 1.3rem;
+  user-select: none;
 }
 .add-product-heading {
   color: #009981;
@@ -71,6 +72,7 @@
 }
 .wrap-btn-input {
   margin: 20px 0 10px -4px;
+  text-align: center;
 }
 .product-btn {
   min-width: 122px;
@@ -155,4 +157,35 @@
   margin: 9px 0 1px;
   color: #009981;
   font-weight: bold;
+}
+// nút convert chuyển sang chế độ thêm sản phẩm
+.convert-add-product {
+  margin-top: 7px;
+  position: relative;
+  &:hover .convert-add-product-icon {
+    cursor: pointer;
+    color: #7fd6cb;
+    border: 2px solid #7fd6cb;
+  }
+  &:hover .convert-add-product-icon-add {
+    color: #7fd6cb;
+  }
+}
+
+.convert-add-product-icon {
+  font-size: 3.2rem;
+  padding: 4.3px;
+  border: 2px solid #00483d;
+  border-radius: 50%;
+  color: $primarryColor;
+  transition: all 0.2s linear;
+}
+
+.convert-add-product-icon-add {
+  position: absolute;
+  font-size: 1.3rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #00483d;
 }

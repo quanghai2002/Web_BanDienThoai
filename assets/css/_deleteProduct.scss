@@ -1,0 +1,99 @@
+.delete-wrap-product {
+  margin-top: 30px;
+  background-color: #fff;
+  border-radius: 6px;
+  box-shadow: 0 0 3px #e5e5e5;
+}
+.delete-product-heading {
+  padding-top: 23px;
+}
+
+.delete-product {
+  padding: 0 75px;
+}
+.delete-product-item {
+  list-style-type: none;
+  margin: 0 314px;
+  max-height: 404px;
+  overflow-y: auto;
+
+  &::-webkit-scrollbar {
+    width: 6px;
+    background-color: #ccc;
+    border-radius: 12px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: #00917a;
+    border-radius: 12px;
+  }
+  .delete-phone-null {
+    padding: 0 13px;
+    border-radius: 8px;
+    border: 1px solid red;
+    display: flex;
+    align-items: center;
+    background-color: rgba(127, 214, 203, 0.3);
+  }
+  .delete-0 {
+    color: #fd475a;
+    text-align: center;
+  }
+  .delete-0-icon {
+    font-size: 3rem;
+    color: red;
+    font-weight: bold;
+    margin-right: -2px;
+  }
+}
+.delete-product-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.6rem;
+  background-color: rgba(127, 214, 203, 0.3);
+  color: #000;
+  border-radius: 3px;
+  box-shadow: 0 0 3px #7fd6cb;
+  user-select: none;
+  padding: 5px 6px;
+  margin-bottom: 8px;
+}
+.delete-product-list-img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+.delete-product-list-text {
+  font-weight: 500;
+  margin: 0 7px 0 2px;
+  flex: 1;
+  line-height: 19px;
+}
+.delete-product-list-icon {
+  color: red;
+  font-size: 2.6rem;
+  transition: all 0.1s linear;
+  &:hover {
+    cursor: pointer;
+    color: #ff6801;
+  }
+}
+.wrap-btn-input-delete {
+  text-align: center;
+}
+
+// popup hiện lên khi xóa thành công
+.popup-delete {
+  display: none;
+  position: fixed;
+  top: 16%;
+  right: 41px;
+  font-size: 1.6rem;
+  background-color: #77d169;
+  padding: 7px 14px;
+  color: #130fe2;
+  border-radius: 5px;
+  font-weight: 600;
+  user-select: none;
+  box-shadow: 0 0 3px $primarryColor;
+}

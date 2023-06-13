@@ -10,6 +10,7 @@ import { completedBuyPhone } from './completedBuyPhone.js';
 import thanhtoan from "./thanhtoan.js";
 import { cart } from './cart.js';
 import addProduct from './addProduct.js';
+import deleteProduct from './deleteProduct.js';
 
 
 let body = document.querySelector('body');
@@ -28,6 +29,7 @@ body.onload = () => {
         thanhtoan();
         cart();
         addProduct();
+        deleteProduct()
     }, 100)
 
 

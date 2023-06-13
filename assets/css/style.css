@@ -596,6 +596,7 @@
   margin-bottom: 10px;
   user-select: none;
   transition: all 0.2s linear;
+  height: 310px;
 }
 .container-product:hover {
   transform: translateY(-3px);
@@ -621,6 +622,7 @@
   line-height: 16px;
   cursor: pointer;
   min-height: 32px;
+  text-transform: capitalize;
 }
 .container-product-info .container-product-info-price {
   cursor: pointer;
@@ -774,6 +776,7 @@
   font-size: 2.2rem;
   color: #333;
   font-weight: bold;
+  text-transform: capitalize;
 }
 
 .buy-phone-product {
@@ -805,6 +808,7 @@
   font-size: 25px;
   color: #fd475a;
   font-weight: bold;
+  text-transform: lowercase;
 }
 
 .buy-phone-product-info-price-vat {
@@ -913,6 +917,7 @@
   color: #fd475a;
   font-weight: bold;
   padding: 0 20.1px 4px 6px;
+  text-transform: lowercase;
 }
 
 .buy-phone-product-promotion-text {
@@ -1091,6 +1096,7 @@
   font-size: 1.8rem;
   font-weight: bold;
   text-align: center;
+  text-transform: capitalize;
 }
 
 .buy-phone-click-img-info-option {
@@ -2038,6 +2044,7 @@
   box-shadow: 0 0 4px #e5e5e5;
   margin-top: 40px;
   font-size: 1.3rem;
+  user-select: none;
 }
 
 .add-product-heading {
@@ -2102,6 +2109,7 @@
 
 .wrap-btn-input {
   margin: 20px 0 10px -4px;
+  text-align: center;
 }
 
 .product-btn {
@@ -2194,6 +2202,142 @@
   margin: 9px 0 1px;
   color: #009981;
   font-weight: bold;
+}
+
+.convert-add-product {
+  margin-top: 7px;
+  position: relative;
+}
+.convert-add-product:hover .convert-add-product-icon {
+  cursor: pointer;
+  color: #7fd6cb;
+  border: 2px solid #7fd6cb;
+}
+.convert-add-product:hover .convert-add-product-icon-add {
+  color: #7fd6cb;
+}
+
+.convert-add-product-icon {
+  font-size: 3.2rem;
+  padding: 4.3px;
+  border: 2px solid #00483d;
+  border-radius: 50%;
+  color: #00483d;
+  transition: all 0.2s linear;
+}
+
+.convert-add-product-icon-add {
+  position: absolute;
+  font-size: 1.3rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #00483d;
+}
+
+.delete-wrap-product {
+  margin-top: 30px;
+  background-color: #fff;
+  border-radius: 6px;
+  box-shadow: 0 0 3px #e5e5e5;
+}
+
+.delete-product-heading {
+  padding-top: 23px;
+}
+
+.delete-product {
+  padding: 0 75px;
+}
+
+.delete-product-item {
+  list-style-type: none;
+  margin: 0 314px;
+  max-height: 404px;
+  overflow-y: auto;
+}
+.delete-product-item::-webkit-scrollbar {
+  width: 6px;
+  background-color: #ccc;
+  border-radius: 12px;
+}
+.delete-product-item::-webkit-scrollbar-thumb {
+  background-color: #00917a;
+  border-radius: 12px;
+}
+.delete-product-item .delete-phone-null {
+  padding: 0 13px;
+  border-radius: 8px;
+  border: 1px solid red;
+  display: flex;
+  align-items: center;
+  background-color: rgba(127, 214, 203, 0.3);
+}
+.delete-product-item .delete-0 {
+  color: #fd475a;
+  text-align: center;
+}
+.delete-product-item .delete-0-icon {
+  font-size: 3rem;
+  color: red;
+  font-weight: bold;
+  margin-right: -2px;
+}
+
+.delete-product-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.6rem;
+  background-color: rgba(127, 214, 203, 0.3);
+  color: #000;
+  border-radius: 3px;
+  box-shadow: 0 0 3px #7fd6cb;
+  user-select: none;
+  padding: 5px 6px;
+  margin-bottom: 8px;
+}
+
+.delete-product-list-img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+
+.delete-product-list-text {
+  font-weight: 500;
+  margin: 0 7px 0 2px;
+  flex: 1;
+  line-height: 19px;
+}
+
+.delete-product-list-icon {
+  color: red;
+  font-size: 2.6rem;
+  transition: all 0.1s linear;
+}
+.delete-product-list-icon:hover {
+  cursor: pointer;
+  color: #ff6801;
+}
+
+.wrap-btn-input-delete {
+  text-align: center;
+}
+
+.popup-delete {
+  display: none;
+  position: fixed;
+  top: 16%;
+  right: 41px;
+  font-size: 1.6rem;
+  background-color: #77d169;
+  padding: 7px 14px;
+  color: #130fe2;
+  border-radius: 5px;
+  font-weight: 600;
+  user-select: none;
+  box-shadow: 0 0 3px #00483d;
 }
 
 * {

@@ -1,6 +1,55 @@
 import { renderPhone } from "./renderPhone.js";
 export default function addProduct() {
 
+
+    // khi click vào nút icon add-product => trên màn hình => chuyển đến trang addProduct
+    let btnConvertAddProduct = document.querySelector('.convert-add-product');
+
+    if (btnConvertAddProduct) {
+        // khi click vào bút add => check xem có phải là tài khoản admin => để được vào trang sản phẩm không
+        btnConvertAddProduct.addEventListener('click', () => {
+
+            let nameUser = JSON.parse(localStorage.getItem('userLogin'));
+            // nếu có thông tin userLogin => check xem có đúng phải admin không
+            if (nameUser) {
+
+                // nếu checkLogin => false =>đã đăng xuất => vui lòng đăng nhập lại
+                let checkLogin = nameUser.checkLogin;
+                let checkNameUser = nameUser.email;
+                let nameAdmin = "haimobiarmy2002@gmail.com";
+
+                if (checkLogin) {
+                    // kiểm tra xem đúng tài khoản admin không => đúng cho vào trang đăng nhập
+                    if (checkNameUser === nameAdmin) {
+                        if (confirm('Xin chào admin: Bạn có muốn chuyển trang chỉnh sửa sản phẩm không ?')) {
+                            window.location.href = "./themSanPham.html";
+                        }
+                    }
+                    else {
+                        if (confirm('Bạn chưa đăng nhập đúng tài khoản admin! Vui lòng đăng nhập đúng tài khoản admin để thêm sản phẩm')) {
+                            window.location.href = "./login.html";
+                        }
+                    }
+                }
+
+                else {
+                    if (confirm('Bạn chưa đăng nhập đúng tài khoản admin! Vui lòng đăng nhập đúng tài khoản admin để thêm sản phẩm')) {
+                        window.location.href = "./login.html";
+                    }
+
+                }
+
+            }
+            // ko có thông tin userLogin => hiện thông báo => chuyển đến trang đăng nhập
+            else {
+                if (confirm('Bạn chưa đăng nhập đúng tài khoản admin! Vui lòng đăng nhập đúng tài khoản admin để thêm sản phẩm')) {
+                    window.location.href = "./login.html";
+                }
+
+            }
+        })
+    }
+
     let dataPhoneOld = localStorage.getItem('phone'); // nếu có dữ liệu dataphone từ trước thì mới làm, ko thì set dataPhone
     if (dataPhoneOld) {
 
@@ -62,13 +111,13 @@ export default function addProduct() {
                         if (!(checkUrl.test(imgPhone.value))) {
                             mesageError[0].style.display = 'block';
                         }
-                        if (!namePhone.value) {
+                        if (!namePhone.value || namePhone.value.trim().length > 47) {
                             mesageError[1].style.display = 'block';
                         }
-                        if (!priceOld.value) {
+                        if (!priceOld.value || priceOld.value.trim().length > 13) {
                             mesageError[2].style.display = 'block';
                         }
-                        if (!priceNew.value) {
+                        if (!priceNew.value || priceNew.value.trim().length > 13) {
                             mesageError[3].style.display = 'block';
                         }
                         if (!phoneSaleof.value) {
@@ -83,19 +132,19 @@ export default function addProduct() {
                         if (!nameOption1.value) {
                             mesageError[7].style.display = 'block';
                         }
-                        if (!priceOption1.value) {
+                        if (!priceOption1.value || priceOption1.value.trim().length > 13) {
                             mesageError[8].style.display = 'block';
                         }
-                        if (!nameOption2.value) {
+                        if (!nameOption2.value || nameOption2.value.trim().length > 4) {
                             mesageError[9].style.display = 'block';
                         }
-                        if (!priceOption2.value) {
+                        if (!priceOption2.value || priceOption2.value.trim().length > 13) {
                             mesageError[10].style.display = 'block';
                         }
-                        if (!nameOption3.value) {
+                        if (!nameOption3.value || nameOption3.value.trim().length > 4) {
                             mesageError[11].style.display = 'block';
                         }
-                        if (!priceOption3.value) {
+                        if (!priceOption3.value || priceOption3.value.trim().length > 13) {
                             mesageError[12].style.display = 'block';
                         }
 
@@ -122,7 +171,7 @@ export default function addProduct() {
 
                     })
                     namePhone.addEventListener('blur', () => {
-                        if (!namePhone.value) {
+                        if (!namePhone.value || namePhone.value.trim().length > 47) {
                             mesageError[1].style.display = 'block';
                         }
                     })
@@ -132,7 +181,7 @@ export default function addProduct() {
 
                     })
                     priceOld.addEventListener('blur', () => {
-                        if (!priceOld.value) {
+                        if (!priceOld.value || priceOld.value.trim().length > 13) {
                             mesageError[3].style.display = 'block';
                         }
                     })
@@ -141,7 +190,7 @@ export default function addProduct() {
 
                     })
                     priceNew.addEventListener('blur', () => {
-                        if (!priceNew.value) {
+                        if (!priceNew.value || priceNew.value.trim().length > 13) {
                             mesageError[2].style.display = 'block';
                         }
                     })
@@ -191,7 +240,7 @@ export default function addProduct() {
 
                     })
                     priceOption1.addEventListener('blur', () => {
-                        if (!priceOption1.value) {
+                        if (!priceOption1.value || priceOption1.value.trim().length > 13) {
                             mesageError[8].style.display = 'block';
                         }
                     })
@@ -201,7 +250,7 @@ export default function addProduct() {
 
                     })
                     nameOption2.addEventListener('blur', () => {
-                        if (!nameOption2.value) {
+                        if (!nameOption2.value || nameOption2.value.trim().length > 4) {
                             mesageError[9].style.display = 'block';
                         }
                     })
@@ -211,7 +260,7 @@ export default function addProduct() {
 
                     })
                     priceOption2.addEventListener('blur', () => {
-                        if (!priceOption2.value) {
+                        if (!priceOption2.value || priceOption2.value.trim().length > 13) {
                             mesageError[10].style.display = 'block';
                         }
                     })
@@ -221,7 +270,7 @@ export default function addProduct() {
 
                     })
                     nameOption3.addEventListener('blur', () => {
-                        if (!nameOption3.value) {
+                        if (!nameOption3.value || nameOption3.value.trim().length > 4) {
                             mesageError[11].style.display = 'block';
                         }
                     })
@@ -230,14 +279,18 @@ export default function addProduct() {
 
                     })
                     priceOption3.addEventListener('blur', () => {
-                        if (!priceOption3.value) {
+                        if (!priceOption3.value || priceOption3.value.trim().length > 13) {
                             mesageError[12].style.display = 'block';
                         }
                     })
                 }
 
                 // nếu dữ liệu nhập đủ => nhập đủ dữ liệu
-                if (imgPhone.value && namePhone.value && priceOld.value && priceNew.value && phoneSaleof.value && phoneDescription.value && phoneDescription2.value && nameOption1.value && priceOption1.value && nameOption2.value && priceOption2.value && nameOption3.value && priceOption3.value) {
+
+
+
+
+                if (imgPhone.value && namePhone.value && namePhone.value.trim().length <= 47 && priceOld.value && priceOld.value.trim().length <= 13 && priceNew.value && priceNew.value.trim().length <= 13 && phoneSaleof.value && phoneDescription.value && phoneDescription2.value && nameOption1.value && priceOption1.value && priceOption1.value.trim().length <= 13 && nameOption2.value && nameOption2.value.trim().length <= 4 && priceOption2.value && priceOption2.value.trim().length <= 13 && nameOption3.value && nameOption3.value.trim().length <= 4 && priceOption3.value && priceOption3.value.trim().length <= 13) {
                     // khi nhập đủ dữ liệu => lấy thông tin phone cũ => trên locastorage => cập nhật thêm thông tin mới vào
                     console.log('nhập đủ dữ liệu')
                     let dataPhone = JSON.parse(localStorage.getItem('phone'));
@@ -448,4 +501,8 @@ export default function addProduct() {
         // Lưu thông tin phone lên locastorage
         localStorage.setItem('phone', JSON.stringify(phone));
     }
+
+
+
+
 }
