@@ -122,56 +122,58 @@ function cart() {
 
         // giá sản phẩm của 1 chiệc điện thoại
         let pricePhone = document.querySelector('.header-cart-value-price strong');
-        let pricePhoneValue = pricePhone.innerText.trim();
-        // chuyển giá thành số để tính toán
-        console.log(pricePhoneValue);
-        let pricePhoneNumber = pricePhoneValue.slice(0, pricePhoneValue.length - 1).trim();
-        let priceNew = Number.parseFloat(pricePhoneNumber.split(',').join(''));
+        if (pricePhone) {
+
+            let pricePhoneValue = pricePhone.innerText.trim();
+            // chuyển giá thành số để tính toán
+            console.log(pricePhoneValue);
+            let pricePhoneNumber = pricePhoneValue.slice(0, pricePhoneValue.length - 1).trim();
+            let priceNew = Number.parseFloat(pricePhoneNumber.split(',').join(''));
 
 
-        // click vào nút tăng sản phẩm => giá tháy đổi theo
-        if (btnPlusOption) {
+            // click vào nút tăng sản phẩm => giá tháy đổi theo
+            if (btnPlusOption) {
 
-            let valueInputOld = Number.parseInt(inputValueOption.value);
-            btnPlusOption.addEventListener('click', () => {
-                valueInputOld++;
-                inputValueOption.value = valueInputOld;
+                let valueInputOld = Number.parseInt(inputValueOption.value);
+                btnPlusOption.addEventListener('click', () => {
+                    valueInputOld++;
+                    inputValueOption.value = valueInputOld;
 
-                // xử lý lấy số lượng * với giá 1 chiếc điện thoại => render lại ra màn hình
-                let price = (priceNew * valueInputOld).toString();
+                    // xử lý lấy số lượng * với giá 1 chiếc điện thoại => render lại ra màn hình
+                    let price = (priceNew * valueInputOld).toString();
 
-                // xử lý tách thành dấu phẩy, in lại ra màn hình render price
-                console.log(price);
-                console.log(price[0]);
+                    // xử lý tách thành dấu phẩy, in lại ra màn hình render price
+                    console.log(price);
+                    console.log(price[0]);
 
-                if (price.length === 6) {
-                    pricePhone.innerText = `${price[0]}${price[1]}${price[2]},${price[3]}${price[4]}${price[5]} đ`;
-                }
-                if (price.length === 7) {
-                    pricePhone.innerText = `${price[0]},${price[1]}${price[2]}${price[3]},${price[4]}${price[5]}${price[6]} đ`;
-                }
-                if (price.length === 8) {
-                    pricePhone.innerText = `${price[0]}${price[1]},${price[2]}${price[3]}${price[4]},${price[5]}${price[6]}${price[7]} đ`;
-                }
-                if (price.length === 9) {
-                    pricePhone.innerText = `${price[0]}${price[1]}${price[2]},${price[3]}${price[4]}${price[5]},${price[6]}${price[7]}${price[8]} đ`;
-                }
-                if (price.length === 10) {
-                    pricePhone.innerText = `${price[0]},${price[1]}${price[2]}${price[3]},${price[4]}${price[5]}${price[6]},${price[7]}${price[8]}${price[9]} đ`;
-                }
-                if (price.length === 10) {
-                    pricePhone.innerText = `${price[0]},${price[1]}${price[2]}${price[3]},${price[4]}${price[5]}${price[6]},${price[7]}${price[8]}${price[9]} đ`;
-                }
-                if (price.length === 11) {
-                    pricePhone.innerText = `${price[0]}${price[1]},${price[2]}${price[3]}${price[4]},${price[5]}${price[6]}${price[7]},${price[8]}${price[9]}${price[10]} đ`;
-                }
-                if (price.length === 12) {
-                    pricePhone.innerText = `${price[0]}${price[1]}${price[2]},${price[3]}${price[4]}${price[5]},${price[6]}${price[7]}${price[8]},${price[9]}${price[10]}${price[11]} đ`;
-                }
+                    if (price.length === 6) {
+                        pricePhone.innerText = `${price[0]}${price[1]}${price[2]},${price[3]}${price[4]}${price[5]} đ`;
+                    }
+                    if (price.length === 7) {
+                        pricePhone.innerText = `${price[0]},${price[1]}${price[2]}${price[3]},${price[4]}${price[5]}${price[6]} đ`;
+                    }
+                    if (price.length === 8) {
+                        pricePhone.innerText = `${price[0]}${price[1]},${price[2]}${price[3]}${price[4]},${price[5]}${price[6]}${price[7]} đ`;
+                    }
+                    if (price.length === 9) {
+                        pricePhone.innerText = `${price[0]}${price[1]}${price[2]},${price[3]}${price[4]}${price[5]},${price[6]}${price[7]}${price[8]} đ`;
+                    }
+                    if (price.length === 10) {
+                        pricePhone.innerText = `${price[0]},${price[1]}${price[2]}${price[3]},${price[4]}${price[5]}${price[6]},${price[7]}${price[8]}${price[9]} đ`;
+                    }
+                    if (price.length === 10) {
+                        pricePhone.innerText = `${price[0]},${price[1]}${price[2]}${price[3]},${price[4]}${price[5]}${price[6]},${price[7]}${price[8]}${price[9]} đ`;
+                    }
+                    if (price.length === 11) {
+                        pricePhone.innerText = `${price[0]}${price[1]},${price[2]}${price[3]}${price[4]},${price[5]}${price[6]}${price[7]},${price[8]}${price[9]}${price[10]} đ`;
+                    }
+                    if (price.length === 12) {
+                        pricePhone.innerText = `${price[0]}${price[1]}${price[2]},${price[3]}${price[4]}${price[5]},${price[6]}${price[7]}${price[8]},${price[9]}${price[10]}${price[11]} đ`;
+                    }
 
-            })
+                })
+            }
         }
-
     }
 
     /*
