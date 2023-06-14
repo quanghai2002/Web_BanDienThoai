@@ -5,6 +5,15 @@ export default function addProduct() {
     // khi click vào nút icon add-product => trên màn hình => chuyển đến trang addProduct
     let btnConvertAddProduct = document.querySelector('.convert-add-product');
 
+    // khi ở trang thêm sản phẩm => click vào sửa sản phẩm => chuyển đến trang sửa sản phẩm
+    let btnChangeProduct = document.querySelector('.product-btn.product-btn-push');
+    if (btnChangeProduct) {
+        btnChangeProduct.addEventListener('click', (e) => {
+            e.preventDefault();
+            window.location.href = "./suaSanPham.html";
+        })
+    }
+
     if (btnConvertAddProduct) {
         // khi click vào bút add => check xem có phải là tài khoản admin => để được vào trang sản phẩm không
         btnConvertAddProduct.addEventListener('click', () => {
@@ -108,7 +117,7 @@ export default function addProduct() {
                     if (mesageError) {
                         // check xem nhâp có phải url hình ảnh hay không
                         let checkUrl = /\.(jpeg|jpg|gif|png|bmp|svg)$/i;
-                        if (!(checkUrl.test(imgPhone.value))) {
+                        if (!(checkUrl.test(imgPhone.value.trim())) || !(imgPhone.value.trim())) {
                             mesageError[0].style.display = 'block';
                         }
                         if (!namePhone.value || namePhone.value.trim().length > 47) {
@@ -159,7 +168,7 @@ export default function addProduct() {
 
                     })
                     imgPhone.addEventListener('blur', () => {
-                        if (!(checkUrl.test(imgPhone.value))) {
+                        if (!(checkUrl.test(imgPhone.value.trim()))) {
                             mesageError[0].style.display = 'block';
                         }
 
@@ -290,7 +299,7 @@ export default function addProduct() {
 
 
 
-                if (imgPhone.value && namePhone.value && namePhone.value.trim().length <= 47 && priceOld.value && priceOld.value.trim().length <= 13 && priceNew.value && priceNew.value.trim().length <= 13 && phoneSaleof.value && phoneDescription.value && phoneDescription2.value && nameOption1.value && priceOption1.value && priceOption1.value.trim().length <= 13 && nameOption2.value && nameOption2.value.trim().length <= 4 && priceOption2.value && priceOption2.value.trim().length <= 13 && nameOption3.value && nameOption3.value.trim().length <= 4 && priceOption3.value && priceOption3.value.trim().length <= 13) {
+                if (imgPhone.value.trim() && namePhone.value && namePhone.value.trim().length <= 47 && priceOld.value && priceOld.value.trim().length <= 13 && priceNew.value && priceNew.value.trim().length <= 13 && phoneSaleof.value && phoneDescription.value && phoneDescription2.value && nameOption1.value && priceOption1.value && priceOption1.value.trim().length <= 13 && nameOption2.value && nameOption2.value.trim().length <= 4 && priceOption2.value && priceOption2.value.trim().length <= 13 && nameOption3.value && nameOption3.value.trim().length <= 4 && priceOption3.value && priceOption3.value.trim().length <= 13) {
                     // khi nhập đủ dữ liệu => lấy thông tin phone cũ => trên locastorage => cập nhật thêm thông tin mới vào
                     console.log('nhập đủ dữ liệu')
                     let dataPhone = JSON.parse(localStorage.getItem('phone'));
@@ -338,7 +347,7 @@ export default function addProduct() {
 
                         // khi thêm dữ liệu thành công => hỏi user muốn thoát về trang chủ xem thành quả luôn không
                         if (confirm('Bạn đã thêm thành công sản phẩm ! Bạn có muốn về trang chủ luôn không')) {
-                            window.location.href = "./index.html";
+                            window.location.href = "./loginHomePage.html";
                         }
 
                     }

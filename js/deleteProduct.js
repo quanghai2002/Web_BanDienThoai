@@ -86,6 +86,12 @@ export default function deleteProduct() {
                                 // window.location.href = "./xoaSanPham.html";
                                 location.reload();
 
+                                // sau khi xóa sp xong hỏi xem có muốn về trang chủ không
+                                if (confirm('Xóa thành công ! Bạn muốn về trang chủ không')) {
+
+                                    window.location.href = "./loginHomePage.html";
+                                }
+
                             }, 1000)
 
                         }
@@ -94,6 +100,9 @@ export default function deleteProduct() {
 
                         // và trang chủ sẽ load lại sản phẩm đã xóa
                         renderPhone();
+
+                        // khi xóa sp thành công => xóa thông tin infoBuyPhone trên localstorage đi
+                        localStorage.removeItem('infoBuyPhone');
 
 
 

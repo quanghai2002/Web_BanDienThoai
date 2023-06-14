@@ -19,6 +19,7 @@ export default function renderPhoneKhiBuy() {
 
             })
 
+
             // thông tin phone mà người dùng click vào 
             let imgPhone = dataPhoneRender.imgPhone;
 

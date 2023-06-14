@@ -63,6 +63,7 @@
   height: 310px;
 
   &:hover {
+    cursor: pointer;
     transform: translateY(-3px);
   }
 }
