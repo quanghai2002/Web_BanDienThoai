@@ -84,7 +84,8 @@ export default function deleteProduct() {
 
 
                                 // window.location.href = "./xoaSanPham.html";
-                                location.reload();
+
+                                window.location.reload();
 
                                 // sau khi xóa sp xong hỏi xem có muốn về trang chủ không
                                 if (confirm('Xóa thành công ! Bạn muốn về trang chủ không')) {

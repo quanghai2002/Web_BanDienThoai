@@ -26,6 +26,26 @@
   user-select: none;
   position: relative;
 }
+
+.add-cart-icon-completed {
+  display: none;
+  font-size: 3.4rem;
+  position: absolute;
+  top: 2px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: red;
+  animation: moveCart 3s linear forwards;
+  @keyframes moveCart {
+    from {
+    }
+    to {
+      top: -974%;
+      left: 265%;
+      display: none;
+    }
+  }
+}
 .modal-popop-add-cart {
   display: none;
   position: absolute;
@@ -112,6 +132,7 @@
   box-shadow: 0 0 3px #00483d;
 }
 .header-cart-value-img {
+  margin-right: 7px;
   img {
     width: 60px;
     height: 60px;
@@ -232,4 +253,41 @@
   .sumPrice-buy {
     color: red;
   }
+}
+
+// trang thanh toán của giỏ hàng
+.buy-phone-cart-ul {
+  list-style-type: none;
+  display: block;
+  user-select: none;
+}
+
+.buy-phone-cart-li {
+  display: flex;
+  align-items: center;
+  padding: 6px 0;
+  width: 100%;
+  margin-bottom: 6px;
+  background-color: rgba(127, 214, 203, 0.3);
+}
+.buy-phone-cart-li-img {
+  margin-right: 1px;
+}
+.buy-phone-cart-li-item {
+  flex: 1;
+}
+
+.buy-phone-cart-li-option-price {
+  color: red;
+}
+.buy-phone-cart-sumPrice strong {
+  color: red;
+}
+
+.completed-buy-phone-order-info {
+  user-select: none;
+}
+
+.completed-buy-phone-order-pay-type-item {
+  user-select: none;
 }
