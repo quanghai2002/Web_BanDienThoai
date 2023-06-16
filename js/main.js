@@ -12,6 +12,7 @@ import { cart } from './cart.js';
 import addProduct from './addProduct.js';
 import deleteProduct from './deleteProduct.js';
 import changeProduct from './changeProduct.js';
+import completedBuyPhoneCart from './completedBuyPhoneCart.js';
 
 
 let body = document.querySelector('body');
@@ -32,6 +33,7 @@ body.onload = () => {
         addProduct();
         deleteProduct();
         changeProduct();
+        completedBuyPhoneCart();
     }, 100)
 
 

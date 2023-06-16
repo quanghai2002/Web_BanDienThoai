@@ -107,7 +107,7 @@ function cart() {
                 }
             }
 
-            // khi click vào giỏ hàng => tạo ra hiệu ưng cho sản phẩm bay vào
+            // khi click vào giỏ hàng => tạo ra hiệu ứng cho sản phẩm bay vào
             let animationCart = document.querySelector('.add-cart-icon-completed');
             if (animationCart) {
                 animationCart.style.display = 'block';
@@ -469,26 +469,7 @@ function cart() {
             })
         })
 
-        // khi click vào nút giỏ hàng trên thanh header => check nếu dữ liệu có sản phẩm => vào trang giỏ hàng => ko thì vào trang giỏ hàng null
-        let btnCart = document.querySelector('.header-cart');
-        if (btnCart) {
-            btnCart.addEventListener('click', () => {
 
-
-
-                // nếu data.length === 0 => ko có hàng => chuyển trang cart null
-                if (dataCartOld.length === 0) {
-                    window.location.href = "./cartNull.html";
-                }
-                if (dataCartOld.length !== 0) {
-                    window.location.href = "./cartValue.html";
-
-                }
-
-
-
-            })
-        }
         // mặc định vào giỏ hàng => số lượng sản phẩm trên giỏ hàng hiện thị bằng số =>lượng trong db
         let dataCart = JSON.parse(localStorage.getItem('dataCarts'));
         if (dataCart) {
@@ -498,19 +479,50 @@ function cart() {
             }
         }
     }
+    // nếu khong có dataCart => thì lập tức số liệu trên giỏ hàng ===0
     else {
-        // nếu không có dữ liệu data cart =>chuyển về giỏ hàng rỗng
-        let btnCart = document.querySelector('.header-cart');
-        if (btnCart) {
-            btnCart.addEventListener('click', () => {
-                window.location.href = "./cartNull.html";
-            })
+        let btnCartNumber = document.querySelector('.header-cart .header-cart-total');
+        if (btnCartNumber) {
+            btnCartNumber.innerText = 0;
         }
     }
 
+    // khi click vào nút giỏ hàng trên thanh header => check nếu dữ liệu có sản phẩm => vào trang giỏ hàng => ko thì vào trang giỏ hàng null
+    let btnCart = document.querySelector('.header-cart');
+    if (btnCart) {
+        btnCart.addEventListener('click', () => {
+            let dataCart = JSON.parse(localStorage.getItem('dataCarts'));
+            if (dataCart) {
+
+                console.log(dataCart.length);
+
+                // nếu data.length === 0 => ko có hàng => chuyển trang cart null
+                if (dataCart.length === 0) {
+                    window.location.href = "./cartNull.html";
+                }
 
 
-    // check nếu check login => đăng xuất => xóa thông tin lưu sản phẩm giỏ hàng đi
+                if (dataCart.length > 0) {
+                    window.location.href = "./cartValue.html";
+
+                }
+            }
+            if (Boolean(dataCart) === false) {
+                // nếu không có dữ liệu data cart =>chuyển về giỏ hàng rỗng
+                window.location.href = "./cartNull.html";
+                // số liệu sản phẩm => lập tức bằng 0
+                let btnCartNumber = document.querySelector('.header-cart .header-cart-total');
+                if (btnCartNumber) {
+                    btnCartNumber.innerText = 0;
+                }
+            }
+
+
+        })
+    }
+
+
+    // check nếu check login => đăng xuất => xóa thông tin lưu sản phẩm giỏ hàng đi => số liệu trên giỏ hàng ===0
     let chekcLogins = JSON.parse(localStorage.getItem('userLogin'));
     if (chekcLogins) {
         if (chekcLogins.checkLogin) {
@@ -519,6 +531,12 @@ function cart() {
         else {
             // bằng false => xóa dữ liệu đi
             localStorage.removeItem('dataCarts');
+            // số liệu sản phẩm => lập tức bằng 0
+            let btnCartNumber = document.querySelector('.header-cart .header-cart-total');
+            if (btnCartNumber) {
+                btnCartNumber.innerText = 0;
+            }
+
         }
     }
 
@@ -675,10 +693,10 @@ function cart() {
                     sumPrice,
                     phoneDetail
                 }
-                console.log(dataCartDatHang);
-
                 // lưu lên db
                 localStorage.setItem('cartCompleted', JSON.stringify(dataCartDatHang));
+                // chuyển đến trang completed buy phone cart
+                window.location.href = "./completedBuyPhoneCart.html";
 
             }
             else {

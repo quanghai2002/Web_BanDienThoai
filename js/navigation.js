@@ -59,7 +59,20 @@ function navigation() {
     let checkRegister = JSON.parse(localStorage.getItem('checkRegister'));
     let checkUserLogin = JSON.parse(localStorage.getItem('userLogin'));
 
+    // khi click vào kiểm tra đơn hàng => hiện lên chức năng đang phát triển
+    let btnKiemTraDonHang = document.querySelector('.heading-check-order');
+    if (btnKiemTraDonHang) {
+        btnKiemTraDonHang.addEventListener('click', () => {
+            let popUpDangPhatTrien = document.querySelector('.check-don-hang');
+            if (popUpDangPhatTrien) {
+                popUpDangPhatTrien.style.display = 'block';
 
+                setTimeout(() => {
+                    popUpDangPhatTrien.style.display = 'none';
+                }, 3000)
+            }
+        })
+    }
 
     if (checkRegister === true && checkUserLogin) {
         let data = JSON.parse(localStorage.getItem('register'));
@@ -85,16 +98,22 @@ function navigation() {
 
             let btnLogout = document.querySelector('.heading-nav-link.heading-nav-logout');
 
-
             if (btnLogout) {
 
                 btnLogout.addEventListener('click', () => {
                     let data = JSON.parse(localStorage.getItem('userLogin'));
                     let dataNew = { ...data, checkLogin: false };
 
-                    console.log(dataNew);
+
                     localStorage.setItem('userLogin', JSON.stringify(dataNew));
-                    // window.location.href = './index.html';
+                    window.location.href = './index.html';
+
+                    // khi click đăng xuất => sô lượng trên giỏ hàng ===0
+                    // số liệu sản phẩm => lập tức bằng 0
+                    let btnCartNumber = document.querySelector('.header-cart .header-cart-total');
+                    if (btnCartNumber) {
+                        btnCartNumber.innerText = 0;
+                    }
 
                 })
             }
@@ -108,6 +127,11 @@ function navigation() {
             btnHomepageLogout.addEventListener('click', () => {
                 let newData = { ...data, checkLogin: false };
                 localStorage.setItem('userLogin', JSON.stringify(newData));
+                // số liệu sản phẩm => lập tức bằng 0
+                let btnCartNumber = document.querySelector('.header-cart .header-cart-total');
+                if (btnCartNumber) {
+                    btnCartNumber.innerText = 0;
+                }
             })
         }
 
@@ -122,6 +146,11 @@ function navigation() {
                 let dataNew = { ...data, checkLogin: false };
 
                 localStorage.setItem('userLogin', JSON.stringify(dataNew));
+                // số liệu sản phẩm => lập tức bằng 0
+                let btnCartNumber = document.querySelector('.header-cart .header-cart-total');
+                if (btnCartNumber) {
+                    btnCartNumber.innerText = 0;
+                }
 
             })
         }

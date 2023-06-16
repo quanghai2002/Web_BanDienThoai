@@ -81,6 +81,7 @@
   margin-left: 25px;
 }
 .heading-content .heading-check-order {
+  position: relative;
   background-color: #00483d;
   width: 126px;
   display: flex;
@@ -100,6 +101,19 @@
 .heading-content .heading-check-order-text {
   font-size: 1.3rem;
   color: #fff;
+}
+.heading-content .heading-check-order .check-don-hang {
+  display: none;
+  position: absolute;
+  bottom: -30px;
+  left: -50%;
+  text-align: center;
+  background-color: #00483d;
+  color: #fff;
+  width: 200%;
+  padding: 4px 8px;
+  border-radius: 6px;
+  box-shadow: 0 0 3px #009981;
 }
 .heading-content .header-cart {
   display: flex;
@@ -2031,6 +2045,65 @@
 
 .completed-buy-phone-order-pay-type-item {
   user-select: none;
+}
+
+.ul-cart-nhanhang {
+  list-style-type: none;
+  display: block;
+}
+
+.li-cart-nhanhang {
+  display: flex;
+  width: 100%;
+}
+
+.title-phone-detail-cart {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: #009a82;
+}
+.title-phone-detail-cart h3 {
+  font-size: 1.3rem;
+  background-color: #009a82;
+  color: #fff;
+  padding: 6.2px 0;
+  font-weight: bold;
+  text-align: center;
+  border-top: 1px solid #dedede;
+  border-right: 1px solid #dedede;
+  border-left: 1px solid #dedede;
+}
+.title-phone-detail-cart .h3-1 {
+  flex: 2;
+}
+.title-phone-detail-cart .h3-2 {
+  flex: 1;
+}
+
+.ul-cart-thanhtoan-momo {
+  list-style-type: none;
+  display: block;
+}
+
+.li-cart-thanhtoan-momo {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  background-color: rgba(127, 214, 203, 0.3);
+  margin: 3px 0;
+}
+
+.li-cart-thanhtoan-momo-item-2 {
+  flex: 1;
+}
+
+.li-cart-thanhtoan-momo-item-1 {
+  margin-right: 2px;
+}
+
+.cart-buyPhone-info-momo-sumPrice strong {
+  color: red;
 }
 
 .input-search-phone {
