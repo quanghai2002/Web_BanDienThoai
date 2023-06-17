@@ -98,7 +98,7 @@ function cart() {
                 }
             }
 
-            // khi click vào giỏ hàng => số lượng sản phẩm trên giỏ hàng hiện thị bằng số lượng trong db
+            // khi click vào giỏ hàng pc-tablet=> số lượng sản phẩm trên giỏ hàng hiện thị bằng số lượng trong db
             let dataCart = JSON.parse(localStorage.getItem('dataCarts'));
             if (dataCart) {
                 let btnCartNumber = document.querySelector('.header-cart .header-cart-total');
@@ -487,8 +487,9 @@ function cart() {
         }
     }
 
-    // khi click vào nút giỏ hàng trên thanh header => check nếu dữ liệu có sản phẩm => vào trang giỏ hàng => ko thì vào trang giỏ hàng null
+    // khi click vào nút giỏ hàng trên thanh header pc-tablet => check nếu dữ liệu có sản phẩm => vào trang giỏ hàng => ko thì vào trang giỏ hàng null
     let btnCart = document.querySelector('.header-cart');
+
     if (btnCart) {
         btnCart.addEventListener('click', () => {
             let dataCart = JSON.parse(localStorage.getItem('dataCarts'));

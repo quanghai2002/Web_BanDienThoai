@@ -112,6 +112,53 @@ body.onload = () => {
     }
 
 
+    // xử trên mobile
+
+    let btnPopUpMobile = document.querySelector('.div-moda-mobile');
+
+    let ulPopUpMobile = document.querySelector('.div-moda-mobile .wrap-product');
+
+    let btnBatMobdaMobile = document.querySelector('.heading-content-mobile-icon-bars');
+    if (btnBatMobdaMobile) {
+        btnBatMobdaMobile.addEventListener('click', () => {
+            btnPopUpMobile.classList.toggle('hidden');
+            if (ulPopUpMobile) {
+                ulPopUpMobile.style.animation = `slideInMobile   0.3s linear`
+            }
+            setTimeout(() => {
+                if (ulPopUpMobile) {
+                    ulPopUpMobile.style.animation = 'unset';
+
+                }
+            }, 300)
+        })
+    }
+
+    let btnClosePopupMobile = document.querySelector('.wrap-product-icon-close');
+    if (btnClosePopupMobile) {
+        btnClosePopupMobile.addEventListener('click', () => {
+
+            if (ulPopUpMobile) {
+                ulPopUpMobile.style.animation = `slideOutMobile  0.3s linear`
+            }
+
+            setTimeout(() => {
+                if (ulPopUpMobile) {
+                    ulPopUpMobile.style.animation = 'unset';
+                    btnPopUpMobile.classList.toggle('hidden');
+                }
+            }, 300)
+        })
+    }
+    // click vào li trong ul tabs bar => trên mobile => chuyển đến trang đăng nhập]
+    let liMobile = document.querySelectorAll('.div-moda-mobile .wrap-product .product-item');
+    if (liMobile) {
+        liMobile.forEach((li) => {
+            li.addEventListener('click', () => {
+                window.location.href = './login.html';
+            })
+        })
+    }
 }
 
 

@@ -2587,6 +2587,456 @@
   padding-bottom: 56px;
 }
 
+@media (max-width: 63.9375em) {
+  .heading-nav-item .heading-nav-list {
+    -webkit-tap-highlight-color: transparent;
+  }
+  .heading-content .heading-content-img-wrap {
+    -webkit-tap-highlight-color: transparent;
+  }
+  .heading-content .heading-check-order-icon {
+    font-size: 2.2rem;
+  }
+  .heading-content .heading-check-order {
+    width: 100px;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .heading-content .header-cart-icon {
+    font-size: 2.8rem;
+  }
+  .heading-content .heading-content-search-input {
+    font-size: 1.2rem;
+  }
+  .heading-content .heading-content-search-input {
+    font-size: 1.4rem;
+  }
+  .heading-content .heading-content-search-wrap-icon {
+    -webkit-tap-highlight-color: transparent;
+  }
+  .heading-content .heading-check-order .check-don-hang {
+    position: absolute;
+    bottom: -48px;
+    z-index: 100;
+  }
+  .input-search-phone {
+    top: 96px;
+  }
+  .app .sosial {
+    left: 1.5%;
+  }
+  .up-top.up-top-active {
+    -webkit-tap-highlight-color: transparent;
+  }
+  .footer-info-text {
+    margin-top: 12px;
+  }
+  .container-product {
+    -webkit-tap-highlight-color: transparent;
+  }
+  .buy-phone-name {
+    text-align: center;
+  }
+  .buy-phone-product {
+    flex-direction: column;
+    align-items: center;
+  }
+  .buy-phone-product .buy-phone-product-img {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+  }
+  .buy-phone-product .buy-phone-product-img img {
+    width: 250px;
+    height: 250px;
+    object-fit: contain;
+  }
+  .buy-phone-warranty-heading {
+    margin-top: 12px;
+    font-size: 2.2rem;
+  }
+  .buy-phone-warranty-text {
+    font-size: 1.5rem;
+  }
+  .buy-phone-warranty-info {
+    justify-content: center;
+  }
+  .buy-phone-product-info {
+    margin-left: 0;
+  }
+  @keyframes moveCart {
+    to {
+      top: -1281%;
+      left: 91%;
+    }
+  }
+  .modal-popop-add-cart {
+    top: 118%;
+    left: -128%;
+  }
+  .buy-phone-warranty-icon {
+    font-size: 3rem;
+    margin-right: 3px;
+  }
+  .buy-phone-click-img {
+    width: 156px;
+  }
+  .buy-phone-click-curent {
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+  }
+  .buy-phone-click-wrap-info-price {
+    margin: 0;
+    width: 89%;
+  }
+  .buy-phone-product-promotion-click-buy {
+    margin: 7px 14px 0 14px;
+  }
+  .buy-phone-click-wrap-img {
+    flex: unset;
+    margin-top: 104px;
+  }
+  .completed-buy-phone-order-pay-type-item.completed-buy-phone-order-pay-type-item-1 h3 {
+    font-size: 1.5rem;
+  }
+  .thanhtoan-nhanhang .header {
+    margin-top: 40px;
+  }
+  .completed-buy-phone-order-pay-momo .order-info .td {
+    width: 103px;
+  }
+  .wrap-cart-value {
+    flex-direction: column;
+    align-items: center;
+  }
+  .cart-value-info-phone {
+    margin-top: -16px;
+  }
+  .buy-phone-click-wrap-info-price-form-user.header-cart-value-1 {
+    width: 98%;
+    margin-left: -21px;
+  }
+  .completed-buy-phone-order-pay-type-item.pay-cart-1 {
+    font-size: 1.2rem;
+  }
+  .slider-wrap {
+    height: 254px;
+  }
+  .btn {
+    -webkit-tap-highlight-color: transparent;
+  }
+  .convert-add-product {
+    display: none;
+  }
+}
+@media (min-width: 64em) {
+  .heading-content-mobile-icon-bars {
+    display: none;
+  }
+  .div-moda-mobile {
+    display: none;
+  }
+}
+@media (min-width: 46.25em) and (max-width: 63.9375em) {
+  .heading-content .heading-content-img-wrap {
+    width: 160px;
+  }
+  .sub-product.lap-top {
+    left: 0;
+  }
+  .sub-item.sub-item-img {
+    width: 30%;
+    object-fit: contain;
+  }
+  .sub-product {
+    left: -12px;
+    width: 654px;
+  }
+  .sub-item-img {
+    display: none;
+  }
+  .sub-product.đong-ho {
+    left: -72px;
+  }
+  .sub-product.lap-top {
+    left: -126px;
+  }
+  .product-item {
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+  }
+  .product-item .material-symbols-outlined.product-icon {
+    -webkit-tap-highlight-color: transparent;
+  }
+  .sub-product.man-hinh {
+    left: -172px;
+  }
+  .sub-product.smart-tv {
+    left: -229px;
+  }
+  .sub-product.am-thanh {
+    left: -283px;
+  }
+  .sub-product.smart-home {
+    left: -343px;
+  }
+  .sub-product.sim-the {
+    left: -413px;
+  }
+  .sub-product.sua-chua {
+    left: -462.2px;
+  }
+  .sub-product.do-choi {
+    left: -516px;
+  }
+  .sub-product.uu-dai {
+    left: -606px;
+  }
+  .heading-content-mobile-icon-bars {
+    display: none;
+  }
+  .div-moda-mobile {
+    display: none;
+  }
+}
+@media (max-width: 46.1875em) {
+  .heading-nav {
+    display: none;
+  }
+  .heading-content-mobile {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 15px 0 15px;
+  }
+  .heading-content-mobile-icon-bars {
+    font-size: 2.7rem;
+    color: #00483d;
+  }
+  .heading-content-mobile-img {
+    text-align: center;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .heading-content-mobile-img img {
+    width: 55%;
+  }
+  .heading-content-mobile-cart .heading-content-mobile-cart-icon {
+    position: relative;
+    font-size: 3rem;
+  }
+  .heading-content-mobile-cart .heading-content-mobile-cart-total {
+    position: absolute;
+    font-size: 1.1rem;
+    top: 33px;
+    right: 14px;
+    padding: 2.1px 5.4px;
+  }
+  .heading-content-mobile-cart .heading-content-mobile-cart-total::before {
+    display: none;
+  }
+  .heading-content-mobile .heading-content-mobile-cart {
+    margin-left: 0;
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+  }
+  .heading-content-order-tools {
+    display: block;
+  }
+  .heading-content-order-tools .heading-check-order {
+    display: none;
+  }
+  .heading .heading-content {
+    padding: 20px 15px;
+    margin-bottom: 41px;
+    position: fixed;
+    z-index: 3000;
+    background-color: #f4f4f4;
+  }
+  .heading-content-search {
+    position: absolute;
+    bottom: -27px;
+    left: 50%;
+    transform: translateX(-55%);
+    width: 90%;
+  }
+  .heading-content-img-wrap {
+    position: relative;
+    left: 72px;
+  }
+  .header-cart {
+    position: relative;
+    left: 40px;
+  }
+  .heading-pruduct .wrap-product {
+    display: none;
+  }
+  .app {
+    overflow: hidden;
+  }
+  .app .slider {
+    margin: 0 3px;
+    width: 98%;
+  }
+  .app .slider-wrap {
+    margin-top: 102px;
+  }
+  .app .sosial {
+    display: none;
+  }
+  .app .wrap-product-mobile {
+    margin: 0 5px;
+  }
+  .app .buy-phone-product {
+    margin-top: 43px;
+  }
+  .app .buy-phone-click-wrap-img {
+    flex: unset;
+    margin-top: 104px;
+  }
+  .app .buy-phone-click-wrap-info-price-form-user .info-number {
+    display: block;
+  }
+  .app .buy-phone-click-wrap-info-price-form-user .info-number .info-number-phone {
+    margin-bottom: 16px;
+  }
+  .app .buy-phone-click-wrap-info-price-form-user .info-address-wrap-select {
+    display: block;
+  }
+  .app .buy-phone-click-wrap-info-price-form-user .info-address-wrap-select .wrap-select.wrap-select-1 {
+    margin: 0 0 18px 0;
+  }
+  .app .completed-buy-phone-wrap-info {
+    flex-direction: column;
+    align-items: center;
+  }
+  .app .completed-buy-phone-wrap-info .completed-buy-phone-order-info {
+    margin-right: 0;
+  }
+  .app .infomation-phone-item {
+    display: block;
+  }
+  .app .modal-popop-add-cart {
+    top: 118%;
+    left: -92%;
+  }
+  .app .header-cart-value-list {
+    flex-direction: column;
+  }
+  .app .header-cart-value-img {
+    margin: 0 0 16px 0;
+  }
+  .app .cart-value-info-phone {
+    text-align: center;
+  }
+  .app .buy-phone-click-wrap-info-price-form-user.header-cart-value-1 {
+    margin-left: 0;
+  }
+  .app .info-number-phone {
+    margin-right: 0;
+  }
+  .app .infomation-phone-item-text.cart-value-buy.cart-value-buy-1.infomation-phone-item-text-1 {
+    min-width: 144.3px;
+  }
+  .app .infomation-phone-item-text.cart-value-buy.cart-value-buy-3.infomation-phone-item-text-2 {
+    min-width: 73px;
+  }
+  .app .infomation-phone-item-text.cart-value-buy.cart-value-buy-2.infomation-phone-item-text-4 {
+    min-width: 70px;
+  }
+  .app .infomation-phone-item-text.cart-value-buy.cart-value-buy-4.infomation-phone-item-text-3 {
+    min-width: 72.7px;
+  }
+  .app .infomation-phone-item-text strong {
+    padding: 0;
+    font-size: 1.4rem;
+    font-weight: 400;
+  }
+  .app .header-cart-value {
+    width: 430px;
+  }
+  .app .header-cart-null.header-cart-value-1.header-cart-value-11 {
+    margin-right: 0;
+  }
+  .slider-wrap {
+    height: 163px;
+  }
+  .slide-btn {
+    display: none;
+  }
+  .fa-solid.fa-circle.slide-dots-icon {
+    -webkit-tap-highlight-color: transparent;
+  }
+  .input-search-phone {
+    top: 117px;
+    width: 100%;
+    left: 188px;
+  }
+  .heading-content-mobile-icon-bars {
+    position: relative;
+  }
+  .hidden {
+    display: none;
+  }
+  .div-moda-mobile {
+    position: fixed;
+    z-index: 900;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(204, 204, 204, 0.6);
+    user-select: none;
+    overflow: hidden;
+  }
+  @keyframes slideInMobile {
+    from {
+      transform: translateX(-100%);
+    }
+    to {
+      transform: translateX(0%);
+    }
+  }
+  @keyframes slideOutMobile {
+    from {
+      transform: translateX(0%);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+  .div-moda-mobile .wrap-product {
+    position: absolute;
+    font-size: 1.5rem;
+    list-style-type: none;
+    width: 296px;
+    background-color: #fff;
+    z-index: 3000;
+    height: 100vh;
+    padding: 36px 0 0 0px;
+  }
+  .div-moda-mobile .wrap-product .wrap-product-icon-close {
+    position: absolute;
+    right: 5px;
+    top: 8px;
+    font-size: 2.5rem;
+    color: red;
+  }
+  .div-moda-mobile .wrap-product .product-item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    color: #00483d;
+    font-weight: bold;
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+    padding: 0 0 10px 10px;
+  }
+  .div-moda-mobile .wrap-product .material-symbols-outlined.product-icon {
+    margin-right: 5px;
+  }
+}
 * {
   margin: 0;
   padding: 0;

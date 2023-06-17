@@ -474,7 +474,9 @@ export default function addProduct() {
 
                     },
                 ]
-            }, {
+
+            },
+            {
                 "id": ++id,
                 "imgPhone": "https://cdn.hoanghamobile.com/i/productlist/ts/Uploads/2022/08/02/combo-product-reno8-z-gold.png",
                 "namePhone": "Reno8 Z 5G - Chính hãng",
@@ -500,7 +502,241 @@ export default function addProduct() {
                     },
                 ]
             },
+            {
+                "id": ++id,
+                "imgPhone": "https://cdn.hoanghamobile.com/i/productlist/ts/Uploads/2023/02/27/thumb-xiaomi-13.png",
+                "namePhone": "Xiaomi 13 (8GB/256GB) - Chính hãng",
+                "priceOld": "17,390,000 ₫",
+                "priceNew": "22,990,000 ₫",
+                "phoneSaleof": "KM",
+                "phoneDescription": "Ưu đãi đến 600.000đ khi mở Ví hoặc thanh toán qua ví VNP Ưu đãi đến 300.000đ khi mở Ví hoặc thanh toán qua ví VNP ",
+                "phoneDetailKM": "VÀ 8 KM KHÁC ",
+                "optionPhone": [
+                    {
+                        'nameOption': '64G',
+                        'priceOption': '17,390,000 ₫'
 
+                    },
+                    {
+                        'nameOption': '128G',
+                        'priceOption': '18,390,000 ₫'
+
+                    }, {
+                        'nameOption': '256G',
+                        'priceOption': '19,990,000 ₫'
+
+                    },
+                ]
+            },
+
+            {
+                "id": ++id,
+                "imgPhone": "https://cdn.hoanghamobile.com/i/productlist/ts/Uploads/2022/09/23/image-removebg-preview-54.png",
+                "namePhone": "Vivo V25 5G 8GB/128GB - Chính hãng",
+                "priceOld": "7,990,000 ₫",
+                "priceNew": "10,490,000 ₫",
+                "phoneSaleof": "KM",
+                "phoneDescription": "Ưu đãi đến 300.000đ khi mở Ví hoặc thanh toán qua ví VNP Ưu đãi đến 300.000đ khi mở Ví hoặc thanh toán qua ví VNP ",
+                "phoneDetailKM": "VÀ 9 KM KHÁC ",
+                "optionPhone": [
+                    {
+                        'nameOption': '64G',
+                        'priceOption': '7,990,000 ₫'
+
+                    },
+                    {
+                        'nameOption': '128G',
+                        'priceOption': '8,990,000 ₫'
+
+                    }, {
+                        'nameOption': '256G',
+                        'priceOption': '8,999,000 ₫'
+
+                    },
+                ]
+            },
+            {
+                "id": ++id,
+                "imgPhone": "https://cdn.hoanghamobile.com/i/productlist/ts/Uploads/2023/06/12/rog-7-0.png",
+                "namePhone": "ASUS ROG Phone 7 (16GB/512GB) - Chính hãng",
+                "priceOld": "24,990,000 ₫",
+                "priceNew": "28,990,000 ₫",
+                "phoneSaleof": "KM",
+                "phoneDescription": "Ưu đãi đến 500.000đ khi mở Ví hoặc thanh toán qua ví VNP Ưu đãi đến 300.000đ khi mở Ví hoặc thanh toán qua ví VNP ",
+                "phoneDetailKM": "VÀ 16 KM KHÁC ",
+                "optionPhone": [
+                    {
+                        'nameOption': '64G',
+                        'priceOption': '24,990,000 ₫'
+
+                    },
+                    {
+                        'nameOption': '128G',
+                        'priceOption': '25,990,000 ₫'
+
+                    }, {
+                        'nameOption': '256G',
+                        'priceOption': '26,990,000 ₫'
+
+                    },
+                ]
+            },
+            {
+                "id": ++id,
+                "imgPhone": "https://cdn.hoanghamobile.com/i/productlist/ts/Uploads/2022/08/04/image-removebg-preview-2_637952077804801502.png",
+                "namePhone": "Nokia G11 Plus 3GB/64GB - Chính hãng",
+                "priceOld": "2,450,000 ₫",
+                "priceNew": "3,590,000 ₫",
+                "phoneSaleof": "KM",
+                "phoneDescription": "Ưu đãi đến 400.000đ khi mở Ví hoặc thanh toán qua ví VNP Ưu đãi đến 300.000đ khi mở Ví hoặc thanh toán qua ví VNP ",
+                "phoneDetailKM": "VÀ 11 KM KHÁC ",
+                "optionPhone": [
+                    {
+                        'nameOption': '64G',
+                        'priceOption': '2,450,000 ₫'
+
+                    },
+                    {
+                        'nameOption': '128G',
+                        'priceOption': '3,450,000 ₫'
+
+                    }, {
+                        'nameOption': '256G',
+                        'priceOption': '4,450,000 ₫'
+
+                    },
+                ]
+            },
+            {
+                "id": ++id,
+                "imgPhone": "https://cdn.hoanghamobile.com/i/productlist/ts/Uploads/2022/09/28/combo-product-reno8-pro-green-removebg-preview.png",
+                "namePhone": "OPPO Reno8 Pro - Chính hãng",
+                "priceOld": "16,490,000 ₫",
+                "priceNew": "17,490,000 ₫",
+                "phoneSaleof": "KM",
+                "phoneDescription": "Ưu đãi đến 400.000đ khi mở Ví hoặc thanh toán qua ví VNP Ưu đãi đến 300.000đ khi mở Ví hoặc thanh toán qua ví VNP ",
+                "phoneDetailKM": "VÀ 11 KM KHÁC ",
+                "optionPhone": [
+                    {
+                        'nameOption': '64G',
+                        'priceOption': '16,490,000 ₫'
+
+                    },
+                    {
+                        'nameOption': '128G',
+                        'priceOption': '17,690,000 ₫'
+
+                    }, {
+                        'nameOption': '256G',
+                        'priceOption': '19,990,000 ₫'
+
+                    },
+                ]
+            },
+            {
+                "id": ++id,
+                "imgPhone": "https://cdn.hoanghamobile.com/i/productlist/ts/Uploads/2023/02/02/image-removebg-preview-2.png",
+                "namePhone": "Samsung Galaxy S23 - 8GB/256GB - Chính hãng",
+                "priceOld": "19,240,000 ₫",
+                "priceNew": "24,990,000 ₫",
+                "phoneSaleof": "KM",
+                "phoneDescription": "Ưu đãi đến 400.000đ khi mở Ví hoặc thanh toán qua ví VNP Ưu đãi đến 300.000đ khi mở Ví hoặc thanh toán qua ví VNP ",
+                "phoneDetailKM": "VÀ 17 KM KHÁC ",
+                "optionPhone": [
+                    {
+                        'nameOption': '64G',
+                        'priceOption': '19,240,000 ₫'
+
+                    },
+                    {
+                        'nameOption': '128G',
+                        'priceOption': '21,240,000 ₫'
+
+                    }, {
+                        'nameOption': '256G',
+                        'priceOption': '22,990,000 ₫'
+
+                    },
+                ]
+            },
+            {
+                "id": ++id,
+                "imgPhone": "https://cdn.hoanghamobile.com/i/productlist/ts/Uploads/2022/03/15/image-removebg-preview-1.png",
+                "namePhone": "Xiaomi 12 Pro - Chính hãng",
+                "priceOld": "19,990,000 ₫",
+                "priceNew": "27,990,000 ₫",
+                "phoneSaleof": "KM",
+                "phoneDescription": "Ưu đãi đến 800.000đ khi mở Ví hoặc thanh toán qua ví VNP Ưu đãi đến 300.000đ khi mở Ví hoặc thanh toán qua ví VNP ",
+                "phoneDetailKM": "VÀ 16 KM KHÁC ",
+                "optionPhone": [
+                    {
+                        'nameOption': '64G',
+                        'priceOption': '19,990,000 ₫'
+
+                    },
+                    {
+                        'nameOption': '128G',
+                        'priceOption': '21,240,000 ₫'
+
+                    }, {
+                        'nameOption': '256G',
+                        'priceOption': '25,990,000 ₫'
+
+                    },
+                ]
+            },
+            {
+                "id": ++id,
+                "imgPhone": "https://cdn.hoanghamobile.com/i/productlist/ts/Uploads/2023/03/08/14-yellow.png",
+                "namePhone": "iPhone 14 (512GB) - Chính hãng VN/A ",
+                "priceOld": "22,490,000 ₫",
+                "priceNew": "23,490,000 ₫",
+                "phoneSaleof": "KM",
+                "phoneDescription": "Ưu đãi đến 900.000đ khi mở Ví hoặc thanh toán qua ví VNP Ưu đãi đến 300.000đ khi mở Ví hoặc thanh toán qua ví VNP ",
+                "phoneDetailKM": "VÀ 16 KM KHÁC ",
+                "optionPhone": [
+                    {
+                        'nameOption': '64G',
+                        'priceOption': '22,490,000 ₫'
+
+                    },
+                    {
+                        'nameOption': '128G',
+                        'priceOption': '23,490,000 ₫'
+
+                    }, {
+                        'nameOption': '256G',
+                        'priceOption': '25,990,000 ₫'
+
+                    },
+                ]
+            },
+            {
+                "id": ++id,
+                "imgPhone": "https://cdn.hoanghamobile.com/i/productlist/ts/Uploads/2023/03/31/image-removebg-preview.png",
+                "namePhone": "iPhone 11 (64GB) - Chính hãng VN/A",
+                "priceOld": "10,290,000 ₫",
+                "priceNew": "19,990,000 ₫",
+                "phoneSaleof": "KM",
+                "phoneDescription": "Ưu đãi đến 900.000đ khi mở Ví hoặc thanh toán qua ví VNP Ưu đãi đến 300.000đ khi mở Ví hoặc thanh toán qua ví VNP ",
+                "phoneDetailKM": "VÀ 16 KM KHÁC ",
+                "optionPhone": [
+                    {
+                        'nameOption': '64G',
+                        'priceOption': '10,290,000 ₫'
+
+                    },
+                    {
+                        'nameOption': '128G',
+                        'priceOption': '11,290,000 ₫'
+
+                    }, {
+                        'nameOption': '256G',
+                        'priceOption': '13,290,000 ₫'
+
+                    },
+                ]
+            }
 
 
 

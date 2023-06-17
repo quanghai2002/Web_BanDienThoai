@@ -2,7 +2,7 @@ export default function completedBuyPhoneCart() {
 
     // render dữ liệu từ cartCompleted => khi ấn vào nút TIẾN HÀNG ĐẶT HÀNG bên cartValue
     let dataPhoneCart = JSON.parse(localStorage.getItem('cartCompleted'));
-    console.log(dataPhoneCart);
+
     if (dataPhoneCart) {
 
         // render các thông tin ra màn hình
